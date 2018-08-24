@@ -22,38 +22,38 @@
 
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings | Description |
-|:---------:|:-------------:|:---------------------------------:|:---------------------------:|:------------------------------------:|
-| users | id | Integer(20) | primary key, auto increment | Infos über eigenen Account |
-|  | publicId | Varchar(36) (for uuid4) | unique | Login |
-|  | username | Varchar(80) | unique | Logout |
-|  | email | Varchar(100) | unique |  |
-|  | password | Blob(512) (sha512 Hash) |  | Admin: Get all Accounts (Infos) |
-|  | lastLogin | TimeStamp |  | Admin: Get Account by UUID |
-|  | created | TimeStamp |  | Register a new Account |
-|  | role | Integer(20) | foreign key -> role.id | Admin: Update User (by UUID) |
-| roles | id | Integer(20) | primary key, auto increment | Update your Account |
-|  | name | Varchar(80) |  | Admin: Delete User (by UUID) |
-|  | description | Varchar(100) |  | Delete your Account |
-| tokens | id | Integer(20) | primary key, auto increment |  |
-|  | user | Integer(20) | foreign key -> user.id | Get all Challenges |
-|  | token | Varchar(128) | unique | Get Challenge by ID |
-|  | created | TimeStamp |  | Create Challenge |
-|  | expires | TimeStamp |  | Update Challenge (Youtube Video IDs) |
-|  | broken | Integer(1) (boolean) |  | Solv Challenge |
-| challenge | id | Integer(20) | primary key, auto increment |  |
-|  | flag | Varchar(80) | unique |  |
-|  | name | Varchar(80) |  |  |
-|  | description | Varchar(512) |  |  |
-|  | urls | Integer(20) | foreign key -> url.id |  |
-|  | ytChallengeId | Varchar(10) |  |  |
-|  | ytSolutionId | Varchar(10) |  |  |
-|  | category | Integer(20) | foreign key -> category.id |  |
-| url | id | Integer(20) | primary key, auto increment |  |
-|  | description | Varchar(100) |  |  |
-|  | url | Varchar(100) | unique |  |
-| category | id | Integer(20) | primary key, auto increment |  |
-|  | description | Varchar(100) |  |  |
-| solved | id | Integer(20) | primary key, auto increment |  |
-|  | challenge | Integer(20) | foreign key -> challenge.id |  |
-|  | user | Integer(20) | foreign key -> user.id |  |
-|  | timestamp | TimeStamp |  |  |
+|:---------:|:-------------:|:---------------------------------:|:---------------------------:|
+| users | id | Integer(20) | primary key, auto increment |
+|  | publicId | Varchar(36) (for uuid4) | unique |
+|  | username | Varchar(80) | unique |
+|  | email | Varchar(100) | unique |
+|  | password | Blob(512) (sha512 Hash) |  |
+|  | lastLogin | TimeStamp |  |
+|  | created | TimeStamp |  |
+|  | role | Integer(20) | foreign key -> role.id |
+| roles | id | Integer(20) | primary key, auto increment |
+|  | name | Varchar(80) |  |
+|  | description | Varchar(100) |  |
+| tokens | id | Integer(20) | primary key, auto increment |
+|  | user | Integer(20) | foreign key -> user.id |
+|  | token | Varchar(128) | unique |
+|  | created | TimeStamp |  |
+|  | expires | TimeStamp |  |
+|  | broken | Integer(1) (boolean) |  |
+| challenge | id | Integer(20) | primary key, auto increment |  
+|  | flag | Varchar(80) | unique |  
+|  | name | Varchar(80) |  |  
+|  | description | Varchar(512) |  |  
+|  | urls | Integer(20) | foreign key -> url.id |  
+|  | ytChallengeId | Varchar(10) |  |  
+|  | ytSolutionId | Varchar(10) |  |  
+|  | category | Integer(20) | foreign key -> category.id |  
+| url | id | Integer(20) | primary key, auto increment |  
+|  | description | Varchar(100) |  |  
+|  | url | Varchar(100) | unique |  
+| category | id | Integer(20) | primary key, auto increment |  
+|  | description | Varchar(100) |  |  
+| solved | id | Integer(20) | primary key, auto increment |  
+|  | challenge | Integer(20) | foreign key -> challenge.id |
+|  | user | Integer(20) | foreign key -> user.id |  
+|  | timestamp | TimeStamp |  |  
