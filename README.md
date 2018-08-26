@@ -15,7 +15,6 @@
 | DELETE | /api/users/me | Access-Token | / | Delete your Account | Done |
 |  |  |  |  |  |  |
 | GET | /api/challenges | Access-Token | / | Get all Challenges |  |
-| GET | /api/challenges/<id:int> | Access-Token | / | Get Challenge by ID |  |
 | POST | /api/challenges | Access-Token | category, flag, description, urls | Create Challenge |  |
 | PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId | Update Challenge (Youtube Video IDs) |  |
 |||||||
