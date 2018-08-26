@@ -18,7 +18,9 @@
 | GET | /api/challenges/<id:int> | Access-Token | / | Get Challenge by ID |  |
 | POST | /api/challenges | Access-Token | category, flag, description, urls | Create Challenge |  |
 | PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId | Update Challenge (Youtube Video IDs) |  |
-| PUT | /api/challenges/solve/<id:int> | Access-Token | flag | Solv Challenge |  | |
+|||||||
+| GET | /api/solve/ | Access-Token | | Get all solved challenges | |
+| POST | /api/solve/<id:int> | Access-Token | flag | Solv Challenge |  | |
 
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings |
