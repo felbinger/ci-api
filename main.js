@@ -7,6 +7,7 @@ module.exports = emitter;
 const auth = require('./auth.js');
 const users = require('./users.js');
 const challenges = require('./challenges.js');
+const responder = require('./response.js');
 
 http.createServer((req, res) => {
     var body = "";
@@ -110,16 +111,12 @@ http.createServer((req, res) => {
                 }
                 break;
             default:
-                res.statusCode = 404;
-                res.statusMessage = "Page not found!";
-                res.end();
+                responder.respond(res, 404, "Page not found!");
                 break;
         }
     });
 }).listen(2002);
 
 function methodNotAllowed(res) {
-    res.statusCode = 405;
-    res.statusMessage = "Method not allowed!";
-    res.end();
+    responder.respond(res, 405, "Method not allowed!");
 }
