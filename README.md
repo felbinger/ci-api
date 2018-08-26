@@ -44,10 +44,12 @@
 |  | flag | Varchar(80) | unique |  
 |  | name | Varchar(80) |  |  
 |  | description | Varchar(512) |  |  
-|  | urls | Integer(20) | foreign key -> url.id |  
 |  | ytChallengeId | Varchar(10) |  |  
 |  | ytSolutionId | Varchar(10) |  |  
 |  | category | Integer(20) | foreign key -> category.id |  
+| challenge_url | id | Integer(20) | primary key, auto increment |  
+|  | challenge | Integer(20) | foreign key -> challenge.id |  
+|  | url | Integer(20) | foreign key -> url.id |  
 | url | id | Integer(20) | primary key, auto increment |  
 |  | description | Varchar(100) |  |  
 |  | url | Varchar(100) | unique |  
