@@ -1,0 +1,5 @@
+{
+  "tests/auth_test.py::test_works": true,
+  "tests/db_test.py::test_create_entry": true,
+  "tests/test_message.py::test_create_message": true
+}

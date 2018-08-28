@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+dev = "bash -c 'FLASK_APP=cc FLASK_DEBUG=1 FLASK_ENV=development flask run'"
+prod = "gunicorn -w 4 cc:create_app"
+test = "pytest"
+cov = "pytest --cov=cc tests"
+
+[packages]
+flask = "*"
+marshmallow = "2.15.3"
+gunicorn = "*"
+flask-sqlalchemy = "*"
+pyjwt = "*"
+requests = "*"
+pymysql = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-sugar = "*"
+python-dateutil = "*"
+pytest-cov = "*"
+
+[requires]
+python_version = "3.6"

@@ -1,0 +1,105 @@
+------------------------------------------------------------------------------------------
+
+from app.db import db
+from sqlalchemy import Column, String, Integer
+
+
+class Categories(db.Model):
+    id = Column('id', Integer, primary_key=True)
+    description = Column('description', String(100), nullable=False)
+
+    def jsonify(self):
+        return {
+            'description': self.description
+        }
+
+------------------------------------------------------------------------------------------
+
+from app.db import db
+from sqlalchemy import Column, ForeignKey, Integer
+
+
+class ChallengeUrl(db.Model):
+    id = Column('id', Integer, primary_key=True)
+
+    url_id = Column('url', Integer, ForeignKey('url.id'), nullable=False)
+    url = db.relationship('Url', backref=db.backref('challenge_url', lazy=True))
+
+    challenge_id = Column('challenge', Integer, ForeignKey('challenge.id'), nullable=False)
+    challenge = db.relationship('Challenge', backref=db.backref('challenge_url', lazy=True))
+
+    def jsonify(self):
+        return {
+            'description': self.description,
+            'url': self.url
+        }
+
+------------------------------------------------------------------------------------------
+
+from app.db import db
+from sqlalchemy import Column, String, Integer, ForeignKey
+
+
+class Challenge(db.Model):
+    id = Column('id', Integer, primary_key=True)
+    flag = Column('flag', String(80), unique=True, nullable=False)
+    name = Column('name', String(80), nullable=False)
+    description = Column('description', String(512), nullable=False)
+    yt_challenge_id = Column('ytChallengeId', String(10))
+    yt_solution_id = Column('ytSolutionId', String(10))
+
+    category_id = Column('category', Integer, ForeignKey('categories.id'), nullable=False)
+    category = db.relationship('Categories', backref=db.backref('challenges', lazy=True))
+
+    def jsonify(self):
+        return {
+            'flag': self.flag,
+            'name': self.name,
+            'description': self.description,
+            'ytChallengeId': self.yt_challenge_id,
+            'ytSolutionId': self.yt_solution_id,
+            'category': self.category.jsonify()
+        }
+
+------------------------------------------------------------------------------------------
+
+from app.db import db
+from sqlalchemy import Column, DateTime, ForeignKey, Integer
+
+
+class Solved(db.Model):
+    id = Column('id', Integer, primary_key=True)
+
+    challenge_id = Column('challenge_id', Integer, ForeignKey('challenge.id'), nullable=False)
+    challenge = db.relationship('Challenge', backref=db.backref('solved', lazy=True))
+
+    user_id = Column('user', Integer, ForeignKey('user.id'), nullable=False)
+    user = db.relationship('User', backref=db.backref('solved', lazy=True))
+
+    timestamp = Column('timestamp', DateTime)
+
+    def jsonify(self):
+        return {
+            'challenge': self.challenge.jsonify(),
+            'user': self.user.jsonfiy(),
+            'timestamp': self.timestamp
+        }
+
+------------------------------------------------------------------------------------------
+
+from app.db import db
+from sqlalchemy import Column, String, Integer
+
+
+class Url(db.Model):
+    id = Column('id', Integer, primary_key=True)
+    description = Column('description', String(100))
+    url = Column('url', String(100), unique=True)
+
+    def jsonify(self):
+        return {
+            'description': self.description,
+            'url': self.url
+        }
+
+------------------------------------------------------------------------------------------
