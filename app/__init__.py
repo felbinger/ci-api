@@ -68,3 +68,6 @@ def register_views(app):
     @app.errorhandler(403)
     def not_found(e):
         return 'Permissions Denied!', 403
+
+
+app = application = create_app()
