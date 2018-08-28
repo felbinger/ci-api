@@ -6,10 +6,10 @@
 | POST | /api/auth |  | username, password | Login | Done |
 | DELETE | /api/auth | Access-Token | / | Logout | Done |
 |||||||
-| GET | /api/roles | Access-Token | / | Get all Roles ||
-| POST | /api/roles | Access-Token | name, description | Admin: Create Role ||
-| PUT | /api/roles/<id:int> | Access-Token | description | Admin: Modify Role Description ||
-| DELETE | /api/roles/<id:int> | Access-Token | / | Admin: Delete Role ||
+| GET | /api/roles | Access-Token | / | Get all Roles | Done |
+| POST | /api/roles | Access-Token | name, description | Admin: Create Role | Done |
+| PUT | /api/roles/<id:int> | Access-Token | description | Admin: Modify Role Description | Done |
+| DELETE | /api/roles/<id:int> | Access-Token | / | Admin: Delete Role | Done |
 |||||||
 | GET | /api/users | Access-Token | / | Admin: Get all Accounts (Infos) | Done |
 | GET | /api/users/<uuid:string> | Access-Token | / | Admin: Get Account by UUID | Done |
@@ -19,9 +19,10 @@
 | DELETE | /api/users/<uuid:string> | Access-Token | / | Admin: Delete User (by UUID) | Done |
 | DELETE | /api/users/me | Access-Token | / | Delete your Account | Done |
 |||||||
-| GET | /api/challenges | Access-Token | / | Get all Challenges |  |
-| POST | /api/challenges | Access-Token | category, flag, description | Create Challenge |  |
-| PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId | Update Challenge (Youtube Video IDs) |  |
+| GET | /api/challenges | Access-Token | / | Get all Challenges | Done |
+| GET | /api/challenges/<name:string> | Access-Token | / | Get Challenge | Done |
+| POST | /api/challenges | Access-Token | name, description, category, flag | Create Challenge | Done |
+| PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
 |||||||
 | GET | /api/solve/ | Access-Token | / | Get all solved challenges | |
 | POST | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | | |
@@ -48,19 +49,15 @@
 |  | broken | Integer(1) (boolean) |  |
 | challenge | id | Integer(20) | primary key, auto increment |  
 |  | flag | Varchar(80) | unique |  
-|  | name | Varchar(80) |  |  
+|  | name | Varchar(80) | unique |  
 |  | description | Varchar(512) |  |  
 |  | ytChallengeId | Varchar(10) |  |  
 |  | ytSolutionId | Varchar(10) |  |  
-|  | category | Integer(20) | foreign key -> category.id |  
-| challenge_url | id | Integer(20) | primary key, auto increment |  
-|  | challenge | Integer(20) | foreign key -> challenge.id |  
-|  | url | Integer(20) | foreign key -> url.id |  
+|  | category | Varchar(80) | |  
 | url | id | Integer(20) | primary key, auto increment |  
 |  | description | Varchar(100) |  |  
-|  | url | Varchar(100) | unique |  
-| category | id | Integer(20) | primary key, auto increment |  
-|  | description | Varchar(100) |  |  
+|  | url | Varchar(100) | unique |
+|  | challenge | Integer(20) | foreign key -> challenge.id |  
 | solved | id | Integer(20) | primary key, auto increment |  
 |  | challenge | Integer(20) | foreign key -> challenge.id |
 |  | user | Integer(20) | foreign key -> user.id |  
