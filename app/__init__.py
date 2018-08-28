@@ -9,6 +9,7 @@ from .db import db
 def create_app(testing_config=None):
     app = Flask(__name__)
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # check which config should be used, can be defined in the environment variables
     env = os.environ.get('FLASK_ENV')
     if testing_config is None:
         if env == 'development':
