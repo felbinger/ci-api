@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,15 +135,16 @@
     <session id="977645913">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Pipfile" value="3" />
+          <entry key="Pipfile" value="4" />
           <entry key="TODO" value="1" />
           <entry key="coverage" value="1" />
           <entry key="md" value="3" />
@@ -155,12 +157,12 @@
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Python" value="86" />
-          <entry key="TOML file" value="3" />
+          <entry key="TOML file" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Pipfile" value="15" />
+          <entry key="Pipfile" value="18" />
           <entry key="md" value="259" />
           <entry key="py" value="5138" />
           <entry key="txt" value="85" />
@@ -171,30 +173,18 @@
           <entry key="Markdown" value="259" />
           <entry key="PLAIN_TEXT" value="85" />
           <entry key="Python" value="5138" />
-          <entry key="TOML file" value="15" />
+          <entry key="TOML file" value="18" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/__init__.py">
+        <entry file="file://$PROJECT_DIR$/Pipfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="51" lean-forward="true" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            <state relative-caret-position="105">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -309,7 +299,6 @@
         <option value="$PROJECT_DIR$/models.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/api/user/resources.py" />
-        <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/tests/db_test.py" />
         <option value="$PROJECT_DIR$/app/utils.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/utils.py" />
@@ -318,6 +307,7 @@
         <option value="$PROJECT_DIR$/app/api/role/resources.py" />
         <option value="$PROJECT_DIR$/app/config.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/Pipfile" />
       </list>
     </option>
   </component>
@@ -361,41 +351,6 @@
             <path>
               <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="challenge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="solve" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -425,19 +380,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/api/solved" />
-      <recent name="$PROJECT_DIR$/app/api/unused_db_models_remove_me" />
-      <recent name="$PROJECT_DIR$/cc/templates" />
-      <recent name="$PROJECT_DIR$/cc/api/user" />
-      <recent name="$PROJECT_DIR$/cc" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/api/solve" />
       <recent name="$PROJECT_DIR$/app/api/challenges" />
       <recent name="$PROJECT_DIR$/app/api/solved" />
       <recent name="$PROJECT_DIR$/app/api/challenge_url" />
       <recent name="$PROJECT_DIR$/app/api/url" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/api/solved" />
+      <recent name="$PROJECT_DIR$/app/api/unused_db_models_remove_me" />
+      <recent name="$PROJECT_DIR$/cc/templates" />
+      <recent name="$PROJECT_DIR$/cc/api/user" />
+      <recent name="$PROJECT_DIR$/cc" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -597,7 +552,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.17502668" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.17716116" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -608,11 +563,11 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4994664" visible="true" weight="0.3623656" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4994664" weight="0.3623656" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.26638025" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.216971" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" weight="0.5252417" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32760474" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" weight="0.32867885" />
@@ -745,9 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="7" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,9 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -786,9 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -796,10 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-            <marker date="1535480348472" expanded="true" signature="452:457" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,10 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <marker date="1535479963987" expanded="true" signature="691:697" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -825,16 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -842,11 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2490">
           <caret line="166" column="26" lean-forward="true" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-            <marker date="1535481535134" expanded="true" signature="1556:1561" ph="..." />
-            <marker date="1535481535134" expanded="true" signature="4947:6413" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,10 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="56" column="27" lean-forward="true" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-            <marker date="1535481953747" expanded="true" signature="463:1042" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,9 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <element signature="e#1#22#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,9 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -916,9 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,6 +839,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -936,13 +853,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
