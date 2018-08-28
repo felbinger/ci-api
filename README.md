@@ -1,4 +1,10 @@
 # Challenge Interface
+
+## TODO
+* PyTests
+* URL API implementation for (coding) challenges
+* Comment code
+
 ## API Schema
 | Method | URL | Headers | Payload | Description | Status |
 |:------:|:------------------------------:|:------------:|:-----------------------------------------:|:------------------------------------:|:------:|
@@ -24,8 +30,8 @@
 | POST | /api/challenges | Access-Token | name, description, category, flag | Create Challenge | Done |
 | PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
 |||||||
-| GET | /api/solve/ | Access-Token | / | Get all solved challenges | |
-| POST | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | | |
+| GET | /api/solve/ | Access-Token | / | Get all solved challenges | Done |
+| POST | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | Done | |
 
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings |

@@ -14,7 +14,6 @@ class Challenge(db.Model):
 
     def jsonify(self):
         return {
-            'flag': self.flag,
             'name': self.name,
             'description': self.description,
             'ytChallengeId': self.yt_challenge_id,
