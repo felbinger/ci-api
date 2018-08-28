@@ -7,10 +7,12 @@ from .db import db
 
 
 def create_app(testing_config=None):
+    # create flask app
     app = Flask(__name__)
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    # check which config should be used, can be defined in the environment variables
+    # check which config should be used, can be defined in the environment variable FLASK_ENV
     env = os.environ.get('FLASK_ENV')
+    # load config
     if testing_config is None:
         if env == 'development':
             app.config.from_object(DevelopmentConfig)
@@ -22,6 +24,7 @@ def create_app(testing_config=None):
     db.init_app(app)
     register_models()
     with app.app_context():
+        # create all tables in the database
         db.create_all()
     register_views(app)
     register_resource(app, UserResource, 'user_api', '/api/users', pk='uuid', pk_type='string')
@@ -56,10 +59,12 @@ def register_resource(app, resource, endpoint, url, pk='_id', pk_type='int',
 
 
 def register_views(app):
+    # 404 error page
     @app.errorhandler(404)
     def not_found(e):
         return 'File not found!', 404
 
+    # 403 error page
     @app.errorhandler(403)
     def not_found(e):
         return 'Permissions Denied!', 403
