@@ -1,8 +1,9 @@
 from flask.views import MethodView
-from flask import request
+from flask import request, current_app
 from hashlib import sha512
 
 from app.db import db
+from app.utils import SMTPMail
 from ..schemas import ResultSchema, ResultErrorSchema
 from ..authentication import require_token, require_admin
 from ..role import Role
@@ -155,6 +156,20 @@ class UserResource(MethodView):
         user = User(**data)
         db.session.add(user)
         db.session.commit()
+
+        if current_app.config['ENABLE_MAIL']:
+            smtp = SMTPMail(
+                current_app.config['SMTP_HOSTNAME'],
+                current_app.config['SMTP_PORT'],
+                current_app.config['SMTP_USERNAME'],
+                current_app.config['SMTP_PASSWORD']
+            )
+            smtp.sendmail(
+                current_app.config['MAIL_SUBJECT'],
+                current_app.config['MAIL_MESSAGE']
+                [user.email]
+            )
+            smtp.exit()
 
         return ResultSchema(
             data=user.jsonify(),
