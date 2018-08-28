@@ -32,6 +32,8 @@
   "api_user_test.py::test_admin_update_invalid_user",
   "api_user_test.py::test_delete_user",
   "db_test.py::test_create_models",
+  "db_test.py::test_create_challenge",
+  "db_test.py::test_solve_challenge",
   "db_test.py::test_create_role",
   "db_test.py::test_create_user"
 ]

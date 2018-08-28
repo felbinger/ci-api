@@ -16,10 +16,12 @@ class ChallengeResource(MethodView):
     @require_token
     def get(self, name, **_):
         if name is None:
+            # get all challenges
             return ResultSchema(
                 data=[d.jsonify() for d in Challenge.query.all()]
             ).jsonify()
         else:
+            # get the challenge object by the submitted name in the resource (url)
             data = Challenge.query.filter_by(name=name).first()
             if not data:
                 return ResultErrorSchema(
@@ -31,6 +33,7 @@ class ChallengeResource(MethodView):
             ).jsonify()
 
     """
+    Create a new challenge
     curl -H "Access-Token: $token" -X POST localhost:5000/api/challenge -H "Content-Type: application/json" \
     -d '{"name": "Test", "description": "TestChallenge", "flag": "TMT{t3$T}", category: "HC"}'
     """
@@ -39,6 +42,7 @@ class ChallengeResource(MethodView):
     def post(self, **_):
         data = request.get_json() or {}
         schema = DaoCreateChallengeSchema()
+        # use the schema to validate the submitted data
         error = schema.validate(data)
         if error:
             return ResultErrorSchema(
@@ -46,6 +50,7 @@ class ChallengeResource(MethodView):
                 errors=error,
                 status_code=400
             ).jsonify()
+        # check if the name for the challenge in already in use
         for challenge in Challenge.query.all():
             if data.get('name') == challenge.name:
                 return ResultErrorSchema(
@@ -53,12 +58,14 @@ class ChallengeResource(MethodView):
                     errors=['name already in use'],
                     status_code=400
                 ).jsonify()
+        # create the challenge
         challenge = Challenge(
             name=data.get('name'),
             description=data.get('description'),
             flag=data.get('flag'),
             category=data.get('category')
         )
+        # add the challenge object to the database
         db.session.add(challenge)
         db.session.commit()
         return ResultSchema(
@@ -75,6 +82,7 @@ class ChallengeResource(MethodView):
     def put(self, name, **_):
         data = request.get_json() or {}
         schema = DaoUpdateChallengeSchema()
+        # use the schema to validate the submitted data
         error = schema.validate(data)
         if error:
             return ResultErrorSchema(
@@ -82,16 +90,19 @@ class ChallengeResource(MethodView):
                 errors=error,
                 status_code=400
             ).jsonify()
-        role = Challenge.query.filter_by(name=name).first()
-        if not role:
+        # get the challenge object by the submitted name
+        challenge = Challenge.query.filter_by(name=name).first()
+        if not challenge:
             return ResultErrorSchema(
                 message='Challenge does not exist!',
                 errors=['Challenge does not exist'],
                 status_code=404
             ).jsonify()
         for key, val in data.items():
-            setattr(role, key, val)
+            # set the submitted values for the submitted key's
+            setattr(challenge, key, val)
+        # save the changes
         db.session.commit()
         return ResultSchema(
-            data=role.jsonify()
+            data=challenge.jsonify()
         ).jsonify()

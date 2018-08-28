@@ -12,6 +12,7 @@ def require_token(view_func):
                 errors=['missing access token'],
                 status_code=401
             ).jsonify()
+        # get the token object by the submitted Access-Token in the header
         token_obj = Token.query.filter_by(token=token).first()
         if token_obj:
             if not token_obj.is_valid() or not token_obj.user:
@@ -35,6 +36,7 @@ def require_admin(view_func):
         user = kwargs.get('user')
         if not user:
             raise AttributeError('Missing user attribute, please use @require_token before!')
+        # check if the user has the role admin
         if user.role.name != 'admin':
             return ResultErrorSchema(message='Access Denied!', errors=['access denied'], status_code=403).jsonify()
         return view_func(*args, **kwargs)

@@ -17,6 +17,7 @@ flask-sqlalchemy = "*"
 pyjwt = "*"
 requests = "*"
 pymysql = "*"
+smtplib = "*"
 
 [dev-packages]
 pytest = "*"

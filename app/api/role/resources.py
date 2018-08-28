@@ -16,10 +16,12 @@ class RoleResource(MethodView):
     @require_token
     def get(self, name, **_):
         if name is None:
+            # get all roles
             return ResultSchema(
                 data=[d.jsonify() for d in Role.query.all()]
             ).jsonify()
         else:
+            # get a role by the name in the resource (url)
             data = Role.query.filter_by(name=name).first()
             if not data:
                 return ResultErrorSchema(
