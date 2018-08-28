@@ -13,7 +13,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 --
--- Database: `challenges`
+-- Database: `challenge`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ CREATE TABLE `categories` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `challenges`
+-- Table structure for table `challenge`
 --
 
 CREATE TABLE `challenges` (
@@ -143,7 +143,7 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `challenges`
+-- Indexes for table `challenge`
 --
 ALTER TABLE `challenges`
   ADD PRIMARY KEY (`id`),
@@ -207,7 +207,7 @@ ALTER TABLE `categories`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `challenges`
+-- AUTO_INCREMENT for table `challenge`
 --
 ALTER TABLE `challenges`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
@@ -253,7 +253,7 @@ ALTER TABLE `users`
 --
 
 --
--- Constraints for table `challenges`
+-- Constraints for table `challenge`
 --
 ALTER TABLE `challenges`
   ADD CONSTRAINT `challenges_ibfk_1` FOREIGN KEY (`category`) REFERENCES `categories` (`id`) ON UPDATE CASCADE;

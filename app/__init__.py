@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 
-from .api import UserResource, AuthResource, RoleResource
+from .api import UserResource, AuthResource, RoleResource, ChallengeResource
 from .config import ProductionConfig, DevelopmentConfig
 from .db import db
 
@@ -26,13 +26,15 @@ def create_app(testing_config=None):
     register_resource(app, UserResource, 'user_api', '/api/users', pk='uuid', pk_type='string')
     register_resource(app, AuthResource, 'auth_api', '/api/auth', pk=None, get=False, put=False)
     register_resource(app, RoleResource, 'role_api', '/api/roles', pk='name', pk_type='string')
+    register_resource(app, ChallengeResource, 'challenge_api', '/api/challenge', pk='name', pk_type='string',
+                      delete=False)
 
     return app
 
 
 def register_models():
     # noinspection PyUnresolvedReferences
-    from .api import User, Token, Role
+    from .api import User, Token, Role, Challenge
 
 
 def register_resource(app, resource, endpoint, url, pk='_id', pk_type='int',
