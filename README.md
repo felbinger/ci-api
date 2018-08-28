@@ -68,3 +68,9 @@
 |  | challenge | Integer(20) | foreign key -> challenge.id |
 |  | user | Integer(20) | foreign key -> user.id |  
 |  | timestamp | TimeStamp |  |  |
+
+## Installation
+* Install the dependencies using pipenv
+ * https://pipenv.readthedocs.io/en/latest/basics/
+
+* Configure Database in config.py

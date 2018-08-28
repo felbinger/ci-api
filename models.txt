@@ -17,3 +17,5 @@ class Url(db.Model):
             'challenge': self.challenge.jsonify(),
             'url': self.url
         }
+
+	
