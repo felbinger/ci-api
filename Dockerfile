@@ -1,4 +1,13 @@
 FROM python:3.6-alpine
+
+ENV MYSQL_HOSTNAME=db
+ENV MYSQL_PORT=3306
+ENV MYSQL_USERNAME=challenges
+ENV MYSQL_DATABASE=challenges
+ENV SMTP_HOSTNAME=the-morpheus.de
+ENV SMTP_PORT=587
+ENV SMTP_USERNAME=challenge
+
 COPY . /app
 WORKDIR /app
 RUN apk add gcc musl-dev libffi-dev libressl-dev

@@ -13,7 +13,7 @@ class Config(object):
     database = os.environ.get('MYSQL_DATABASE')
     SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
 
-    ENABLE_MAIL = True
+    ENABLE_MAIL = False
 
     SMTP_HOSTNAME = os.environ.get('SMTP_HOSTNAME')
     SMTP_PORT = os.environ.get('SMTP_PORT')
@@ -26,18 +26,13 @@ class Config(object):
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@localhost:9999/hc?charset=utf8mb4'
-    DB_CHARSET = 'utf8'
+    ENABLE_MAIL = True
 
 
 class DevelopmentConfig(Config):
-    ENABLE_MAIL = False
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@localhost:9999/hc?charset=utf8mb4'
-    DB_CHARSET = 'utf8'
 
 
 class TestingConfig(Config):
-    ENABLE_MAIL = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
     TESTING = True
