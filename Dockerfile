@@ -8,6 +8,8 @@ ENV SMTP_HOSTNAME=the-morpheus.de
 ENV SMTP_PORT=587
 ENV SMTP_USERNAME=challenge
 
+EXPOSE 80
+
 COPY . /app
 WORKDIR /app
 RUN apk add gcc musl-dev libffi-dev libressl-dev

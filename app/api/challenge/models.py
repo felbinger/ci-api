@@ -1,6 +1,6 @@
 
 from app.db import db
-from sqlalchemy import Column, String, Integer
+from sqlalchemy import Column, String, Integer, ForeignKey
 
 
 class Challenge(db.Model):
@@ -18,5 +18,22 @@ class Challenge(db.Model):
             'description': self.description,
             'ytChallengeId': self.yt_challenge_id,
             'ytSolutionId': self.yt_solution_id,
-            'category': self.category
+            'category': self.category,
+            'urls': [url.jsonify() for url in Url.query.filter_by(challenge=self).all()]
+        }
+
+
+class Url(db.Model):
+    id = Column('id', Integer, primary_key=True)
+
+    challenge_id = Column('challenge', Integer, ForeignKey('challenge.id'), nullable=False)
+    challenge = db.relationship('Challenge', backref=db.backref('Url', lazy=True))
+
+    description = Column('description', String(100))
+    url = Column('url', String(100), unique=True)
+
+    def jsonify(self):
+        return {
+            'description': self.description,
+            'url': self.url
         }

@@ -6,6 +6,12 @@ class DaoCreateChallengeSchema(Schema):
     description = fields.Str(required=True)
     flag = fields.Str(required=True)
     category = fields.Str(required=True)
+    urls = fields.List(fields.Dict(), required=True)
+
+
+class DaoUrlSchema(Schema):
+    description = fields.Str(required=True)
+    url = fields.Str(required=True)
 
 
 class DaoUpdateChallengeSchema(Schema):

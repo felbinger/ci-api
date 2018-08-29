@@ -40,7 +40,7 @@ def create_app(testing_config=None):
 
 def register_models():
     # noinspection PyUnresolvedReferences
-    from .api import User, Token, Role, Challenge, Solve
+    from .api import User, Token, Role, Challenge, Solve, Url
 
 
 def register_resource(app, resource, endpoint, url, pk='_id', pk_type='int',
