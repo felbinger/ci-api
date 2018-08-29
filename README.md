@@ -69,7 +69,37 @@
 |  | timestamp | TimeStamp |  |  |
 
 ## Installation
-* Install the dependencies using pipenv
- * https://pipenv.readthedocs.io/en/latest/basics/
-
-* Configure Database in config.py
+* Install Docker
+* Build Docker Image
+```
+git clone ssh://git@git.the-morpheus.de:322/challengeInterface/backend.git
+docker build -t backend .
+```
+* Start Docker Container
+```
+docker run -it -p 8080:80 -e MYSQL_PASSWORD=myPassword backend
+```
+* Use docker-compose
+```
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    container_name: root_db_1
+    restart: always
+    ports:
+      - "9999:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hc
+    volumes:
+      - "/srv/mysql:/var/lib/mysql"
+  backend:
+    image: backend
+    container_name: root_backend_1
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      MYSQL_PASSWORD: myPassword
+```
