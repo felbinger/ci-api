@@ -48,9 +48,15 @@ class UserResource(MethodView):
             token_obj = Token.query.filter_by(token=token).first()
             if token_obj:
                 if not token_obj.is_valid() or not token_obj.user:
-                    return self._register_user()
+                    return ResultErrorSchema(
+                        message='Invalid Access-Token',
+                        errors=['invalid access token'],
+                        status_code=401
+                    ).jsonify()
                 else:
                     return self._create_user_as_admin()
+        else:
+            return self._register_user()
 
     """
     curl -X PUT localhost:5000/api/users/89789fc7-4655-413d-8339-6fabedb1eab0 -H "Access-Token: $token" \

@@ -19,6 +19,7 @@
 | GET | /api/users | Access-Token | / | Admin: Get all Accounts (Infos) | Done |
 | GET | /api/users/<uuid:string> | Access-Token | / | Admin: Get Account by UUID | Done |
 | POST | /api/users |  | username, email, password | Register a new Account | Done |
+| POST | /api/users | Access-Token | username, email, password, role | Admin: Create a new Account | Done |
 | PUT | /api/users/<uuid:string> | Access-Token | username (and/or) email (and/or) password | Admin: Update User (by UUID) | Done |
 | PUT | /api/users/me | Access-Token | username (and/or) email (and/or) password | Update your Account | Done |
 | DELETE | /api/users/<uuid:string> | Access-Token | / | Admin: Delete User (by UUID) | Done |
