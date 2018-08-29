@@ -71,16 +71,16 @@
 ## Installation
 * Install Docker
 * Build Docker Image
-```
+```bash
 git clone ssh://git@git.the-morpheus.de:322/challengeInterface/backend.git
 docker build -t backend .
 ```
 * Start Docker Container
-```
+```bash
 docker run -it -p 8080:80 -e MYSQL_PASSWORD=myPassword backend
 ```
 * Use docker-compose
-```
+```bash
 version: '3'
 services:
   db:
