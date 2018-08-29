@@ -9,6 +9,7 @@ from ..authentication import require_token, require_admin
 from ..role import Role
 from .models import User
 from ..authentication import Token
+from ..solve import Solve
 from .schemas import DaoCreateUserSchema, DaoUpdateUserSchema, DaoRegisterUserSchema
 
 
@@ -81,8 +82,14 @@ class UserResource(MethodView):
     """
     @require_token
     @require_admin
-    def delete(self, uuid, **_):
-        user = User.query.filter_by(public_id=uuid).first()
+    def delete(self, uuid, user, **_):
+        if uuid != 'me':
+            user = User.query.filter_by(public_id=uuid).first()
+
+        for token in Token.query.filter_by(user=user).all():
+            db.session.delete(token)
+        for solve in Solve.query.filter_by(user=user).all():
+            db.session.delete(solve)
         db.session.delete(user)
         db.session.commit()
         return '', 204
