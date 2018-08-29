@@ -30,7 +30,7 @@ def create_app(testing_config=None):
     register_resource(app, UserResource, 'user_api', '/api/users', pk='uuid', pk_type='string')
     register_resource(app, AuthResource, 'auth_api', '/api/auth', pk=None, get=False, put=False)
     register_resource(app, RoleResource, 'role_api', '/api/roles', pk='name', pk_type='string')
-    register_resource(app, ChallengeResource, 'challenge_api', '/api/challenge', pk='name', pk_type='string',
+    register_resource(app, ChallengeResource, 'challenge_api', '/api/challenges', pk='name', pk_type='string',
                       delete=False)
     register_resource(app, SolveResource, 'solve_api', '/api/solve', pk='name', pk_type='string',
                       get=False, post=False, delete=False)
