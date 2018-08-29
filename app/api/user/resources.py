@@ -82,18 +82,35 @@ class UserResource(MethodView):
     curl -X DELETE localhost:5000/api/users/me -H "Access-Token: $token"
     """
     @require_token
-    @require_admin
     def delete(self, uuid, user, **_):
-        if uuid != 'me':
-            user = User.query.filter_by(public_id=uuid).first()
-
-        for token in Token.query.filter_by(user=user).all():
-            db.session.delete(token)
-        for solve in Solve.query.filter_by(user=user).all():
-            db.session.delete(solve)
-        db.session.delete(user)
-        db.session.commit()
-        return '', 204
+        if uuid == 'me':
+            for token in Token.query.filter_by(user=user).all():
+                db.session.delete(token)
+            for solve in Solve.query.filter_by(user=user).all():
+                db.session.delete(solve)
+            db.session.delete(user)
+            db.session.commit()
+            return '', 204
+        else:
+            token = request.headers.get('Access-Token')
+            if token:
+                token_obj = Token.query.filter_by(token=token).first()
+                if token_obj:
+                    if not token_obj.is_valid() or not token_obj.user:
+                        return ResultErrorSchema(
+                            message='Invalid Access-Token',
+                            errors=['invalid access token'],
+                            status_code=401
+                        ).jsonify()
+                    else:
+                        user = User.query.filter_by(public_id=uuid).first()
+                        for token in Token.query.filter_by(user=user).all():
+                            db.session.delete(token)
+                        for solve in Solve.query.filter_by(user=user).all():
+                            db.session.delete(solve)
+                        db.session.delete(user)
+                        db.session.commit()
+                        return '', 204
 
     def _update_user(self, user):
         schema = DaoUpdateUserSchema()
