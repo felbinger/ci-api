@@ -2,7 +2,6 @@
 
 ## TODO
 * PyTests
-* URL API implementation for (coding) challenges
 * Comment code
 
 ## API Schema
