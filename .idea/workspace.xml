@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/user/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/user/resources.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,7 +166,7 @@
           <entry key="Dockerfile" value="11" />
           <entry key="Pipfile" value="30" />
           <entry key="md" value="259" />
-          <entry key="py" value="6169" />
+          <entry key="py" value="6171" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
@@ -176,7 +175,7 @@
           <entry key="Dockerfile" value="11" />
           <entry key="Markdown" value="259" />
           <entry key="PLAIN_TEXT" value="85" />
-          <entry key="Python" value="6169" />
+          <entry key="Python" value="6171" />
           <entry key="TOML file" value="30" />
         </counts>
       </usages-collector>
@@ -187,12 +186,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/api/user/resources.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+            <state relative-caret-position="466">
+              <caret line="183" column="28" lean-forward="true" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1535567361253" expanded="true" signature="1582:1587" ph="..." />
-                <marker date="1535567361253" expanded="true" signature="5442:6908" ph="..." />
+                <marker date="1535567501680" expanded="true" signature="1582:1587" ph="..." />
+                <marker date="1535567501680" expanded="true" signature="5515:6981" ph="..." />
               </folding>
             </state>
           </provider>
@@ -881,12 +880,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/api/user/resources.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+        <state relative-caret-position="466">
+          <caret line="183" column="28" lean-forward="true" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1535567361253" expanded="true" signature="1582:1587" ph="..." />
-            <marker date="1535567361253" expanded="true" signature="5442:6908" ph="..." />
+            <marker date="1535567501680" expanded="true" signature="1582:1587" ph="..." />
+            <marker date="1535567501680" expanded="true" signature="5515:6981" ph="..." />
           </folding>
         </state>
       </provider>

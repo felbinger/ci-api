@@ -26,7 +26,7 @@ class Config(object):
 
 
 class ProductionConfig(Config):
-    ENABLE_MAIL = True
+    ENABLE_MAIL = False # True
 
 
 class DevelopmentConfig(Config):

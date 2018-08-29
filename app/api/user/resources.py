@@ -79,6 +79,7 @@ class UserResource(MethodView):
 
     """
     curl -X DELETE localhost:5000/api/users/2a1c8ba8-f12e-4d2a-97c3-2fe454fefc6e -H "Access-Token: $token"
+    curl -X DELETE localhost:5000/api/users/me -H "Access-Token: $token"
     """
     @require_token
     @require_admin
