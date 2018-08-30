@@ -6,28 +6,29 @@ class Config(object):
     TESTING = False
     SECRET_KEY = 'jnw639kO3{28W1cvtDl]tjdrzkkd3YJCB(2IPK1deBKe*v!I6e0NB1$n3admTreE79Q%MxOuVtVFbuAsb69Mb2gPPpCQ?GAFcUMoH'
     TOKEN_VALIDITY = 180
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+
+    ENABLE_MAIL = False
+
+
+class ProductionConfig(Config):
     username = os.environ.get('MYSQL_USERNAME')
     password = os.environ.get('MYSQL_PASSWORD')
     hostname = os.environ.get('MYSQL_HOSTNAME')
     port = os.environ.get('MYSQL_PORT')
     database = os.environ.get('MYSQL_DATABASE')
-    # SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'  # only for testing - bugged config
+    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
 
-    ENABLE_MAIL = False
-
-    SMTP_HOSTNAME = os.environ.get('SMTP_HOSTNAME')
-    SMTP_PORT = os.environ.get('SMTP_PORT')
-    SMTP_USERNAME = os.environ.get('SMTP_USERNAME')
-    SMTP_PASSWORD = os.environ.get('SMTP_PASSWORD')
+    # ENABLE_MAIL = True
 
     # TODO add something
     MAIL_SUBJECT = "Subject"
     MAIL_MESSAGE = "Message"
 
-
-class ProductionConfig(Config):
-    ENABLE_MAIL = False # True
+    SMTP_HOSTNAME = os.environ.get('SMTP_HOSTNAME')
+    SMTP_PORT = os.environ.get('SMTP_PORT')
+    SMTP_USERNAME = os.environ.get('SMTP_USERNAME')
+    SMTP_PASSWORD = os.environ.get('SMTP_PASSWORD')
 
 
 class DevelopmentConfig(Config):
@@ -36,5 +37,4 @@ class DevelopmentConfig(Config):
 
 
 class TestingConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
     TESTING = True

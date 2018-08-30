@@ -12,20 +12,3 @@ class Role(db.Model):
             'name': self.name,
             'description': self.description
         }
-
-    def check(self):
-        # Create default roles if the does not exist.
-        if len(Role.query.all()) < 2:
-            if not Role.query.filter_by(name="admin").first():
-                admin = Role(
-                    name="admin",
-                    description="Administrator"
-                )
-                db.session.add(admin)
-            if not Role.query.filter_by(name="user").first():
-                user = Role(
-                    name="user",
-                    description="User"
-                )
-                db.session.add(user)
-            db.session.commit()
