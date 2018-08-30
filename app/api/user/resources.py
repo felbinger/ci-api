@@ -55,7 +55,14 @@ class UserResource(MethodView):
                         status_code=401
                     ).jsonify()
                 else:
-                    return self._create_user_as_admin()
+                    if token_obj.user.role.name == 'admin':
+                        return self._create_user_as_admin()
+                    else:
+                        return ResultErrorSchema(
+                            message='Forbidden',
+                            errors=['forbidden'],
+                            status_code=403
+                        ).jsonify()
         else:
             return self._register_user()
 
@@ -71,8 +78,8 @@ class UserResource(MethodView):
             target = User.query.filter_by(public_id=uuid).first()
             if not target:
                 return ResultErrorSchema(
-                    message='User does not exists',
-                    errors=['user does not exists'],
+                    message='User does not exist',
+                    errors=['user does not exist'],
                     status_code=404
                 ).jsonify()
             return require_admin(self._update_user_as_admin)(user=user, target=target)
@@ -124,7 +131,7 @@ class UserResource(MethodView):
             ).jsonify()
         if 'role' in data.keys():
             return ResultErrorSchema(
-                message='You are not allowed to change your role',
+                message='You are not allowed to change your role!',
                 errors='not allowed to change role',
                 status_code=403
             ).jsonify()

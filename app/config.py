@@ -11,7 +11,8 @@ class Config(object):
     hostname = os.environ.get('MYSQL_HOSTNAME')
     port = os.environ.get('MYSQL_PORT')
     database = os.environ.get('MYSQL_DATABASE')
-    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
+    # SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'  # only for testing - bugged config
 
     ENABLE_MAIL = False
 

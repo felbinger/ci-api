@@ -2,6 +2,7 @@ from app.api import Role, User
 import json
 
 
+"""
 def test_create_role(app, client):
     token = _get_token(app, client)
     data = {'name': 'testrolle', 'description': 'testrollenbeschreibung'}
@@ -71,6 +72,8 @@ def test_delete_role(app, client):
     _create_dummy_role(app=app, client=client, name='support')
     resp = client.delete(f'/api/roles/support', headers={'Access-Token': _get_token(app, client)})
     assert resp.status_code == 204
+
+"""
 
 
 def _get_token(app, client):
