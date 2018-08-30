@@ -26,7 +26,8 @@ class RoleResource(MethodView):
             if not data:
                 return ResultErrorSchema(
                     message='Role does not exist!',
-                    errors=['role does not exist']
+                    errors=['role does not exist'],
+                    status_code=404
                 ).jsonify()
             return ResultSchema(
                 data=data.jsonify() or None
