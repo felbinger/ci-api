@@ -16,5 +16,4 @@ class DaoUrlSchema(Schema):
 
 class DaoUpdateChallengeSchema(Schema):
     description = fields.Str(validate=[validate.Length(min=1, max=512)])
-    yt_challenge_id = fields.Str(validate=[validate.Length(min=1, max=10)])
-    yt_solution_id = fields.Str(validate=[validate.Length(min=1, max=10)])
+    url = fields.Str(validate=[validate.Length(min=1, max=10)])

@@ -37,7 +37,6 @@ class ChallengeResource(MethodView):
     curl -H "Access-Token: $token" -X POST localhost:5000/api/challenge -H "Content-Type: application/json" \
     -d '{"name": "Test", "description": "TestChallenge", "flag": "TMT{t3$T}", "category": "HC", "urls": [{}]}'
     """
-    # TODO recheck (url feature)
     @require_token
     @require_admin
     def post(self, **_):
@@ -101,6 +100,7 @@ class ChallengeResource(MethodView):
     curl -H "Access-Token: $token" -X PUT localhost:5000/api/challenge/test -H "Content-Type: application/json" \
     -d '{"description": "Test2"}'
     """
+    # TODO recheck -  how to update the dynamic assigned url's ? id from jsonify (need to be added) in the payload?
     @require_token
     @require_admin
     def put(self, name, **_):
