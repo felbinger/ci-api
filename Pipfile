@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-dev = "bash -c 'FLASK_APP=app FLASK_DEBUG=1 FLASK_ENV=development flask run'"
+dev = "sh -c 'FLASK_APP=app FLASK_DEBUG=1 FLASK_ENV=development flask run'"
 prod = "gunicorn -w 4 app:application -b 0.0.0.0:80"
 test = "pytest"
 cov = "pytest --cov=cc tests"
