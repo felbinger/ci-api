@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/schemas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +134,7 @@
     <session id="977645913">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.9" value="4" />
@@ -171,7 +166,7 @@
           <entry key="Dockerfile" value="11" />
           <entry key="Pipfile" value="30" />
           <entry key="md" value="259" />
-          <entry key="py" value="13629" />
+          <entry key="py" value="14020" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
@@ -180,7 +175,7 @@
           <entry key="Dockerfile" value="11" />
           <entry key="Markdown" value="259" />
           <entry key="PLAIN_TEXT" value="85" />
-          <entry key="Python" value="13629" />
+          <entry key="Python" value="14020" />
           <entry key="TOML file" value="30" />
         </counts>
       </usages-collector>
@@ -191,10 +186,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="333">
+              <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding>
-                <marker date="1535809414495" expanded="true" signature="743:748" ph="..." />
+                <marker date="1535809689453" expanded="true" signature="743:748" ph="..." />
               </folding>
             </state>
           </provider>
@@ -623,7 +618,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.19423692" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.19423692" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -634,8 +629,8 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49893278" visible="true" weight="0.3623656" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.26638025" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49893278" weight="0.3623656" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.26559138" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010672" side_tool="true" weight="0.3623656" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" weight="0.32903227" />
@@ -945,10 +940,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="333">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding>
-            <marker date="1535809414495" expanded="true" signature="743:748" ph="..." />
+            <marker date="1535809689453" expanded="true" signature="743:748" ph="..." />
           </folding>
         </state>
       </provider>

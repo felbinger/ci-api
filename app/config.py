@@ -23,8 +23,12 @@ class ProductionConfig(Config):
     # ENABLE_MAIL = True
 
     # TODO add something
-    MAIL_SUBJECT = "Subject"
-    MAIL_MESSAGE = "Message"
+    MAIL_SUBJECT = "The Morpheus Tutorials - Challenges"
+    MAIL_MESSAGE = """
+Hallo,
+schön das du dich bei uns registriert hast!
+
+"""
 
     SMTP_HOSTNAME = os.environ.get('SMTP_HOSTNAME')
     SMTP_PORT = os.environ.get('SMTP_PORT')
