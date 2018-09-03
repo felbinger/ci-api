@@ -4,3 +4,4 @@ from .role import Role, RoleResource
 from .schemas import ResultErrorSchema, ResultSchema
 from .challenge import Challenge, Url, ChallengeResource
 from .solve import Solve, SolveResource
+from .categories import Category, CategoryResource

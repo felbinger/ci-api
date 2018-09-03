@@ -1,4 +1,4 @@
-from app.api import User, Role, Challenge, Solve
+from app.api import User, Role, Challenge, Solve, Category
 from uuid import UUID
 
 
@@ -7,10 +7,15 @@ def test_create_models(client):
 
 
 def test_create_challenge(app, client):
+    cat = Category(
+        name='test',
+        description='Test'
+    )
     db = client.db
-    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category="HC")
+    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category=cat)
     with app.app_context():
         db.session.add(challenge)
+        db.session.add(cat)
         db.session.commit()
         assert len(Challenge.query.all()) == 1
 
@@ -25,15 +30,31 @@ def test_solve_challenge(app, client):
         password='testineTestHatEinPw',
         role=role
     )
-    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category="HC")
+    cat = Category(
+        name='test',
+        description='Test'
+    )
+    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category=cat)
     solve = Solve(challenge=challenge, user=user)
     with app.app_context():
         db.session.add(role)
         db.session.add(user)
         db.session.add(challenge)
+        db.session.add(cat)
         db.session.add(solve)
         db.session.commit()
         assert len(Solve.query.all()) == 1
+
+
+def test_create_category(app, client):
+    cat = Category(
+        name='test',
+        description='Test'
+    )
+    db = client.db
+    with app.app_context():
+        db.session.add(cat)
+        db.session.commit()
 
 
 def test_create_role(app, client):

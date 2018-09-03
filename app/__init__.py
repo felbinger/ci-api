@@ -1,9 +1,10 @@
 import os
-from flask import Flask
+from flask import Flask, send_from_directory
 
-from .api import UserResource, AuthResource, RoleResource, ChallengeResource, SolveResource
+from .api import UserResource, AuthResource, RoleResource, ChallengeResource, SolveResource, CategoryResource
 from .config import ProductionConfig, DevelopmentConfig
 from .db import db
+from .views import general, challenges, admin
 
 
 def create_app(testing_config=None):
@@ -30,17 +31,16 @@ def create_app(testing_config=None):
     register_resource(app, UserResource, 'user_api', '/api/users', pk='uuid', pk_type='string')
     register_resource(app, AuthResource, 'auth_api', '/api/auth', pk=None, get=False, put=False)
     register_resource(app, RoleResource, 'role_api', '/api/roles', pk='name', pk_type='string')
-    register_resource(app, ChallengeResource, 'challenge_api', '/api/challenges', pk='name', pk_type='string',
-                      delete=False)
-    register_resource(app, SolveResource, 'solve_api', '/api/solve', pk='name', pk_type='string',
-                      get=False, post=False, delete=False)
+    register_resource(app, ChallengeResource, 'challenge_api', '/api/challenges', delete=False)
+    register_resource(app, SolveResource, 'solve_api', '/api/solve', get=False, delete=False)
+    register_resource(app, CategoryResource, 'category_api', '/api/categories', pk='name', pk_type='string')
 
     return app
 
 
 def register_models():
     # noinspection PyUnresolvedReferences
-    from .api import User, Token, Role, Challenge, Solve, Url
+    from .api import User, Token, Role, Challenge, Solve, Url, Category
 
 
 def register_resource(app, resource, endpoint, url, pk='_id', pk_type='int',
@@ -59,6 +59,11 @@ def register_resource(app, resource, endpoint, url, pk='_id', pk_type='int',
 
 
 def register_views(app):
+    # register blueprints
+    app.register_blueprint(general)
+    app.register_blueprint(challenges, url_prefix='/challenges')
+    app.register_blueprint(admin, url_prefix='/admin')
+
     # 404 error page
     @app.errorhandler(404)
     def not_found(e):
@@ -66,8 +71,36 @@ def register_views(app):
 
     # 403 error page
     @app.errorhandler(403)
-    def not_found(e):
+    def permission_denied(e):
         return 'Permissions Denied!', 403
+
+    @app.route('/favicon.ico')
+    def favicon():
+        return send_from_directory(
+            os.path.join(general.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon'
+        )
+
+    @app.route('/robots.txt')
+    def robots():
+        return send_from_directory(os.path.join(general.root_path, 'static'), 'robots.txt', mimetype='text/plain')
+
+    @app.route('/static/vendor/images/sort_both.png')
+    def sort_both():
+        return send_from_directory(
+            os.path.join(general.root_path, 'static/vendor/datatables/images/'), 'sort_both.png', mimetype='image/png'
+        )
+
+    @app.route('/static/vendor/images/sort_asc.png')
+    def sort_asc():
+        return send_from_directory(
+            os.path.join(general.root_path, 'static/vendor/datatables/images/'), 'sort_asc.png', mimetype='image/png'
+        )
+
+    @app.route('/static/vendor/images/sort_desc.png')
+    def sort_desc():
+        return send_from_directory(
+            os.path.join(general.root_path, 'static/vendor/datatables/images/'), 'sort_desc.png', mimetype='image/png'
+        )
 
 
 app = application = create_app()

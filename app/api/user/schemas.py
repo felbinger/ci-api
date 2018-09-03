@@ -35,5 +35,5 @@ class DaoRegisterUserSchema(Schema):
 class DaoUpdateUserSchema(Schema):
     username = fields.Str()
     email = fields.Str()
-    password = fields.Str()
+    password = fields.Str(validate=[validate.Length(min=8, max=200)])
     role = fields.Str()

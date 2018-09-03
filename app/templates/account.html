@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Account</title>
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+        <!-- MetisMenu 1.1.3 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.css" integrity="sha256-wX02j8eyavr6AAbf7QKnd+hn+WMGX3wLsItXJT6d8hg=" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.js" integrity="sha256-j/etbFTYvJhMr1E7dJMJhIt3X0kMYoI27gL+aKeB3no=" crossorigin="anonymous"></script>
+        <!-- Font Awesome 4.6.3 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+        <!-- Custom CSS -->
+		<link href="{{url_for('static',filename='dist/css/sb-admin-2.css')}}" rel="stylesheet">
+		<!-- Custom Theme JavaScript -->
+		<script src="{{url_for('static',filename='dist/js/sb-admin-2.js')}}"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            {% include "navigation.html" %}
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Account</h1>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Settings -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Settings</div>
+                                        <div class="panel-body">
+                                            <div>
+                                                {% with messages = get_flashed_messages(with_categories=true) %}
+                                                <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+                                                {% if messages %}
+                                                  {% for category, message in messages %}
+                                                    <div class="form-group"><div class="alert alert-{{ category }}"><span class="fa fa-info-circle"></span> {{ message }}</div>
+                                                  {% endfor %}
+                                                {% endif %}
+                                                {% endwith %}
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <form role="form" method="POST">
+                                                        <div class="form-group">
+                                                            <label>Username</label>
+                                                            <input name="username" class="form-control" value="{{ data['username'] }}" placeholder="Username">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>E-Mail Address</label>
+                                                            <input name="email" class="form-control" value="{{ data['email'] }}" placeholder="mail@example.com">
+                                                        </div>
+                                                        <button type="button" class="btn btn-default pull-middle" data-toggle="modal" data-target="#modalChangePassword">Change Password</button>
+                                                        <button type="submit" class="btn btn-primary pull-right" name="action" value="update">Save Changes</button>
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="modalChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                        <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+                                                                    </div>
+                                                                    <form action="POST">
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="form-group">
+                                                                                        <label>Password</label>
+                                                                                        <input name="password1" class="form-control" type="password">
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>Password (again)</label>
+                                                                                        <input name="password2" class="form-control" type="password">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- /.col-md-12 (nested) -->
+                                                                            </div>
+                                                                            <!-- /.row (nested) -->
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                            <button type="submit" name="action" value="changePassword" class="btn btn-primary">Save changes</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <!-- /.modal-content -->
+                                                            </div>
+                                                            <!-- /.modal-dialog -->
+                                                        </div>
+                                                        <!-- /.modal -->
+                                                    </form>
+                                                </div>
+                                                <!-- /.col-lg-12 (nested) -->
+                                            </div>
+                                            <!-- /.row (nested) -->
+                                        </div>
+                                        <!-- /.panel-body -->
+                                    </div>
+                                    <!-- /.panel -->
+                                    {% if data['solved_challenges'] != [] %}
+                                    <!-- Solved Challenges -->
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">Solved Challenges</div>
+                                        <!-- /.panel-heading -->
+                                        <div class="panel-body">
+                                            <div class="list-group">
+                                                {% for challenge in data['solved_challenges'] %}
+                                                <div class="list-group-item">
+                                                    {{ challenge['type'] }} - {{ challenge['name'] }}
+                                                    <span class="pull-right text-muted small"><em>{{ challenge['time'] }}</em></span>
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                            <!-- /.list-group -->
+                                        </div>
+                                        <!-- /.panel-body -->
+                                    </div>
+                                    <!-- /.panel -->
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.col-lg-12 -->
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </body>
+</html>

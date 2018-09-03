@@ -31,7 +31,7 @@
 | PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
 |||||||
 | GET | /api/solve/ | Access-Token | / | Get all solved challenges | Done |
-| POST | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | Done | |
+| PUT | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | Done | |
 
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings |

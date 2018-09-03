@@ -3,6 +3,7 @@ from flask import request
 
 from ..schemas import ResultSchema, ResultErrorSchema
 from .models import Challenge, Url
+from ..categories import Category
 from app.db import db
 from ..authentication import require_token, require_admin
 from .schemas import DaoCreateChallengeSchema, DaoUpdateChallengeSchema, DaoUrlSchema
@@ -14,15 +15,15 @@ class ChallengeResource(MethodView):
     curl -H "Access-Token: $token" -X GET localhost:5000/api/challenge/test
     """
     @require_token
-    def get(self, name, **_):
-        if name is None:
+    def get(self, _id, **_):
+        if _id is None:
             # get all challenges
             return ResultSchema(
                 data=[d.jsonify() for d in Challenge.query.all()]
             ).jsonify()
         else:
             # get the challenge object by the submitted name in the resource (url)
-            data = Challenge.query.filter_by(name=name).first()
+            data = Challenge.query.filter_by(id=_id).first()
             if not data:
                 return ResultErrorSchema(
                     message='Challenge does not exist!',
@@ -58,12 +59,13 @@ class ChallengeResource(MethodView):
                     errors=['name already in use'],
                     status_code=400
                 ).jsonify()
+        category = Category.query.filter_by(name=data.get('category')).first()
         # create the challenge
         challenge = Challenge(
             name=data.get('name'),
             description=data.get('description'),
             flag=data.get('flag'),
-            category=data.get('category')
+            category=category
         )
 
         # add all submitted urls
@@ -103,11 +105,11 @@ class ChallengeResource(MethodView):
     # TODO recheck -  how to update the dynamic assigned url's ? id from jsonify (need to be added) in the payload?
     @require_token
     @require_admin
-    def put(self, name, **_):
+    def put(self, _id, **_):
         data = request.get_json() or {}
         schema = DaoUpdateChallengeSchema()
         # use the schema to validate the submitted data
-        error = schema.validate(data)
+        data, error = schema.load(data)
         if error:
             return ResultErrorSchema(
                 message='Payload is invalid',
@@ -115,7 +117,7 @@ class ChallengeResource(MethodView):
                 status_code=400
             ).jsonify()
         # get the challenge object by the submitted name
-        challenge = Challenge.query.filter_by(name=name).first()
+        challenge = Challenge.query.filter_by(id=_id).first()
         if not challenge:
             return ResultErrorSchema(
                 message='Challenge does not exist!',

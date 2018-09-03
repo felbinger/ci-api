@@ -1,6 +1,7 @@
 
 from app.db import db
 from sqlalchemy import Column, String, Integer, ForeignKey
+from ..solve import Solve
 
 
 class Challenge(db.Model):
@@ -8,14 +9,22 @@ class Challenge(db.Model):
     flag = Column('flag', String(80), unique=True, nullable=False)
     name = Column('name', String(80), unique=True, nullable=False)
     description = Column('description', String(512), nullable=False)
-    category = Column('category', String(80), nullable=False)
+    yt_challenge_id = Column('ytChallengeId', String(20), nullable=True)
+    yt_solution_id = Column('ytSolutionId', String(20), nullable=True)
+
+    category_id = Column('category', Integer, ForeignKey('category.id'), nullable=False)
+    category = db.relationship('Category', backref=db.backref('challenges', lazy=True))
 
     def jsonify(self):
         return {
+            'id': self.id,
             'name': self.name,
             'description': self.description,
-            'category': self.category,
-            'urls': [url.jsonify() for url in Url.query.filter_by(challenge=self).all()]
+            'category': self.category.jsonify(),
+            'ytChallengeId': self.yt_challenge_id,
+            'ytSolutionId': self.yt_solution_id,
+            'urls': [url.jsonify() for url in Url.query.filter_by(challenge=self).all()],
+            'solveCount': len(Solve.query.filter_by(challenge=self).all())
         }
 
 

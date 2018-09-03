@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin Dashboard</title>
+        <!-- jQuery -->
+        <!--<script src="../vendor/jquery/jquery.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+        <!-- Bootstrap 3.3.7 CSS -->
+        <!--<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+        <!-- MetisMenu 1.1.3 -->
+        <!--<link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.css" integrity="sha256-wX02j8eyavr6AAbf7QKnd+hn+WMGX3wLsItXJT6d8hg=" crossorigin="anonymous" />
+        <!--<script src="../vendor/metisMenu/metisMenu.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.js" integrity="sha256-j/etbFTYvJhMr1E7dJMJhIt3X0kMYoI27gL+aKeB3no=" crossorigin="anonymous"></script>
+        <!-- Font Awesome 4.6.3 -->
+        <!--<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+        <!-- Custom CSS -->
+        <link href="{{url_for('static',filename='dist/css/sb-admin-2.css')}}" rel="stylesheet">
+        <!-- Custom Theme JavaScript -->
+        <script src="{{url_for('static',filename='dist/js/sb-admin-2.js')}}"></script>
+        <!-- DataTables CSS -->
+        <link href="{{url_for('static',filename='vendor/datatables-plugins/dataTables.bootstrap.css')}}" rel="stylesheet">
+        <!-- DataTables Responsive CSS -->
+        <link href="{{url_for('static',filename='vendor/datatables-responsive/dataTables.responsive.css')}}" rel="stylesheet">
+        <!-- DataTables JavaScript -->
+        <script src="{{url_for('static',filename='vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{url_for('static',filename='vendor/datatables-plugins/dataTables.bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static',filename='vendor/datatables-responsive/dataTables.responsive.js')}}"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            {% include "navigation.html" %}
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Admin Dashboard</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                        <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+                        {% if messages %}
+                          {% for category, message in messages %}
+                            <div class="form-group"><div class="alert alert-{{ category }}"><span class="fa fa-info-circle"></span> {{ message }}</div></div>
+                          {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Accounts
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="accountList">
+                                    <thead>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Created</th>
+                                            <th>Last Login</th>
+                                            <th>Role</th>
+                                            <!-- TODO Priority: low - set the + Icon in the middle of the column (horiz-align: middle; text-align: center; (not working)) -->
+                                            <th align="center" class="no-sort"><a data-target="#modalCreateAccount" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for account in data['accounts'] %}
+                                        <tr class="odd gradeX">
+                                            <td>{{ account['username'] }}</td>
+                                            <td>{{ account['created'] }}</td>
+                                            <td>{{ account['lastLogin'] }}</td>
+                                            <td>{{ account['role']['description'] }}</td>
+                                            <td align="center">
+                                                <a onclick='openModalUpdateAccount({{ account|tojson }})'>
+                                                    <i class="fa fa-gear fa-fw"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Challenge
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="challengeList">
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Name</th>
+                                            <th>Solves</th>
+                                            <!-- TODO Priority: low - set the + Icon in the middle of the column (horiz-align: middle; text-align: center; (not working)) -->
+                                            <th align="center" class="no-sort"><a data-target="#modalCreateChallenge" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for challenge in data['challenges'] %}
+                                        <tr class="odd gradeX">
+                                            <td>{{ challenge['category']['description'] }}</td>
+                                            <td>{{ challenge['name'] }}</td>
+                                            <td>{{ challenge['solveCount'] }}</td>
+                                            <td align="center">
+                                                <a onclick='openModalUpdateChallenge({{ challenge|tojson }})'>
+                                                    <i class="fa fa-gear fa-fw"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Roles
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="rolelist">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <!-- TODO Priority: low - set the + Icon in the middle of the column (horiz-align: middle; text-align: center; (not working)) -->
+                                            <th align="center" class="no-sort"><a data-target="#modalCreateRole" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for role in data['roles'] %}
+                                        <tr class="odd gradeX">
+                                            <td>{{ role['name'] }}</td>
+                                            <td>{{ role['description'] }}</td>
+                                            <td align="center">
+                                                <a onclick='openModalUpdateRole({{ role|tojson }})'>
+                                                    <i class="fa fa-gear fa-fw"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Challenge Categories
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="categoryList">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <!-- TODO Priority: low - set the + Icon in the middle of the column (horiz-align: middle; text-align: center; (not working)) -->
+                                            <th align="center" class="no-sort"><a data-target="#modalCreateCategory" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for category in data['categories'] %}
+                                        <tr class="odd gradeX">
+                                            <td>{{ category['name'] }}</td>
+                                            <td>{{ category['description'] }}</td>
+                                            <td align="center">
+                                                <a onclick='openModalUpdateCategory({{ category|tojson }})'>
+                                                    <i class="fa fa-gear fa-fw"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </body>
+
+    <!-- Modal: Create Account -->
+    <div class="modal fade" id="modalCreateAccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create Account</h4>
+                </div>
+                <form method="POST" role="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input name="username" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>E-Mail Address</label>
+                                        <input name="email" class="form-control" placeholder="mail@example.com" value="">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input id="password" name="password" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Role</label>
+                                        <select name="role" class="form-control">
+                                            {% for role in data['roles'] %}
+                                            <option value="{{ role['name'] }}">{{ role['description'] }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="modalButtonCreateAccount" name="action" value="createAccount" class="btn btn-primary">Create Account</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Create Challenge -->
+    <div class="modal fade" id="modalCreateChallenge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create Challenge</h4>
+                </div>
+                <form method="POST" role="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input name="name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <input name="description" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Flag</label>
+                                        <input name="flag" class="form-control" placeholder="TMT{fL4g}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <select name="category" class="form-control">
+                                            {% for category in data['categories'] %}
+                                            <option value="{{ category['name'] }}">{{ category['description'] }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" name="action" value="createChallenge" class="btn btn-primary">Create Challenge</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Create Role -->
+    <div class="modal fade" id="modalCreateRole" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create Role</h4>
+                </div>
+                <form method="POST" role="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input name="name" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input name="description" class="form-control" value="">
+                                </div>
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="modalButtonCreateRole" name="action" value="createRole" class="btn btn-primary">Create Role</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Create Category -->
+    <div class="modal fade" id="modalCreateCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create Category</h4>
+                </div>
+                <form method="POST" role="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input name="name" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input name="description" class="form-control" value="">
+                                </div>
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="modalButtonCreateCategory" name="action" value="createCategory" class="btn btn-primary">Create Category</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Modify Account -->
+    <div class="modal fade" id="modalUpdateAccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Update Account</h4>
+                </div>
+                <form method="POST" name="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>ID</label>
+                                    <input id="updateID" name="id" class="form-control" type="text" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input id="updateUsername" name="username" class="form-control" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>E-Mail</label>
+                                    <input id="updateEmail" name="email" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                            <!-- /.col-md-6 (nested) -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Created</label>
+                                    <input id="updateCreated" class="form-control" type="text" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Login</label>
+                                    <input id="updateLastLogin" class="form-control" type="text" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label>Role</label>
+                                    <select name="role" class="form-control" required>
+                                        {% for role in data['roles'] %}
+                                        <option value="{{ role['name'] }}">{{ role['description'] }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.col-md-6 (nested) -->
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="modalButtonDeleteAccount" name="action" value="deleteAccount" class="btn btn-danger">Delete Account</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-target="#modalChangePassword" data-toggle="modal">Change Password</button>
+                        <button type="submit" id="modalButtonUpdateAccount" name="action" value="updateAccount" class="btn btn-primary">Update Account</button>
+                    </div>
+                    <!-- Modal: Change Password -->
+                    <div class="modal fade" id="modalChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input name="password1" class="form-control" type="password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Password (again)</label>
+                                                <input name="password2" class="form-control" type="password">
+                                            </div>
+                                        </div>
+                                        <!-- /.col-md-12 (nested) -->
+                                    </div>
+                                    <!-- /.row (nested) -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" id="modalButtonUpdatePassword" name="action" value="updatePassword" class="btn btn-primary">Update Password</button>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Modify Role -->
+    <div class="modal fade" id="modalUpdateRole" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Update Role</h4>
+                </div>
+                <form method="POST" name="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input id="updateRoleName" name="name" class="form-control" type="text" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input id="updateRoleDescription" name="description" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="modalButtonDeleteRole" name="action" value="deleteRole" class="btn btn-danger">Delete Role</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="modalButtonUpdateRole" name="action" value="updateRole" class="btn btn-primary">Update Role</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Modify Category -->
+    <div class="modal fade" id="modalUpdateCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Update Category</h4>
+                </div>
+                <form method="POST" name="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input id="updateCategoryName" name="name" class="form-control" type="text" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input id="updateCategoryDescription" name="description" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="modalButtonDeleteCategory" name="action" value="deleteCategory" class="btn btn-danger">Delete Category</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="modalButtonUpdateCategory" name="action" value="updateCategory" class="btn btn-primary">Update Category</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Modify Challenge -->
+    <div class="modal fade" id="modalUpdateChallenge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Update Challenge</h4>
+                </div>
+                <form method="POST" role="form">
+                    <input type="hidden" id="updateChallengeId" name="id" class="form-control" readonly>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <input id="updateChallengeCategory" class="form-control" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>YouTube Challenge Video ID</label>
+                                        <input id="updateChallengeytChallengeId" name="ytChallengeId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input id="updateChallengeName" class="form-control" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>YouTube Solution Video ID</label>
+                                        <input id="updateChallengeytSolutionId" name="ytSolutionId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea id="updateChallengeDescription" style="resize: vertical;" name="description" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-12 (nested) -->
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" name="action" value="updateChallenge" class="btn btn-primary">Update Challenge</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script>
+        function openModalUpdateAccount(data) {
+        	$('#updateID').val(data['publicId']);
+            $("#updateUsername").val(data["username"]);
+            $("#updateCreated").val(data["created"]);
+            $("#updateLastLogin").val(data["lastLogin"]);
+            $("#updateEmail").val(data["email"]);
+            $('select[name="role"]').find('option[value="' + data['role']['name'] + '"]').attr("selected",true);
+            $('#modalUpdateAccount').modal('show');
+        }
+
+        function openModalUpdateRole(data) {
+            $('#updateRoleName').val(data['name']);
+            $("#updateRoleDescription").val(data["description"]);
+            $('#modalUpdateRole').modal('show');
+        }
+
+        function openModalUpdateCategory(data) {
+            $('#updateCategoryName').val(data['name']);
+            $("#updateCategoryDescription").val(data["description"]);
+            $('#modalUpdateCategory').modal('show');
+        }
+
+        function openModalUpdateChallenge(data) {
+        	$('#updateChallengeId').val(data['id'])
+            $('#updateChallengeCategory').val(data['category']['description']);
+            $("#updateChallengeName").val(data["name"]);
+            $("#updateChallengeDescription").val(data["description"]);
+            $("#updateChallengeytChallengeId").val(data["ytChallengeId"]);
+            $("#updateChallengeytSolutionId").val(data["ytSolutionId"]);
+            $('#modalUpdateChallenge').modal('show');
+        }
+
+        $(document).ready(function() {
+          $('#accountList').DataTable({
+              responsive: true,
+              "columnDefs": [{
+                  "targets": 'no-sort',
+                  "orderable": false
+              }]
+          });
+          $('#challengeList').DataTable({
+              responsive: true,
+              "columnDefs": [{
+                  "targets": 'no-sort',
+                  "orderable": false
+              }]
+          });
+          $('#rolelist').DataTable({
+              responsive: true,
+              "columnDefs": [{
+              	  "targets": 'no-sort',
+                  "orderable": false
+              }]
+          });
+          $('#categoryList').DataTable({
+              responsive: true,
+              "columnDefs": [{
+                  "targets": 'no-sort',
+                  "orderable": false
+              }]
+          });
+        });
+    </script>
+</html>
