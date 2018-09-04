@@ -35,30 +35,29 @@ class SolveResource(MethodView):
                 errors=error,
                 status_code=400
             ).jsonify()
-        challenge = Challenge.query.filter_by(flag=data.get('flag')).all()
-        if not challenge:
+        challenge = Challenge.query.filter_by(flag=data.get('flag')).first()
+        if not challenge or challenge.category.name != 'Special':
             return ResultErrorSchema(
                 message="Invalid flag!",
                 errors=["invalid flag"],
                 status_code="404"
             ).jsonify()
-        else:
-            if challenge.category == 'Special':
-                user_solved = Solve.query.filter_by(user=user).all()
-                if user_solved:
-                    for chall in user_solved:
-                        if chall.challenge == challenge:
-                            return ResultErrorSchema(
-                                message='Challenge already solved!',
-                                errors=['challenge already solved'],
-                                status_code=422
-                            ).jsonify()
-                solve = Solve(
-                    user=user,
-                    challenge=challenge
-                )
-                db.session.add(solve)
-                db.session.commit()
+
+        user_solved = Solve.query.filter_by(user=user).all()
+        if user_solved:
+            for chall in user_solved:
+                if chall.challenge == challenge:
+                    return ResultErrorSchema(
+                        message='Challenge already solved!',
+                        errors=['challenge already solved'],
+                        status_code=422
+                    ).jsonify()
+        solve = Solve(
+            user=user,
+            challenge=challenge
+        )
+        db.session.add(solve)
+        db.session.commit()
 
         return ResultSchema(
             data=solve.jsonify(),
