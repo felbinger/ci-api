@@ -5,6 +5,10 @@
   * Create tests after implementing
 * Datensätze in DB einfügen wenn diese nicht existieren (Default Datensätze: Roles + Categories)
 * Datenbank charset muss unicode sein, da sonst 500 server error bei ⶳⶳⶳ kommt
+* Leerzeichen im Schemas trimmen
+* challenges können mehrfach gesolved werden
+
+
 ## Frontend (HTML, CSS, JS)
 * Rules hinzufügen
 * Mail Subject/Message in config.py anpassen

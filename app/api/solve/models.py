@@ -19,7 +19,6 @@ class Solve(db.Model):
 
     def jsonify(self):
         return {
-            # 'user': self.user.jsonify(),
             'challenge': self.challenge.jsonify(),
             'timestamp': self.timestamp
         }

@@ -89,6 +89,16 @@ class SolveResource(MethodView):
                 status_code="404"
             ).jsonify()
 
+        user_solved = Solve.query.filter_by(user=user).all()
+        if user_solved:
+            for chall in user_solved:
+                if chall.challenge == challenge:
+                    return ResultErrorSchema(
+                        message='Challenge already solved!',
+                        errors=['challenge already solved'],
+                        status_code=422
+                    ).jsonify()
+
         solve = Solve(
             user=user,
             challenge=challenge
