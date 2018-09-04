@@ -117,11 +117,15 @@
                                                     <div class="col-lg-12" style="margin-top: 10px;">
                                                         {% if challenge['ytChallengeId'] != "" or challenge['ytChallengeId'] == "None" %}
                                                         <div class="col-lg-6">
-                                                            <iframe src="https://www.youtube.com/embed/{{ challenge['ytChallengeId'] }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                            <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ challenge['ytChallengeId'] }}" allowfullscreen></iframe>
+                                                            </div>
                                                         </div>
                                                             {% if challenge['ytSolutionId'] != "" or challenge['ytSolutionId'] == "None" %}
                                                             <div class="col-lg-6">
-                                                                <iframe src="https://www.youtube.com/embed/{{ challenge['ytChallengeId'] }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                                <div class="embed-responsive embed-responsive-16by9">
+                                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ challenge['ytSolutionId'] }}" allowfullscreen></iframe>
+                                                                </div>
                                                             </div>
                                                             {% endif %}
                                                         {% endif %}
