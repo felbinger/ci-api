@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/templates/cc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/cc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/hc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/hc.html" afterDir="false" />
-    </list>
+    <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +153,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="1" />
           <entry key="md" value="6" />
-          <entry key="py" value="363" />
+          <entry key="py" value="364" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
@@ -167,7 +164,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="363" />
+          <entry key="Python" value="364" />
           <entry key="TOML file" value="7" />
         </counts>
       </usages-collector>
@@ -177,7 +174,7 @@
           <entry key="Pipfile" value="85" />
           <entry key="html" value="4680" />
           <entry key="md" value="1300" />
-          <entry key="py" value="23483" />
+          <entry key="py" value="23498" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
@@ -187,7 +184,7 @@
           <entry key="HTML" value="4680" />
           <entry key="Markdown" value="1300" />
           <entry key="PLAIN_TEXT" value="85" />
-          <entry key="Python" value="23483" />
+          <entry key="Python" value="23498" />
           <entry key="TOML file" value="85" />
         </counts>
       </usages-collector>
@@ -195,32 +192,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="123" column="126" lean-forward="true" selection-start-line="123" selection-start-column="126" selection-end-line="123" selection-end-column="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
+        <entry file="file://$PROJECT_DIR$/app/views/general.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="152" column="69" selection-start-line="152" selection-start-column="69" selection-end-line="152" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -325,7 +301,6 @@
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/templates/rules.html.py" />
-        <option value="$PROJECT_DIR$/app/views/general.py" />
         <option value="$PROJECT_DIR$/app/templates/rules.html" />
         <option value="$PROJECT_DIR$/tests/db_test.py" />
         <option value="$PROJECT_DIR$/tests/api_solve_test.py" />
@@ -347,6 +322,7 @@
         <option value="$PROJECT_DIR$/app/config.py" />
         <option value="$PROJECT_DIR$/app/templates/cc.html" />
         <option value="$PROJECT_DIR$/app/templates/hc.html" />
+        <option value="$PROJECT_DIR$/app/views/general.py" />
       </list>
     </option>
   </component>
@@ -847,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/general.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -1060,11 +1029,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
+        <state relative-caret-position="309">
+          <caret line="127" column="10" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/general.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="152" column="69" selection-start-line="152" selection-start-column="69" selection-end-line="152" selection-end-column="69" />
         </state>
       </provider>
     </entry>

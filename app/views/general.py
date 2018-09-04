@@ -150,7 +150,7 @@ def account():
         headers=header
     ).json().get('data')
     for solve in solved:
-        category = solve.get('challenge').get('category')
+        category = solve.get('challenge').get('category').get('name')
         if category == 'HC':
             category = 'Hacking Challenge'
         elif category == 'CC':
