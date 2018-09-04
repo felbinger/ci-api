@@ -18,7 +18,7 @@ class ProductionConfig(Config):
     port = os.environ.get('MYSQL_PORT')
     database = os.environ.get('MYSQL_DATABASE')
     # TODO testing wont work if this URI is not comment out - why?
-    # SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
 
     # ENABLE_MAIL = True
 

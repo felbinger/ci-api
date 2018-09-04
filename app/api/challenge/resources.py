@@ -102,7 +102,7 @@ class ChallengeResource(MethodView):
     curl -H "Access-Token: $token" -X PUT localhost:5000/api/challenge/test -H "Content-Type: application/json" \
     -d '{"description": "Test2"}'
     """
-    # TODO recheck -  how to update the dynamic assigned url's ? id from jsonify (need to be added) in the payload?
+    # TODO How to update the assigned url's (its a list) without an ? id from jsonify (need to be added) in the payload?
     @require_token
     @require_admin
     def put(self, _id, **_):
