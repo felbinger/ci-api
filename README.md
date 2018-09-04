@@ -14,8 +14,8 @@
 | GET | /api/roles | Access-Token | / | Get all Roles | Done |
 | GET | /api/roles/<name:string> | Access-Token | / | Get a Roles | Done |
 | POST | /api/roles | Access-Token | name, description | Admin: Create Role | Done |
-| PUT | /api/roles/<id:int> | Access-Token | description | Admin: Modify Role Description | Done |
-| DELETE | /api/roles/<id:int> | Access-Token | / | Admin: Delete Role | Done |
+| PUT | /api/roles/<name:string> | Access-Token | description | Admin: Modify Role Description | Done |
+| DELETE | /api/roles/<name:string> | Access-Token | / | Admin: Delete Role | Done |
 |||||||
 | GET | /api/users | Access-Token | / | Admin: Get all Accounts (Infos) | Done |
 | GET | /api/users/<uuid:string> | Access-Token | / | Admin: Get Account by UUID | Done |
@@ -29,7 +29,7 @@
 | GET | /api/challenges | Access-Token | / | Get all Challenges | Done |
 | GET | /api/challenges/<name:string> | Access-Token | / | Get Challenge | Done |
 | POST | /api/challenges | Access-Token | name, description, category, flag | Create Challenge | Done |
-| PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
+| PUT | /api/challenges/<name:string> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
 |||||||
 | GET | /api/categories | Access-Token | / | Get all Categories | Done |
 | GET | /api/categories/<name:string> | Access-Token | / | Get a Category | Done |
@@ -38,7 +38,7 @@
 | DELETE | /api/categories/<id:int> | Access-Token | / | Admin: Delete Category | Done |
 |||||||
 | GET | /api/solve/ | Access-Token | / | Get all solved challenges | Done |
-| PUT | /api/solve | Access-Token | flag | Solve Special Challenge | Done |
+| POST | /api/solve | Access-Token | flag | Solve Special Challenge | Done |
 | PUT | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | Done | |
 
 ## Database Schema
