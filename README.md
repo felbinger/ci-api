@@ -39,7 +39,7 @@
 |||||||
 | GET | /api/solve/ | Access-Token | / | Get all solved challenges | Done |
 | POST | /api/solve | Access-Token | flag | Solve Special Challenge | Done |
-| PUT | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | Done | |
+| PUT | /api/solve/<id:int> | Access-Token | flag | Solve Challenge | Done | |
 
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings |
