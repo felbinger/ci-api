@@ -31,26 +31,27 @@ def index():
             solves.append(solve.get('challenge').get('id'))
 
     data = list()
-    for category in categories:
-        solved_count = 0
-        challenge_count = 0
-        if category.get('name') != 'Special':
-            for challenge in solved:
-                if category["name"] == challenge['challenge']["category"]["name"]:
-                    solved_count += 1
+    if categories:
+        for category in categories:
+            solved_count = 0
+            challenge_count = 0
+            if category.get('name') != 'Special':
+                for challenge in solved:
+                    if category["name"] == challenge['challenge']["category"]["name"]:
+                        solved_count += 1
 
-            for challenge in challenges:
-                if category["name"] == challenge["category"]["name"]:
-                    challenge_count += 1
-            if category.get('name') == 'HC':
-                url = url_for('app.views.challenges.hacking')
-            elif category.get('name') == 'CC':
-                url = url_for('app.views.challenges.hacking')
-            data.append({
-                'description': category.get('description'),
-                'unsolved': challenge_count - solved_count,
-                'url': url
-            })
+                for challenge in challenges:
+                    if category["name"] == challenge["category"]["name"]:
+                        challenge_count += 1
+                if category.get('name') == 'HC':
+                    url = url_for('app.views.challenges.hacking')
+                elif category.get('name') == 'CC':
+                    url = url_for('app.views.challenges.hacking')
+                data.append({
+                    'description': category.get('description'),
+                    'unsolved': challenge_count - solved_count,
+                    'url': url
+                })
 
     return render_template('index.html', data=data), 200
 

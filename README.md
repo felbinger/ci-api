@@ -12,6 +12,7 @@
 | DELETE | /api/auth | Access-Token | / | Logout | Done |
 |||||||
 | GET | /api/roles | Access-Token | / | Get all Roles | Done |
+| GET | /api/roles/<name:string> | Access-Token | / | Get a Roles | Done |
 | POST | /api/roles | Access-Token | name, description | Admin: Create Role | Done |
 | PUT | /api/roles/<id:int> | Access-Token | description | Admin: Modify Role Description | Done |
 | DELETE | /api/roles/<id:int> | Access-Token | / | Admin: Delete Role | Done |
@@ -30,7 +31,14 @@
 | POST | /api/challenges | Access-Token | name, description, category, flag | Create Challenge | Done |
 | PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
 |||||||
+| GET | /api/categories | Access-Token | / | Get all Categories | Done |
+| GET | /api/categories/<name:string> | Access-Token | / | Get a Category | Done |
+| POST | /api/categories | Access-Token | name, description | Admin: Create Category | Done |
+| PUT | /api/categories/<id:int> | Access-Token | description | Admin: Modify Category Description | Done |
+| DELETE | /api/categories/<id:int> | Access-Token | / | Admin: Delete Category | Done |
+|||||||
 | GET | /api/solve/ | Access-Token | / | Get all solved challenges | Done |
+| PUT | /api/solve | Access-Token | flag | Solve Special Challenge | Done |
 | PUT | /api/solve/<id:int> | Access-Token | flag | Solv Challenge | Done | |
 
 ## Database Schema
