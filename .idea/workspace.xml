@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/templates/special.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/special.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navigation.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +153,7 @@
           <entry key="Pipfile" value="7" />
           <entry key="TODO" value="1" />
           <entry key="coverage" value="1" />
-          <entry key="html" value="100" />
+          <entry key="html" value="101" />
           <entry key="js" value="1" />
           <entry key="md" value="9" />
           <entry key="py" value="382" />
@@ -163,7 +163,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="100" />
+          <entry key="HTML" value="101" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="9" />
           <entry key="PLAIN_TEXT" value="8" />
@@ -175,7 +175,7 @@
         <counts>
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="85" />
-          <entry key="html" value="4954" />
+          <entry key="html" value="4992" />
           <entry key="md" value="1344" />
           <entry key="py" value="24574" />
           <entry key="txt" value="85" />
@@ -184,7 +184,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="4954" />
+          <entry key="HTML" value="4992" />
           <entry key="Markdown" value="1344" />
           <entry key="PLAIN_TEXT" value="85" />
           <entry key="Python" value="24574" />
@@ -237,11 +237,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/special.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+            <state relative-caret-position="285">
+              <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="28" column="155" selection-start-line="28" selection-start-column="155" selection-end-line="28" selection-end-column="155" />
             </state>
           </provider>
         </entry>
@@ -344,7 +353,6 @@
         <option value="$PROJECT_DIR$/app/api/__init__.py" />
         <option value="$PROJECT_DIR$/tests/api_category_test.py" />
         <option value="$PROJECT_DIR$/app/templates/account.html" />
-        <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/templates/rules.html.py" />
         <option value="$PROJECT_DIR$/app/templates/rules.html" />
         <option value="$PROJECT_DIR$/tests/db_test.py" />
@@ -377,6 +385,7 @@
         <option value="$PROJECT_DIR$/app/api/solve/models.py" />
         <option value="$PROJECT_DIR$/app/api/solve/resources.py" />
         <option value="$PROJECT_DIR$/app/templates/special.html" />
+        <option value="$PROJECT_DIR$/app/templates/navigation.html" />
       </list>
     </option>
   </component>
@@ -821,13 +830,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/rules.html.py" />
-    <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/api_category_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
@@ -1101,8 +1103,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/special.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        <state relative-caret-position="285">
+          <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="28" column="155" selection-start-line="28" selection-start-column="155" selection-end-line="28" selection-end-column="155" />
         </state>
       </provider>
     </entry>
