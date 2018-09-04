@@ -3,7 +3,8 @@ from marshmallow import Schema, fields, validate
 
 class DaoCreateUserSchema(Schema):
     username = fields.Str(
-        required=True
+        required=True,
+        validate=[validate.Length(min=1, max=80)]
     )
     email = fields.Str(
         required=True,
@@ -14,13 +15,15 @@ class DaoCreateUserSchema(Schema):
         validate=[validate.Length(min=8, max=200)]
     )
     role = fields.Str(
-        required=True
+        required=True,
+        validate=[validate.Length(min=1, max=50)]
     )
 
 
 class DaoRegisterUserSchema(Schema):
     username = fields.Str(
-        required=True
+        required=True,
+        validate=[validate.Length(min=1, max=80)]
     )
     email = fields.Str(
         required=True,
