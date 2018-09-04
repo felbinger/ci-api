@@ -5,7 +5,6 @@
   * Create tests after implementing
 * Datensätze in DB einfügen wenn diese nicht existieren (Default Datensätze: Roles + Categories)
 ## Frontend (HTML, CSS, JS)
-* Dashboard/Frontend `+`-Zeichen mittig in Tabelle setzen
 * Rules hinzufügen
 * Mail Subject/Message in config.py anpassen
 

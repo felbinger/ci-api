@@ -99,6 +99,28 @@ def logout():
     return redirect(url_for('app.views.general.login'), code=302)
 
 
+@general.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # TODO trick the user somehow
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        if username and email and password:
+            requests.post(
+                f'{request.scheme}://{request.host}{url_for("user_api")}',
+                json={
+                    'username': username,
+                    'email': email,
+                    'password': password
+                }
+            )
+    """
+    curl -X POST https://api.challenges.the-morpheus.de/api/users -H "Content-Type: application/json" -d '{"username": "max", "email": "max@mustermann.de", "password": "mustermann"}'
+    {"data":{"created":"04.09.2018 17:14:55","email":"max@mustermann.de","lastLogin":null,"publicId":"37721a12-8300-4969-8e29-a3ba5e3eb22c","role":{"description":"User","name":"user"},"username":"max"},"statusCode":201}
+    """
+
+
 @general.route('/account', methods=['GET', 'POST'])
 @require_login
 def account():
