@@ -28,6 +28,16 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">Special Challenges</h1>
+                            <div>
+                                {% with messages = get_flashed_messages(with_categories=true) %}
+                                <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+                                {% if messages %}
+                                  {% for category, message in messages %}
+                                    <div class="form-group"><div class="alert alert-{{ category }}"><span class="fa fa-info-circle"></span> {{ message }}</div>
+                                  {% endfor %}
+                                {% endif %}
+                                {% endwith %}
+                            </div>
                             <p>Du hast eine Flag gefunden, die zu keiner Challenge gehört? Hier kannst du Sie eingeben und die Punkte holen!</p>
                             <form method="POST">
                                 <div class="col-lg-7" style="padding-left: 0px !important;">
