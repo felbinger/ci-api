@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/solve/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/solve/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/challenges.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/challenges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_solve_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api_solve_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +15,7 @@
     <SUITE FILE_PATH="coverage/CC$py_test_for_user_test_test_self_update.coverage" NAME="py.test for user_test.test_self_update Coverage Results" MODIFIED="1529934610192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$cc.coverage" NAME="cc Coverage Results" MODIFIED="1529955273026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CC$Twisted_Trial_in_auth_test_py.coverage" NAME="Twisted Trial in auth_test.py Coverage Results" MODIFIED="1528041604470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/ChallengeInterface$tests.coverage" NAME="tests Coverage Results" MODIFIED="1536153534068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ChallengeInterface$tests.coverage" NAME="tests Coverage Results" MODIFIED="1536153689132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$py_test_for_backend_login_test_test_login.coverage" NAME="py.test for backend_login_test.test_login Coverage Results" MODIFIED="1532881951926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$py_test_for_backend_settings_test_test_settings_update_password.coverage" NAME="py.test for backend_settings_test.test_settings_update_password Coverage Results" MODIFIED="1532882342673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$Unnamed.coverage" NAME="tests Coverage Results" MODIFIED="1528043393370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -143,7 +139,7 @@
     <session id="977645913">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.10" value="11" />
           <entry key="project.open.time.11" value="7" />
           <entry key="project.open.time.12" value="1" />
@@ -161,7 +157,7 @@
           <entry key="html" value="108" />
           <entry key="js" value="1" />
           <entry key="md" value="11" />
-          <entry key="py" value="398" />
+          <entry key="py" value="404" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
@@ -172,7 +168,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="11" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="398" />
+          <entry key="Python" value="404" />
           <entry key="TOML file" value="7" />
         </counts>
       </usages-collector>
@@ -182,7 +178,7 @@
           <entry key="Pipfile" value="85" />
           <entry key="html" value="5375" />
           <entry key="md" value="2694" />
-          <entry key="py" value="27503" />
+          <entry key="py" value="27516" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
@@ -192,7 +188,7 @@
           <entry key="HTML" value="5375" />
           <entry key="Markdown" value="2693" />
           <entry key="PLAIN_TEXT" value="85" />
-          <entry key="Python" value="27504" />
+          <entry key="Python" value="27517" />
           <entry key="TOML file" value="85" />
         </counts>
       </usages-collector>
@@ -200,26 +196,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/api_solve_test.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-                <marker date="1536153541499" expanded="true" signature="1350:2899" ph="..." />
-                <marker date="1536153541499" expanded="true" signature="3925:4201" ph="..." />
-                <marker date="1536153541499" expanded="true" signature="5537:6289" ph="..." />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="333">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -295,7 +288,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/api/user/resources.py" />
         <option value="$PROJECT_DIR$/tests/api_user_test.py" />
         <option value="$PROJECT_DIR$/app/api/role/models.py" />
         <option value="$PROJECT_DIR$/app/api/role/resources.py" />
@@ -345,6 +337,7 @@
         <option value="$PROJECT_DIR$/app/api/challenge/models.py" />
         <option value="$PROJECT_DIR$/app/api/challenge/resources.py" />
         <option value="$PROJECT_DIR$/tests/api_solve_test.py" />
+        <option value="$PROJECT_DIR$/app/api/authentication/models.py" />
         <option value="$PROJECT_DIR$/app/config.py" />
       </list>
     </option>
@@ -385,6 +378,13 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
@@ -600,9 +600,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests - 2018.09.05 at 15h 14m 23s.xml">
-      <configuration name="tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="tests - 2018.09.05 at 15h 14m 32s.xml">
       <configuration name="tests" configurationId="tests" />
     </history-entry>
@@ -630,6 +627,9 @@
     <history-entry file="tests - 2018.09.05 at 15h 18m 56s.xml">
       <configuration name="tests" configurationId="tests" />
     </history-entry>
+    <history-entry file="tests - 2018.09.05 at 15h 21m 29s.xml">
+      <configuration name="tests" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -655,7 +655,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49839914" visible="true" weight="0.33010754" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49839914" weight="0.33010754" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.2612903" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.21827957" />
@@ -705,20 +705,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/api/authentication/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/categories/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -804,16 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/db_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/rules.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -853,13 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="50" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="3" column="93" lean-forward="true" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="109" />
         </state>
       </provider>
     </entry>
@@ -1038,10 +1007,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config.py">
+    <entry file="file://$PROJECT_DIR$/app/api/authentication/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/authentication/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/db_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>

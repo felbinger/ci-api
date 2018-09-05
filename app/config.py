@@ -5,7 +5,7 @@ class Config(object):
     DEBUG = False
     TESTING = False
     SECRET_KEY = 'jnw639kO3{28W1cvtDl]tjdrzkkd3YJCB(2IPK1deBKe*v!I6e0NB1$n3admTreE79Q%MxOuVtVFbuAsb69Mb2gPPpCQ?GAFcUMoH'
-    TOKEN_VALIDITY = 180
+    TOKEN_VALIDITY = 48  # hours
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
 
     ENABLE_MAIL = False

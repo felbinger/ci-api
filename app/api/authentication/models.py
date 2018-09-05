@@ -18,9 +18,8 @@ class Token(db.Model):
     broken = Column('broken', Boolean, nullable=False)
 
     def __init__(self, *args, **kwargs):
-        token_validity = current_app.config['TOKEN_VALIDITY']
         # expires = str(datetime.now() + timedelta(hours=token_validity)).split(".")[0]
-        expires = datetime.now() + timedelta(hours=token_validity)
+        expires = datetime.now() + timedelta(hours=current_app.config['TOKEN_VALIDITY'])
         super().__init__(*args, **kwargs, token=str(uuid4()), created=datetime.utcnow(), expires=expires, broken=False)
 
     def jsonify(self):
