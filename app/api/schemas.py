@@ -1,4 +1,10 @@
 from flask import jsonify
+from marshmallow import ValidationError
+
+
+def validate_spaces(text):
+    if " " in text:
+        raise ValidationError("Text should'nt contain any space")
 
 
 class ResultErrorSchema:

@@ -1,9 +1,7 @@
 # TODO
 ## API
-* config.py: Check bugged TestingConfig
 * Challenge Update: How to update the URL's?
   * Create tests after implementing
-* How to insert rows into the database if the does not exist? (roles(user,admin) + categories(HC,CC,Special))
 
 * Create mysql database with collection `utf8mb4_unicode_ci` if not exists:
 https://sqlalchemy-utils.readthedocs.io/en/latest/database_helpers.html#database-exists
@@ -15,8 +13,10 @@ if not database_exists(uri):
 ```
 
 * Change MySQL database collection to `utf8mb4_unicode_ci` via sqlalchemy (if possible)
+  * define in database model
+    http://stackoverflow.com/questions/18561190/ddg#18561417
+    https://groups.google.com/d/msg/sqlalchemy/XDDPiyWJsAk/T7splX0ABwAJ
 
-* Leerzeichen im Schemas trimmen
 
 
 ## Frontend (HTML, CSS, JS)

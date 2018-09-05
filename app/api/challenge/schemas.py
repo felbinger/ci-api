@@ -13,7 +13,7 @@ class DaoCreateChallengeSchema(Schema):
     )
     category = fields.Str(
         required=True,
-        validate=[validate.Length(min=1, max=50)]
+        validate=[validate.Length(min=1, max=50), validate_spaces]
     )
     urls = fields.List(fields.Dict()) or []
 

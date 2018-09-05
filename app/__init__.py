@@ -14,6 +14,7 @@ def create_app(testing_config=None):
     # check which config should be used, can be defined in the environment variable FLASK_ENV
     env = os.environ.get('FLASK_ENV')
     # load config
+
     if testing_config is None:
         if env == 'development':
             app.config.from_object(DevelopmentConfig)
@@ -101,6 +102,3 @@ def register_views(app):
         return send_from_directory(
             os.path.join(general.root_path, 'static/vendor/datatables/images/'), 'sort_desc.png', mimetype='image/png'
         )
-
-
-app = application = create_app()

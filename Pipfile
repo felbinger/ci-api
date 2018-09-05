@@ -5,7 +5,7 @@ name = "pypi"
 
 [scripts]
 dev = "sh -c 'FLASK_APP=app FLASK_DEBUG=1 FLASK_ENV=development flask run'"
-prod = "gunicorn --workers 4 app:application --bind 0.0.0.0:80 --log-syslog --log-level DEBUG"
+prod = "gunicorn --workers 4 wsgi:application --bind 0.0.0.0:80 --log-syslog --log-level DEBUG"
 test = "pytest"
 cov = "pytest --cov=cc tests"
 
