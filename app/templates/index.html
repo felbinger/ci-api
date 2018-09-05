@@ -32,31 +32,11 @@
                 </div>
                 <!-- /.row -->
                 <div class="row">
-
-                    {% for entry in data %}
-                    <div class="col-lg-4 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">{{ entry['unsolved'] }}</div>
-                                        <div>Unsolved {{ entry['description'] }}!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="{{ entry['url'] }}">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
+                    <div class="col-lg-offset-1 col-lg-10 col-md-12">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEOID" allowfullscreen></iframe> <!-- TODO add announcement video id -->
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
                 <!-- /.row -->
             </div>

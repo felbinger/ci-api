@@ -10,50 +10,7 @@ general = Blueprint(__name__, 'general')
 def index():
     header = {'Access-Token': session.get('Access-Token')}
 
-    categories = requests.get(
-        f'{request.scheme}://{request.host}{url_for("category_api")}',
-        headers=header
-    ).json().get('data')
-
-    challenges = requests.get(
-        f'{request.scheme}://{request.host}{url_for("challenge_api")}',
-        headers=header
-    ).json().get('data')
-
-    solves = list()
-    solved = requests.get(
-        f'{request.scheme}://{request.host}{url_for("solve_api")}',
-        headers=header
-    ).json().get('data') or []
-    if solved:
-        for solve in solved:
-            # append the challenge id the the solves list
-            solves.append(solve.get('challenge').get('id'))
-
-    data = list()
-    if categories:
-        for category in categories:
-            solved_count = 0
-            challenge_count = 0
-            if category.get('name') != 'Special':
-                for challenge in solved:
-                    if category["name"] == challenge['challenge']["category"]["name"]:
-                        solved_count += 1
-
-                for challenge in challenges:
-                    if category["name"] == challenge["category"]["name"]:
-                        challenge_count += 1
-                if category.get('name') == 'HC':
-                    url = url_for('app.views.challenges.hacking')
-                elif category.get('name') == 'CC':
-                    url = url_for('app.views.challenges.hacking')
-                data.append({
-                    'description': category.get('description'),
-                    'unsolved': challenge_count - solved_count,
-                    'url': url
-                })
-
-    return render_template('index.html', data=data), 200
+    return render_template('index.html'), 200
 
 
 @general.route('/rules', methods=['GET'])
@@ -128,7 +85,7 @@ def register():
                 if token:
                     print(f'User {username} logged in with token: {token}')
                     session['Access-Token'] = token
-                    return redirect(url_for('app.views.general.rules'))
+                    return redirect(url_for('app.views.general.index'))
             else:
                 flash(f'Unknown error: {resp.json().get("message")}')
         else:

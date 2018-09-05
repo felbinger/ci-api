@@ -78,7 +78,7 @@
 |  | timestamp | TimeStamp |  |  |
 
 ## Installation
-* Install Docker
+* Install [Docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/)
 * Build Docker Image
 
 ```
@@ -86,15 +86,9 @@ git clone ssh://git@git.the-morpheus.de:322/challengeInterface/backend.git
 docker build -t backend .
 ```
 
-* Start Docker Container
+* Define your container in the file `docker-compose.yml`:
 
-```
-docker run -it -p 8080:80 -e MYSQL_PASSWORD=myPassword backend
-```
-
-* Use docker-compose
-
-```
+```yml
 version: '3'
 services:
   db:
@@ -115,5 +109,32 @@ services:
     ports:
       - "8080:80"
     environment:
-      MYSQL_PASSWORD: myPassword
+      MYSQL_PASSWORD: root
+```
+
+* Add database hc (in this example automatically)
+* Change database collection from `latin1_swedish_ci` to `utf8mb4_unicode_ci`
+
+* Use docker-compose:
+```bash
+# Start all containers
+docker-compose up -d
+# Stop all containers
+docker-compose stop
+# Stop and remove all containers
+docker-compose down
+
+# Start a specific container
+docker-compose up -d <container>
+# Stop a specific container
+docker-compose stop <container>
+# Stop and remove a specific container
+docker-compose rm -fs <container>
+
+# Show logs
+docker-compose logs [container]
+
+# Show status
+docker-compose ps [container]
+
 ```

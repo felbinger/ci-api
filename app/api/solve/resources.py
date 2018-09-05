@@ -1,9 +1,10 @@
 from flask.views import MethodView
 from flask import request
-
+import json
 from ..schemas import ResultSchema, ResultErrorSchema
 from .models import Solve
 from app.db import db
+from ..categories import Category
 from ..authentication import require_token
 from .schemas import DaoSolveChallengeSchema
 from ..challenge import Challenge
@@ -15,9 +16,26 @@ class SolveResource(MethodView):
     """
     @require_token
     def get(self, user, **_):
+        lst = list()
+        for category in Category.query.all():
+            if category.name != 'Special':
+                challenge_count = len(Challenge.query.filter_by(category=category).all())
+                solved_count = 0
+                for solve in Solve.query.filter_by(user=user).all():
+                    if category.name == solve.challenge.category.name:
+                        solved_count += 1
+                lst.append({
+                    'category': category.jsonify(),
+                    'solved': solved_count,
+                    'unsolved': challenge_count - solved_count
+                })
+        data = [d.jsonify() for d in Solve.query.filter_by(user=user).all()]
+        data.append({'counts': lst})
         return ResultSchema(
-            data=[d.jsonify() for d in Solve.query.filter_by(user=user).all()]
+            data=data
         ).jsonify()
+
+    #  Solve count
 
     """
     Solve Method for special challenges
