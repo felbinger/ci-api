@@ -7,6 +7,7 @@ from ..categories import Category
 from app.db import db
 from ..authentication import require_token, require_admin
 from .schemas import DaoCreateChallengeSchema, DaoUpdateChallengeSchema, DaoUrlSchema
+from ..solve import Solve
 
 
 class ChallengeResource(MethodView):
@@ -23,14 +24,19 @@ class ChallengeResource(MethodView):
             ).jsonify()
         else:
             # get the challenge object by the submitted name in the resource (url)
-            data = Challenge.query.filter_by(id=_id).first()
-            if not data:
+            challenge = Challenge.query.filter_by(id=_id).first()
+            if not challenge:
                 return ResultErrorSchema(
                     message='Challenge does not exist!',
                     errors=['challenge does not exist']
                 ).jsonify()
+            data = challenge.jsonify()
+            challenge_solves = Solve.query.filter_by(challenge=challenge).first()
+            if challenge_solves:
+                print(challenge_solves.jsonify())
+            data['solved'] = True
             return ResultSchema(
-                data=data.jsonify() or None
+                data=data
             ).jsonify()
 
     """

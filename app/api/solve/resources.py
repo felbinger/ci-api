@@ -29,8 +29,9 @@ class SolveResource(MethodView):
                     'solved': solved_count,
                     'unsolved': challenge_count - solved_count
                 })
-        data = [d.jsonify() for d in Solve.query.filter_by(user=user).all()]
-        data.append({'counts': lst})
+        data = dict()
+        data['challenges'] = [d.jsonify() for d in Solve.query.filter_by(user=user).all()]
+        data['counts'] = lst
         return ResultSchema(
             data=data
         ).jsonify()

@@ -40,7 +40,7 @@ def coding():
     solves = list()
     solved = requests.get(f'{request.scheme}://{request.host}{url_for("solve_api")}', headers=header).json().get('data')
     if solved:
-        for solve in solved:
+        for solve in solved.get('challenges'):
             # append the challenge id the the solves list
             solves.append(solve.get('challenge').get('id'))
     if challs:
@@ -81,7 +81,7 @@ def hacking():
     solves = list()
     solved = requests.get(f'{request.scheme}://{request.host}{url_for("solve_api")}', headers=header).json().get('data')
     if solved:
-        for solve in solved:
+        for solve in solved.get('challenges'):
             # append the challenge id the the solves list
             solves.append(solve.get('challenge').get('id'))
 
