@@ -1,11 +1,12 @@
 from marshmallow import Schema, fields, validate
 from flask import jsonify
+from ..schemas import validate_spaces
 
 
 class AuthSchema(Schema):
     username = fields.Str(
         required=True,
-        validate=[validate.Length(min=1, max=200)]
+        validate=[validate.Length(min=1, max=200), validate_spaces]
     )
     password = fields.Str(
         required=True,

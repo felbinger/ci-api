@@ -1,4 +1,7 @@
 # TODO
+
+* Kommentieren
+
 ## API
 * Challenge Update: How to update the URL's?
   * Create tests after implementing
@@ -19,10 +22,10 @@ if not database_exists(uri):
 
 
 
-## Frontend (HTML, CSS, JS)
-* Rules hinzufügen
-* Mail Subject/Message in config.py anpassen
-* ID für Announcement Video des Challenge Interface einfügen
+## General and Frontend (HTML, CSS, JS)
+* rules.html erstellen
+* config.py: Mail Subject/Message anpassen
+* ID für Announcement Video des Challenge Interface einfügen - muss mit Cedric koordiniert werden.
 
 ## Rules
 * DoS (Denial of Service) ist verboten!

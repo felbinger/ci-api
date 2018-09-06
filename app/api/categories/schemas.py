@@ -1,4 +1,5 @@
 from marshmallow import Schema, fields, validate
+from ..schemas import validate_spaces
 
 
 class DaoCreateCategorySchema(Schema):

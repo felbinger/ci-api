@@ -7,6 +7,7 @@ from app.db import db
 
 
 class Token(db.Model):
+    __table_args__ = ({'mysql_character_set': 'utf8mb4', 'mysql_collate': 'utf8mb4_unicode_520_ci'})
     id = Column('id', Integer, primary_key=True)
     token = Column('token', String(80), unique=True, nullable=False)
 

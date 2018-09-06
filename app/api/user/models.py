@@ -7,6 +7,7 @@ from app.db import db
 
 
 class User(db.Model):
+    __table_args__ = ({'mysql_character_set': 'utf8mb4', 'mysql_collate': 'utf8mb4_unicode_520_ci'})
     id = Column('id', Integer, primary_key=True)
     public_id = Column('publicId', String(80), unique=True, nullable=False)
     username = Column('username', String(100), unique=True, nullable=False)

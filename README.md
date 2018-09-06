@@ -1,9 +1,5 @@
 # Challenge Interface
 
-## TODO
-* PyTests
-* Comment code
-
 ## API Schema
 | Method | URL | Headers | Payload | Description | Status |
 |:------:|:------------------------------:|:------------:|:-----------------------------------------:|:------------------------------------:|:------:|
@@ -27,15 +23,15 @@
 | DELETE | /api/users/me | Access-Token | / | Delete your Account | Done |
 |||||||
 | GET | /api/challenges | Access-Token | / | Get all Challenges | Done |
-| GET | /api/challenges/<name:string> | Access-Token | / | Get Challenge | Done |
+| GET | /api/challenges/<id:int> | Access-Token | / | Get Challenge | Done |
 | POST | /api/challenges | Access-Token | name, description, category, flag | Create Challenge | Done |
-| PUT | /api/challenges/<name:string> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
+| PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
 |||||||
 | GET | /api/categories | Access-Token | / | Get all Categories | Done |
 | GET | /api/categories/<name:string> | Access-Token | / | Get a Category | Done |
 | POST | /api/categories | Access-Token | name, description | Admin: Create Category | Done |
-| PUT | /api/categories/<id:int> | Access-Token | description | Admin: Modify Category Description | Done |
-| DELETE | /api/categories/<id:int> | Access-Token | / | Admin: Delete Category | Done |
+| PUT | /api/categories/<name:string> | Access-Token | description | Admin: Modify Category Description | Done |
+| DELETE | /api/categories/<name:string> | Access-Token | / | Admin: Delete Category | Done |
 |||||||
 | GET | /api/solve/ | Access-Token | / | Get all solved challenges | Done |
 | POST | /api/solve | Access-Token | flag | Solve Special Challenge | Done |

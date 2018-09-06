@@ -4,6 +4,7 @@ from sqlalchemy import Column, DateTime, Integer, ForeignKey
 
 
 class Solve(db.Model):
+    __table_args__ = ({'mysql_character_set': 'utf8mb4', 'mysql_collate': 'utf8mb4_unicode_520_ci'})
     id = Column('id', Integer, primary_key=True)
 
     user_id = Column('user', Integer, ForeignKey('user.id'), nullable=False)
