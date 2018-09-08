@@ -259,18 +259,20 @@ def dashboard():
                                 challenge_id = resp.json().get('data').get('id')
                                 if urls and url_descriptions:
                                     for url, description in zip(urls, url_descriptions):
-                                        resp = requests.post(
-                                            f'{request.scheme}://{request.host}{url_for("url_api")}',
-                                            headers=header,
-                                            json={
-                                                'url': url,
-                                                'description': description,
-                                                'challenge': challenge_id
-                                            }
-                                        )
-                                        if resp.status_code != 201:
-                                            print(resp.json())
-                                            flash(f'Unable to create url {url}: {resp.json().get("message")}', 'danger')
+                                        if url and description:  # todo maybe ""?
+                                            resp = requests.post(
+                                                f'{request.scheme}://{request.host}{url_for("url_api")}',
+                                                headers=header,
+                                                json={
+                                                    'url': url,
+                                                    'description': description,
+                                                    'challenge': challenge_id
+                                                }
+                                            )
+                                            if resp.status_code != 201:
+                                                msg = resp.json().get("message")
+                                                flash(f'Unable to create url {url}: {msg}', 'danger')
+
                                 else:
                                     flash('Challenge has been created successfully!', 'success')
 

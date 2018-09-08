@@ -109,10 +109,10 @@
                                         <!-- /.panel-heading -->
                                         <div class="panel-body">
                                             <div class="list-group">
-                                                {% for challenge in data['solved_challenges'] %}
+                                                {% for solve in data['solved'] %}
                                                 <div class="list-group-item">
-                                                    {{ challenge['type'] }} - {{ challenge['name'] }}
-                                                    <span class="pull-right text-muted small"><em>{{ challenge['time'] }}</em></span>
+                                                    {{ solve['challenge']['category']['description'] }} - {{ solve['challenge']['name'] }}
+                                                    <span class="pull-right text-muted small"><em>{{ solve['timestamp'] }}</em></span>
                                                 </div>
                                                 {% endfor %}
                                             </div>
