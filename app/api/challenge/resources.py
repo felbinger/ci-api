@@ -2,11 +2,11 @@ from flask.views import MethodView
 from flask import request
 
 from ..schemas import ResultSchema, ResultErrorSchema
-from .models import Challenge, Url
+from .models import Challenge
 from ..categories import Category
 from app.db import db
 from ..authentication import require_token, require_admin
-from .schemas import DaoCreateChallengeSchema, DaoUpdateChallengeSchema, DaoUrlSchema
+from .schemas import DaoCreateChallengeSchema, DaoUpdateChallengeSchema
 from ..solve import Solve
 
 
@@ -42,7 +42,7 @@ class ChallengeResource(MethodView):
     """
     Create a new challenge
     curl -H "Access-Token: $token" -X POST localhost:5000/api/challenge -H "Content-Type: application/json" \
-    -d '{"name": "Test", "description": "TestChallenge", "flag": "TMT{t3$T}", "category": "HC", "urls": [{}]}'
+    -d '{"name": "Test", "description": "TestChallenge", "flag": "TMT{t3$T}", "category": "HC"}'
     """
     @require_token
     @require_admin
@@ -74,26 +74,6 @@ class ChallengeResource(MethodView):
             category=category
         )
 
-        # add all submitted urls
-        if data.get('urls'):
-            for d in data.get('urls'):
-                url_schema = DaoUrlSchema()
-                url_error = url_schema.validate(d)
-                if url_error:
-                    return ResultErrorSchema(
-                        message='URL Payload is invalid',
-                        errors=url_error,
-                        status_code=400
-                    ).jsonify()
-                # create url object
-                url = Url(
-                    description=d.get('description'),
-                    challenge=challenge,
-                    url=d.get('url')
-                )
-                # add the url object to the database
-                db.session.add(url)
-
         # add the challenge object to the database
         db.session.add(challenge)
         # commit db changes (urls + challenge)
@@ -106,9 +86,8 @@ class ChallengeResource(MethodView):
 
     """
     curl -H "Access-Token: $token" -X PUT localhost:5000/api/challenge/test -H "Content-Type: application/json" \
-    -d '{"description": ""}'
+    -d '{"description": "a"}'
     """
-    # TODO How to update the assigned url's (its a list) without an ? id from jsonify (need to be added) in the payload?
     @require_token
     @require_admin
     def put(self, _id, **_):

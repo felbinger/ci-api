@@ -2,7 +2,6 @@ from sqlalchemy import Column, String, DateTime, ForeignKey, Integer
 from uuid import uuid4
 from hashlib import sha512
 from datetime import datetime
-
 from app.db import db
 
 
@@ -24,13 +23,15 @@ class User(db.Model):
         super().__init__(*args, **kwargs, public_id=str(uuid4()), created=datetime.utcnow())
 
     def jsonify(self):
+        from ..solve import Solve
         return {
             'publicId': self.public_id,
             'username': self.username,
             'email': self.email,
             'created': self.created.strftime("%d.%m.%Y %H:%M:%S"),
             'lastLogin': self.last_login.strftime("%d.%m.%Y %H:%M:%S") if self.last_login else None,
-            'role': self.role.jsonify()
+            'role': self.role.jsonify(),
+            'solved': [solve.jsonify() for solve in Solve.query.filter_by(user=self).all()]
         }
 
     def verify_password(self, password):

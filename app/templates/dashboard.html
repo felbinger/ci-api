@@ -59,6 +59,7 @@
                         {% endwith %}
                     </div>
                     <div class="col-lg-12">
+                        <!-- Table: Accounts -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 Accounts
@@ -99,6 +100,7 @@
                     </div>
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-12">
+                        <!-- Table: Challenges -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 Challenge
@@ -137,6 +139,7 @@
                     </div>
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-6">
+                        <!-- Table: Roles -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 Roles
@@ -170,6 +173,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <!-- Table: Challenge Categories -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 Challenge Categories
@@ -276,6 +280,7 @@
                 <form method="POST" role="form">
                     <div class="modal-body">
                         <div class="row">
+                            <div class="col-lg-12" id="urlError"></div>
                             <div class="col-lg-12">
                                 <div class="col-lg-6">
                                     <div class="form-group">
@@ -284,7 +289,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <input name="description" class="form-control">
+                                        <input name="description" class="form-control"> <!-- todo should be a text area: <textarea style="resize: vertical;" name="description" class="form-control"></textarea> can this be added to the design?-->
+                                    </div>
+                                    <div class="form-group">
+                                        <label>YouTube Challenge Video ID</label>
+                                        <input name="ytChallengeId" class="form-control">
                                     </div>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
@@ -301,8 +310,30 @@
                                             {% endfor %}
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <label>YouTube Solution Video ID</label>
+                                        <input name="ytSolutionId" class="form-control">
+                                    </div>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
+                                <div class="row">
+                                    <div id="urls"></div>
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="urls[]" value="" placeholder="URL">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="urlDescriptions[]" placeholder="Description">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group"><div class="form-group input-group-btn"><button class="btn btn-success" type="button" onclick="append_url();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.col-lg-12 -->
                         </div>
@@ -318,7 +349,6 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
 
     <!-- Modal: Create Role -->
     <div class="modal fade" id="modalCreateRole" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -574,7 +604,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>YouTube Challenge Video ID</label>
-                                        <input id="updateChallengeytChallengeId" name="ytChallengeId" class="form-control">
+                                        <input id="updateChallengeYtChallengeId" name="ytChallengeId" class="form-control">
                                     </div>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
@@ -585,7 +615,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>YouTube Solution Video ID</label>
-                                        <input id="updateChallengeytSolutionId" name="ytSolutionId" class="form-control">
+                                        <input id="updateChallengeYtSolutionId" name="ytSolutionId" class="form-control">
                                     </div>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
@@ -594,6 +624,7 @@
                                         <label>Description</label>
                                         <textarea id="updateChallengeDescription" style="resize: vertical;" name="description" class="form-control"></textarea>
                                     </div>
+                                    <div id="updateChallengeURLs"></div>
                                 </div>
                                 <!-- /.col-lg-12 (nested) -->
                             </div>
@@ -641,9 +672,73 @@
             $('#updateChallengeCategory').val(data['category']['description']);
             $("#updateChallengeName").val(data["name"]);
             $("#updateChallengeDescription").val(data["description"]);
-            $("#updateChallengeytChallengeId").val(data["ytChallengeId"]);
-            $("#updateChallengeytSolutionId").val(data["ytSolutionId"]);
+            $("#updateChallengeYtChallengeId").val(data["ytChallengeId"]);
+            $("#updateChallengeYtSolutionId").val(data["ytSolutionId"]);
+
+            for (var i in data['urls']) {
+            	var url = data['urls'][i]['url'];
+                var description = data['urls'][i]['description'];
+                // TODO implement update/delete - at the moment its only possible to view the urls
+                // think of: delete one url and add a new one...
+                $('#updateChallengeURLs').append(
+                	'<div id="url_' + i + '">' +
+                        '<div class="col-lg-12">' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="text" class="form-control" name="urls[]" value="' + url + '" placeholder="URL">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="text" class="form-control" name="urlDescriptions[]" value="' + description + '" placeholder="Description">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-2 nopadding">' +
+                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url('+ i +');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
+                            '</div>' +
+                            '<div class="clear"></div>' +
+                        '</div>' +
+                    '</div>'
+                );
+			}
+
             $('#modalUpdateChallenge').modal('show');
+        }
+
+
+        var id = 1;
+        var count = 1;
+        function append_url() {
+            if (count < 3) {
+                $('#urls').append(
+                    '<div id="url_' + id + '">' +
+                        '<div class="col-lg-12">' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="text" class="form-control" name="urls[]" value="" placeholder="URL">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="text" class="form-control" name="urlDescriptions[]" placeholder="Description">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-2 nopadding">' +
+                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url('+ id +');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
+                            '</div>' +
+                            '<div class="clear"></div>' +
+                        '</div>' +
+                    '</div>'
+                );
+                id++;
+                count++;
+            } else {
+                $('#urlError').html('<div class="form-group"><div class="alert alert-danger"><span class="fa fa-info-circle"></span> The maximum amount of url\'s has been reached.</div></div>')
+            }
+        }
+        function remove_url(id) {
+            $('#url_'+id).remove();
+            count--;
         }
 
         $(document).ready(function() {

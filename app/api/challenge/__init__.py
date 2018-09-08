@@ -1,2 +1,2 @@
-from .models import Challenge, Url
+from .models import Challenge
 from .resources import ChallengeResource

@@ -16,21 +16,28 @@ class DaoCreateChallengeSchema(Schema):
         required=True,
         validate=[validate.Length(min=1, max=50), validate_spaces]
     )
-    urls = fields.List(fields.Dict()) or []
-
-
-class DaoUrlSchema(Schema):
-    description = fields.Str(
-        required=True,
-        validate=[validate.Length(min=1, max=80)]
+    yt_challenge_id = fields.Str(
+        load_from='ytChallengeId',
+        validate=[validate.Length(min=0, max=20)]
     )
-    url = fields.Str(
-        required=True,
-        validate=[validate.Length(min=1, max=80)]
+    yt_solution_id = fields.Str(
+        load_from='ytSolutionId',
+        validate=[validate.Length(min=0, max=20)]
     )
 
 
 class DaoUpdateChallengeSchema(Schema):
-    description = fields.Str(validate=[validate.Length(min=0, max=800)])
-    yt_challenge_id = fields.Str(load_from='ytChallengeId', validate=[validate.Length(min=0, max=20)])
-    yt_solution_id = fields.Str(load_from='ytSolutionId', validate=[validate.Length(min=0, max=20)])
+    description = fields.Str(
+        validate=[validate.Length(min=0, max=800)]
+    )
+    category = fields.Str(
+        validate=[validate.Length(min=1, max=50), validate_spaces]
+    )
+    yt_challenge_id = fields.Str(
+        load_from='ytChallengeId',
+        validate=[validate.Length(min=0, max=20)]
+    )
+    yt_solution_id = fields.Str(
+        load_from='ytSolutionId',
+        validate=[validate.Length(min=0, max=20)]
+    )

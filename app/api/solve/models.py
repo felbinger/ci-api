@@ -20,6 +20,6 @@ class Solve(db.Model):
 
     def jsonify(self):
         return {
-            'challenge': self.challenge.jsonify(),
+            'challenge': self.challenge.min_jsonify(),
             'timestamp': self.timestamp
         }

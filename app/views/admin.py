@@ -228,6 +228,10 @@ def dashboard():
                 description = request.form.get('description')
                 flag = request.form.get('flag')
                 category_name = request.form.get('category')
+                yt_challenge_id = request.form.get('ytChallengeId')
+                yt_solution_id = request.form.get('ytSolutionId')
+                urls = request.form.getlist('urls[]')
+                url_descriptions = request.form.getlist("urlDescriptions[]")
                 if not name:
                     flash('Unable to create challenge: Name cannot be emtpy!', 'danger')
                 else:
@@ -244,13 +248,31 @@ def dashboard():
                                     'name': name,
                                     'description': description,
                                     'flag': flag,
-                                    'category': category_name
+                                    'category': category_name,
+                                    'ytChallengeId': yt_challenge_id,
+                                    'ytSolutionId': yt_solution_id
                                 }
                             )
                             if resp.status_code != 201:
                                 flash(f'Unable to create challenge: {resp.json().get("message")}', 'danger')
                             else:
-                                flash('Challenge has been created successfully!', 'success')
+                                challenge_id = resp.json().get('data').get('id')
+                                if urls and url_descriptions:
+                                    for url, description in zip(urls, url_descriptions):
+                                        resp = requests.post(
+                                            f'{request.scheme}://{request.host}{url_for("url_api")}',
+                                            headers=header,
+                                            json={
+                                                'url': url,
+                                                'description': description,
+                                                'challenge': challenge_id
+                                            }
+                                        )
+                                        if resp.status_code != 201:
+                                            print(resp.json())
+                                            flash(f'Unable to create url {url}: {resp.json().get("message")}', 'danger')
+                                else:
+                                    flash('Challenge has been created successfully!', 'success')
 
             elif action == 'updateChallenge':
                 _id = request.form.get('id')

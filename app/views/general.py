@@ -8,8 +8,6 @@ general = Blueprint(__name__, 'general')
 @general.route('/', methods=['GET'])
 @require_login
 def index():
-    header = {'Access-Token': session.get('Access-Token')}
-
     return render_template('index.html'), 200
 
 
@@ -96,7 +94,7 @@ def register():
             flash('Missing data')
             if request.args.get('username') and request.args.get('email') and request.args.get('password'):
                 # Flash an message in the template to deflect the user.
-                flash('Permission Denied: Unable to create account!', 'danger')
+                flash('Permission Denied: Missing admin cookie!', 'danger')
 
     # The template contains one form which should have the attribute method="POST".
     # The user should recognize this error and correct it itself to create the account.
@@ -143,29 +141,10 @@ def account():
                     flash(f'Unable to update your account: {resp.json().get("message")}', 'danger')
                 else:
                     flash('Your account has been updated!', 'success')
+
     data = requests.get(
         f'{request.scheme}://{request.host}{url_for("auth_api")}',
         headers=header
     ).json().get('data')
-    data['solved_challenges'] = list()
-
-    solved = requests.get(
-        f'{request.scheme}://{request.host}{url_for("solve_api")}',
-        headers=header
-    ).json().get('data')
-    for solve in solved:
-        category = solve.get('challenge').get('category').get('name')
-        if category == 'HC':
-            category = 'Hacking Challenge'
-        elif category == 'CC':
-            category = 'Coding Challenge'
-        else:
-            category = 'Special Challenge'
-
-        data['solved_challenges'].append({
-            'type': category,
-            'name': solve.get('challenge').get('name'),
-            'time': solve.get('timestamp')
-        })
 
     return render_template('account.html', data=data)

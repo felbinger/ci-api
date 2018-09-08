@@ -1,7 +1,8 @@
 import os
 from flask import Flask, send_from_directory
 
-from .api import UserResource, AuthResource, RoleResource, ChallengeResource, SolveResource, CategoryResource
+from .api import AuthResource, UserResource, RoleResource, ChallengeResource, SolveResource, CategoryResource, \
+    UrlResource
 from .config import ProductionConfig, DevelopmentConfig
 from .db import db
 from .views import general, challenges, admin
@@ -14,7 +15,6 @@ def create_app(testing_config=None):
     # check which config should be used, can be defined in the environment variable FLASK_ENV
     env = os.environ.get('FLASK_ENV')
     # load config
-
     if testing_config is None:
         if env == 'development':
             app.config.from_object(DevelopmentConfig)
@@ -29,12 +29,13 @@ def create_app(testing_config=None):
         # create all tables in the database
         db.create_all()
     register_views(app)
-    register_resource(app, UserResource, 'user_api', '/api/users', pk='uuid', pk_type='string')
     register_resource(app, AuthResource, 'auth_api', '/api/auth', pk=None, get=False, put=False)
     register_resource(app, RoleResource, 'role_api', '/api/roles', pk='name', pk_type='string')
+    register_resource(app, UserResource, 'user_api', '/api/users', pk='uuid', pk_type='string')
+    register_resource(app, CategoryResource, 'category_api', '/api/categories', pk='name', pk_type='string')
+    register_resource(app, UrlResource, 'url_api', '/api/urls', get_all=False, get=False)
     register_resource(app, ChallengeResource, 'challenge_api', '/api/challenges', delete=False)
     register_resource(app, SolveResource, 'solve_api', '/api/solve', get=False, delete=False)
-    register_resource(app, CategoryResource, 'category_api', '/api/categories', pk='name', pk_type='string')
 
     return app
 
