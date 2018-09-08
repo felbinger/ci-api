@@ -259,7 +259,7 @@ def dashboard():
                                 challenge_id = resp.json().get('data').get('id')
                                 if urls and url_descriptions:
                                     for url, description in zip(urls, url_descriptions):
-                                        if url and description:  # todo maybe ""?
+                                        if url and description:
                                             resp = requests.post(
                                                 f'{request.scheme}://{request.host}{url_for("url_api")}',
                                                 headers=header,

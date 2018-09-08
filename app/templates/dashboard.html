@@ -103,7 +103,7 @@
                         <!-- Table: Challenges -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Challenge
+                                Challenges
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
@@ -287,14 +287,6 @@
                                         <label>Name</label>
                                         <input name="name" class="form-control">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Description</label>
-                                        <input name="description" class="form-control"> <!-- todo should be a text area: <textarea style="resize: vertical;" name="description" class="form-control"></textarea> can this be added to the design?-->
-                                    </div>
-                                    <div class="form-group">
-                                        <label>YouTube Challenge Video ID</label>
-                                        <input name="ytChallengeId" class="form-control">
-                                    </div>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
                                 <div class="col-lg-6">
@@ -302,6 +294,23 @@
                                         <label>Flag</label>
                                         <input name="flag" class="form-control" placeholder="TMT{fL4g}">
                                     </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>YouTube Challenge Video ID</label>
+                                        <input name="ytChallengeId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>YouTube Solution Video ID</label>
+                                        <input name="ytSolutionId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-4">
                                     <div class="form-group">
                                         <label>Category</label>
                                         <select name="category" class="form-control">
@@ -310,12 +319,15 @@
                                             {% endfor %}
                                         </select>
                                     </div>
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label>YouTube Solution Video ID</label>
-                                        <input name="ytSolutionId" class="form-control">
+                                        <label>Description</label>
+                                        <textarea style="resize: vertical;" name="description" class="form-control"></textarea>
                                     </div>
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
+                                <!-- /.col-lg-12 (nested) -->
                                 <div class="row">
                                     <div id="urls"></div>
                                     <div class="col-lg-12">
@@ -624,7 +636,9 @@
                                         <label>Description</label>
                                         <textarea id="updateChallengeDescription" style="resize: vertical;" name="description" class="form-control"></textarea>
                                     </div>
-                                    <div id="updateChallengeURLs"></div>
+                                    <div class="row">
+                                        <div id="updateChallengeURLs"></div>
+                                    </div>
                                 </div>
                                 <!-- /.col-lg-12 (nested) -->
                             </div>
@@ -676,19 +690,21 @@
             $("#updateChallengeYtSolutionId").val(data["ytSolutionId"]);
 
             // remove urls from old challenges
-            $('#url_1').remove();
-            $('#url_2').remove();
-            $('#url_3').remove();
+            $('#updateChallengeUrl_0').remove();
+            $('#updateChallengeUrl_1').remove();
+            $('#updateChallengeUrl_2').remove();
             for (var i in data['urls']) {
             	var url = data['urls'][i]['url'];
                 var description = data['urls'][i]['description'];
-                // TODO implement update/delete - at the moment its only possible to view the urls
+                var id = data['urls'][i]['id'];
+                // TODO implement update/delete urls - currently it's only possible to view the urls
                 // think of: delete one url and add a new one...
                 $('#updateChallengeURLs').append(
-                	'<div id="url_' + i + '">' +
+                	'<div class="row" id="updateChallengeUrl_' + i + '">' +
                         '<div class="col-lg-12">' +
                             '<div class="col-lg-5">' +
                                 '<div class="form-group">' +
+                                    '<input type="hidden" name="urlId[]" value="' + id + '">' +
                                     '<input type="text" class="form-control" name="urls[]" value="' + url + '" placeholder="URL">' +
                                 '</div>' +
                             '</div>' +

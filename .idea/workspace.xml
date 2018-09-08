@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/general.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -157,7 +155,7 @@
           <entry key="Pipfile" value="8" />
           <entry key="TODO" value="1" />
           <entry key="coverage" value="1" />
-          <entry key="html" value="124" />
+          <entry key="html" value="125" />
           <entry key="http" value="1" />
           <entry key="js" value="1" />
           <entry key="lock" value="1" />
@@ -170,7 +168,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="124" />
+          <entry key="HTML" value="125" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="30" />
@@ -184,7 +182,7 @@
         <counts>
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="89" />
-          <entry key="html" value="8133" />
+          <entry key="html" value="8422" />
           <entry key="md" value="3654" />
           <entry key="py" value="32735" />
           <entry key="txt" value="263" />
@@ -193,7 +191,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="8133" />
+          <entry key="HTML" value="8422" />
           <entry key="Markdown" value="3652" />
           <entry key="PLAIN_TEXT" value="263" />
           <entry key="Python" value="32736" />
@@ -205,11 +203,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="261" column="65" selection-start-line="261" selection-start-column="65" selection-end-line="261" selection-end-column="65" />
+            <state relative-caret-position="448">
+              <caret line="317" column="32" selection-start-line="317" selection-start-column="32" selection-end-line="317" selection-end-column="32" />
               <folding>
                 <element signature="e#677#2643#0" />
                 <element signature="e#2705#3572#0" />
@@ -221,27 +219,8 @@
                 <element signature="e#8226#9096#0" />
                 <element signature="e#9159#10167#0" />
                 <element signature="e#10230#10841#0" />
+                <element signature="e#10905#13996#0" />
                 <element signature="e#14165#15260#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/general.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-495">
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -366,10 +345,10 @@
         <option value="$PROJECT_DIR$/app/config.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/resources.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/app/views/admin.py" />
         <option value="$PROJECT_DIR$/app/templates/account.html" />
         <option value="$PROJECT_DIR$/app/views/general.py" />
+        <option value="$PROJECT_DIR$/app/views/admin.py" />
+        <option value="$PROJECT_DIR$/app/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -659,10 +638,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <frame x="-1" y="0" width="1922" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.1696905" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.1696905" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -673,7 +652,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49839914" visible="true" weight="0.28709677" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49839914" visible="true" weight="0.28709677" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.2612903" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.21827957" />
@@ -1028,24 +1007,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="684" column="98" lean-forward="true" selection-start-line="684" selection-start-column="98" selection-end-line="684" selection-end-column="98" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="113" column="92" lean-forward="true" selection-start-line="113" selection-start-column="92" selection-end-line="113" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -1058,10 +1023,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/general.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="141" column="21" lean-forward="true" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="709" column="29" selection-start-line="709" selection-start-column="29" selection-end-line="709" selection-end-column="29" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#html#0;n#!!top" />
+            <element signature="n#div#6;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="261" column="65" selection-start-line="261" selection-start-column="65" selection-end-line="261" selection-end-column="65" />
+        <state relative-caret-position="448">
+          <caret line="317" column="32" selection-start-line="317" selection-start-column="32" selection-end-line="317" selection-end-column="32" />
           <folding>
             <element signature="e#677#2643#0" />
             <element signature="e#2705#3572#0" />
@@ -1073,22 +1068,9 @@
             <element signature="e#8226#9096#0" />
             <element signature="e#9159#10167#0" />
             <element signature="e#10230#10841#0" />
+            <element signature="e#10905#13996#0" />
             <element signature="e#14165#15260#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="113" column="92" lean-forward="true" selection-start-line="113" selection-start-column="92" selection-end-line="113" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/general.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
         </state>
       </provider>
     </entry>
