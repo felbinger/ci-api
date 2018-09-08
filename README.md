@@ -138,17 +138,14 @@ docker-compose up -d
 docker-compose stop
 # Stop and remove all containers
 docker-compose down  
-
 # Start a specific container
 docker-compose up -d <container>
 # Stop a specific container
 docker-compose stop <container>
 # Stop and remove a specific container
 docker-compose rm -fs <container>  
-
 # Show logs
 docker-compose logs [container]  
 # Show status
 docker-compose ps [container]
-
 ```
