@@ -1,41 +1,55 @@
 # Challenge Interface
 
 ## API Schema
-| Method | URL | Headers | Payload | Description | Status |
-|:------:|:------------------------------:|:------------:|:-----------------------------------------:|:------------------------------------:|:------:|
-| GET | /api/auth | Access-Token | / | Infos über eigenen Account | Done |
-| POST | /api/auth |  | username, password | Login | Done |
-| DELETE | /api/auth | Access-Token | / | Logout | Done |
-|||||||
-| GET | /api/roles | Access-Token | / | Get all Roles | Done |
-| GET | /api/roles/<name:string> | Access-Token | / | Get a Roles | Done |
-| POST | /api/roles | Access-Token | name, description | Admin: Create Role | Done |
-| PUT | /api/roles/<name:string> | Access-Token | description | Admin: Modify Role Description | Done |
-| DELETE | /api/roles/<name:string> | Access-Token | / | Admin: Delete Role | Done |
-|||||||
-| GET | /api/users | Access-Token | / | Admin: Get all Accounts (Infos) | Done |
-| GET | /api/users/<uuid:string> | Access-Token | / | Admin: Get Account by UUID | Done |
-| POST | /api/users |  | username, email, password | Register a new Account | Done |
-| POST | /api/users | Access-Token | username, email, password, role | Admin: Create a new Account | Done |
-| PUT | /api/users/<uuid:string> | Access-Token | username (and/or) email (and/or) password | Admin: Update User (by UUID) | Done |
-| PUT | /api/users/me | Access-Token | username (and/or) email (and/or) password | Update your Account | Done |
-| DELETE | /api/users/<uuid:string> | Access-Token | / | Admin: Delete User (by UUID) | Done |
-| DELETE | /api/users/me | Access-Token | / | Delete your Account | Done |
-|||||||
-| GET | /api/challenges | Access-Token | / | Get all Challenges | Done |
-| GET | /api/challenges/<id:int> | Access-Token | / | Get Challenge | Done |
-| POST | /api/challenges | Access-Token | name, description, category, flag | Create Challenge | Done |
-| PUT | /api/challenges/<id:int> | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Update Challenge (Youtube Video IDs and/or Description) | Done |
-|||||||
-| GET | /api/categories | Access-Token | / | Get all Categories | Done |
-| GET | /api/categories/<name:string> | Access-Token | / | Get a Category | Done |
-| POST | /api/categories | Access-Token | name, description | Admin: Create Category | Done |
-| PUT | /api/categories/<name:string> | Access-Token | description | Admin: Modify Category Description | Done |
-| DELETE | /api/categories/<name:string> | Access-Token | / | Admin: Delete Category | Done |
-|||||||
-| GET | /api/solve/ | Access-Token | / | Get all solved challenges | Done |
-| POST | /api/solve | Access-Token | flag | Solve Special Challenge | Done |
-| PUT | /api/solve/<id:int> | Access-Token | flag | Solve Challenge | Done | |
+| Method | URL | Headers | Data | Description |
+|:---:|:---:|:---:|:---:|:---:|
+| GET | /api/auth | Access-Token | / | Infos über eigenen Account |
+| POST | /api/auth |  | username, password | Login |
+| DELETE | /api/auth | Access-Token | / | Logout |
+||||||
+| GET | /api/roles | Access-Token | / | Get all roles |
+| GET | /api/roles/{name:string} | Access-Token | / | Get a role |
+| POST | /api/roles | Access-Token | name, description | Admin: create role |
+| PUT | /api/roles/{name:string} | Access-Token | description | Admin: modify role (description) |
+| DELETE | /api/roles/{name:string} | Access-Token | / | Admin: delete role |
+||||||
+| GET | /api/users | Access-Token | / | Admin: Get all accounts |
+| GET | /api/users/{uuid:string} | Access-Token | / | Admin: Get a account |
+| POST | /api/users |  | username, email, password | Register a new account |
+| POST | /api/users | Access-Token | username, email, password, role | Admin: Create a new account |
+| PUT | /api/users/{uuid:string} | Access-Token | username (and/or) email (and/or) password | Admin: update user (by UUID) |
+| PUT | /api/users/me | Access-Token | username (and/or) email (and/or) password | update your account |
+| DELETE | /api/users/{uuid:string} | Access-Token | / | Admin: delete user (by UUID) |
+| DELETE | /api/users/me | Access-Token | / | delete your account |
+||||||
+| GET | /api/categories | Access-Token | / | Get all categories |
+| GET | /api/categories/{name:string} | Access-Token | / | Get a category |
+| POST | /api/categories | Access-Token | name, description | Admin: create category |
+| PUT | /api/categories/{name:string} | Access-Token | description | Admin: modify category (description) |
+| DELETE | /api/categories/{name:string} | Access-Token | / | Admin: delete category |
+||||||
+| GET | /api/urls/ | Access-Token | / | Get all urls |
+| GET | /api/urls/{id:int} | Access-Token | / | Get a url |
+| POST | /api/urls | Access-Token | url, description, challenge | Admin: create url |
+| PUT | /api/urls/{id:int} | Access-Token | url, description, challenge | Admin: modify url |
+| DELETE | /api/urls/{id:int} | Access-Token | / | Admin: delete url |
+||||||
+| GET | /api/challenges | Access-Token | / | Get all challenges |
+| GET | /api/challenges/{id:int} | Access-Token | / | Get challenge |
+| POST | /api/challenges | Access-Token | name, description, category, flag | Admin: create challenge |
+| PUT | /api/challenges/{id:int} | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Admin: update challenge (YouTube video id's and/or description) |
+||||||
+| POST | /api/solve | Access-Token | flag | Solve Special Challenge |
+| PUT | /api/solve/{id:int} | Access-Token | flag | Solve Challenge | |
+
+### GET Result Schemas
+* Role: `name`, `description`
+* Account (user): `publicId`, `username`, `email`, `created`, `lastLogin`,
+  `role` (`name`, `description`), `solved` (`challenge` (`id`, `name`, `category`), `timestamp`)
+* Category: `name`, `description`
+* URL: `id`, `url`, `description`, `challenge` (`id`, `name`, `category`(`name`, `description`))
+* Challenge: `id`, `name`, `description`, `category`(`name`, `description`), `ytChallengeId`, `ytSolutionId`, 
+  `urls` [(`id`, `url`, `description`), ...], `solveCount`
 
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings |
@@ -47,12 +61,12 @@
 |  | password | Blob(512) (sha512 Hash) |  |
 |  | lastLogin | TimeStamp |  |
 |  | created | TimeStamp |  |
-|  | role | Integer(20) | foreign key -> role.id |
+|  | role | Integer(20) | foreign key -} role.id |
 | roles | id | Integer(20) | primary key, auto increment |
 |  | name | Varchar(80) |  |
 |  | description | Varchar(100) |  |
 | tokens | id | Integer(20) | primary key, auto increment |
-|  | user | Integer(20) | foreign key -> user.id |
+|  | user | Integer(20) | foreign key -} user.id |
 |  | token | Varchar(128) | unique |
 |  | created | TimeStamp |  |
 |  | expires | TimeStamp |  |
@@ -67,10 +81,10 @@
 | url | id | Integer(20) | primary key, auto increment |  
 |  | description | Varchar(100) |  |  
 |  | url | Varchar(100) | unique |
-|  | challenge | Integer(20) | foreign key -> challenge.id |  
+|  | challenge | Integer(20) | foreign key -} challenge.id |  
 | solved | id | Integer(20) | primary key, auto increment |  
-|  | challenge | Integer(20) | foreign key -> challenge.id |
-|  | user | Integer(20) | foreign key -> user.id |  
+|  | challenge | Integer(20) | foreign key -} challenge.id |
+|  | user | Integer(20) | foreign key -} user.id |  
 |  | timestamp | TimeStamp |  |  |
 
 ## Installation
@@ -110,6 +124,11 @@ services:
 
 * Add database hc (in this example automatically)
 * Change database collection from `latin1_swedish_ci` to `utf8mb4_unicode_ci`
+* Execute following sql:
+```sql
+INSERT INTO `role` (`id`, `name`, `description`) VALUES (NULL, 'user', 'User'), (NULL, 'admin', 'Admin');
+INSERT INTO `category` (`id`, `name`, `description`) VALUES (NULL, 'Special', 'Special Challenges'), (NULL, 'HC', 'Hacking Challenges'), (NULL, 'CC', 'Coding Challenges');
+```
 
 * Use docker-compose:
 ```bash
