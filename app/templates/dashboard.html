@@ -676,9 +676,9 @@
             $("#updateChallengeYtSolutionId").val(data["ytSolutionId"]);
 
             // remove urls from old challenges
-            $('#url_1').delete();
-            $('#url_2').delete();
-            $('#url_3').delete();
+            $('#url_1').remove();
+            $('#url_2').remove();
+            $('#url_3').remove();
             for (var i in data['urls']) {
             	var url = data['urls'][i]['url'];
                 var description = data['urls'][i]['description'];
