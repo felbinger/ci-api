@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin.py" afterDir="false" />
     </list>
@@ -23,7 +24,7 @@
     <SUITE FILE_PATH="coverage/CC$cc__productive_.coverage" NAME="cc (productive) Coverage Results" MODIFIED="1533043001959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CC$tests.coverage" NAME="tests Coverage Results" MODIFIED="1532884587413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$Twisted_Trial_for_backend_login_test_test_login_without_data.coverage" NAME="Twisted Trial for backend_login_test.test_login_without_data Coverage Results" MODIFIED="1532882089879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/ChallengeInterface$ChallengeInterface__dev_.coverage" NAME="ChallengeInterface (dev) Coverage Results" MODIFIED="1536431506448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChallengeInterface$ChallengeInterface__dev_.coverage" NAME="ChallengeInterface (dev) Coverage Results" MODIFIED="1536482118324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CC$cc__dev_.coverage" NAME="cc (dev) Coverage Results" MODIFIED="1534937298014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ChallengeInterface$pytest_for_api_challenge_test_test_helper_functions.coverage" NAME="pytest for api_challenge_test.test_helper_functions Coverage Results" MODIFIED="1536007063817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$Twisted_Trial_for_backend_login_test_test_login.coverage" NAME="Twisted Trial for backend_login_test.test_login Coverage Results" MODIFIED="1532880333452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -140,13 +141,13 @@
     <session id="977645913">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
-          <entry key="project.open.time.10" value="15" />
+          <entry key="project.closed" value="37" />
+          <entry key="project.open.time.10" value="16" />
           <entry key="project.open.time.11" value="10" />
           <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -155,12 +156,12 @@
           <entry key="Pipfile" value="8" />
           <entry key="TODO" value="1" />
           <entry key="coverage" value="1" />
-          <entry key="html" value="125" />
+          <entry key="html" value="128" />
           <entry key="http" value="1" />
           <entry key="js" value="1" />
           <entry key="lock" value="1" />
           <entry key="md" value="30" />
-          <entry key="py" value="559" />
+          <entry key="py" value="560" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="8" />
         </counts>
@@ -168,12 +169,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="125" />
+          <entry key="HTML" value="128" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="30" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="559" />
+          <entry key="Python" value="560" />
           <entry key="PythonStub" value="1" />
           <entry key="TOML file" value="8" />
         </counts>
@@ -182,19 +183,19 @@
         <counts>
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="89" />
-          <entry key="html" value="8422" />
+          <entry key="html" value="8476" />
           <entry key="md" value="3654" />
-          <entry key="py" value="32735" />
+          <entry key="py" value="33392" />
           <entry key="txt" value="263" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="8422" />
+          <entry key="HTML" value="8476" />
           <entry key="Markdown" value="3652" />
           <entry key="PLAIN_TEXT" value="263" />
-          <entry key="Python" value="32736" />
+          <entry key="Python" value="33393" />
           <entry key="SQL" value="1" />
           <entry key="TOML file" value="89" />
         </counts>
@@ -204,23 +205,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/admin.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="317" column="32" selection-start-line="317" selection-start-column="32" selection-end-line="317" selection-end-column="32" />
+            <state relative-caret-position="345">
+              <caret line="735" column="50" lean-forward="true" selection-start-line="735" selection-start-column="50" selection-end-line="735" selection-end-column="50" />
               <folding>
-                <element signature="e#677#2643#0" />
-                <element signature="e#2705#3572#0" />
-                <element signature="e#3634#4252#0" />
-                <element signature="e#4315#5549#0" />
-                <element signature="e#5608#6462#0" />
-                <element signature="e#6521#7509#0" />
-                <element signature="e#7568#8163#0" />
-                <element signature="e#8226#9096#0" />
-                <element signature="e#9159#10167#0" />
-                <element signature="e#10230#10841#0" />
-                <element signature="e#10905#13996#0" />
-                <element signature="e#14165#15260#0" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#html#0;n#!!top" />
+                <element signature="n#div#6;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -359,9 +362,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-279" />
-    <option name="width" value="1914" />
-    <option name="height" value="1049" />
+    <option name="x" value="47" />
+    <option name="width" value="1906" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -371,17 +374,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ScamPage" type="cbb8eebc:String" user="ScamPage" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -419,6 +411,13 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="url" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -432,6 +431,17 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ScamPage" type="cbb8eebc:String" user="ScamPage" />
             </path>
           </expand>
           <select />
@@ -638,10 +648,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1053" extended-state="7" />
+    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.1696905" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.17129135" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -827,13 +837,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/utils.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/url/resources.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/url/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -990,11 +993,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/api/categories/resources.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1016,11 +1015,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/general.py">
@@ -1030,33 +1025,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/app/api/url/resources.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="709" column="29" selection-start-line="709" selection-start-column="29" selection-end-line="709" selection-end-column="29" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="118">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="317" column="32" selection-start-line="317" selection-start-column="32" selection-end-line="317" selection-end-column="32" />
+        <state relative-caret-position="328">
+          <caret line="310" column="51" selection-start-line="310" selection-start-column="51" selection-end-line="310" selection-end-column="51" />
           <folding>
             <element signature="e#677#2643#0" />
             <element signature="e#2705#3572#0" />
@@ -1068,8 +1047,30 @@
             <element signature="e#8226#9096#0" />
             <element signature="e#9159#10167#0" />
             <element signature="e#10230#10841#0" />
-            <element signature="e#10905#13996#0" />
-            <element signature="e#14165#15260#0" />
+            <element signature="e#10905#13997#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="735" column="50" lean-forward="true" selection-start-line="735" selection-start-column="50" selection-end-line="735" selection-end-column="50" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#html#0;n#!!top" />
+            <element signature="n#div#6;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -281,6 +281,9 @@ def dashboard():
                 description = request.form.get('description')
                 yt_challenge_id = request.form.get('ytChallengeId')
                 yt_solution_id = request.form.get('ytSolutionId')
+                url_ids = request.form.getlist('urlIds[]')
+                urls = request.form.getlist('urls[]')
+                url_descriptions = request.form.getlist("urlDescriptions[]")
                 if not _id:
                     flash('Unable to update challenge: ID cannot be emtpy!', 'danger')
                 else:
@@ -294,10 +297,29 @@ def dashboard():
                         }
                     )
                     if resp.status_code != 200:
-                        print(resp.json())
                         flash(f'Unable to update challenge: {resp.json().get("message")}', 'danger')
                     else:
                         flash('Challenge has been created successfully!', 'success')
+                        if urls and url_descriptions:
+                            for _id, url, description in zip(url_ids, urls, url_descriptions):
+                                if url and description:
+                                    resp = requests.put(
+                                        f'{request.scheme}://{request.host}{url_for("url_api")}/{_id}',
+                                        headers=header,
+                                        json={
+                                            'url': url,
+                                            'description': description
+                                        }
+                                    )
+                                    if resp.status_code != 200:
+                                        flash(f'Unable to update challenge: {resp.json().get("message")}', 'danger')
+                                else:
+                                    resp = requests.delete(
+                                        f'{request.scheme}://{request.host}{url_for("url_api")}/{_id}',
+                                        headers=header
+                                    )
+                                    if resp.status_code != 200:
+                                        flash(f'Unable to update challenge: {resp.json().get("message")}', 'danger')
 
     data = dict()
     data['accounts'] = requests.get(

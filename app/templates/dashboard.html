@@ -704,7 +704,7 @@
                         '<div class="col-lg-12">' +
                             '<div class="col-lg-5">' +
                                 '<div class="form-group">' +
-                                    '<input type="hidden" name="urlId[]" value="' + id + '">' +
+                                    '<input type="hidden" name="urlIds[]" value="' + id + '">' +
                                     '<input type="text" class="form-control" name="urls[]" value="' + url + '" placeholder="URL">' +
                                 '</div>' +
                             '</div>' +
@@ -714,7 +714,7 @@
                                 '</div>' +
                             '</div>' +
                             '<div class="col-lg-2 nopadding">' +
-                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url('+ i +');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
+                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url(\'updateChallengeUrl_'+ i +'\');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
                             '</div>' +
                             '<div class="clear"></div>' +
                         '</div>' +
@@ -744,7 +744,7 @@
                                 '</div>' +
                             '</div>' +
                             '<div class="col-lg-2 nopadding">' +
-                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url('+ id +');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
+                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url(\'url_'+ id +'\');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
                             '</div>' +
                             '<div class="clear"></div>' +
                         '</div>' +
@@ -757,7 +757,7 @@
             }
         }
         function remove_url(id) {
-            $('#url_'+id).remove();
+            $('#' + id).remove();
             count--;
         }
 
