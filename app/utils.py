@@ -1,4 +1,7 @@
 import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.utils import COMMASPACE
 
 
 class SMTPMail:
@@ -12,14 +15,14 @@ class SMTPMail:
             print(e)
 
     def sendmail(self, subject, message, receivers=[], sender='no-reply@the-morpheus.de'):
-        message = f"""From: {sender}
-To: {receivers[0]}
-Subject: {subject}
+        msg = MIMEMultipart()
+        msg['From'] = sender
+        msg['To'] = COMMASPACE.join(receivers)
+        msg['Subject'] = subject
+        msg.attach(MIMEText(message, _charset='utf-8'))
 
-{message}
-"""
         try:
-            self.conn.sendmail(sender, receivers, message)
+            self.conn.sendmail(sender, receivers, msg.as_string())
         except smtplib.SMTPException as e:
             print(e)
 

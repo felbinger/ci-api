@@ -204,7 +204,7 @@ class UserResource(MethodView):
             )
             smtp.sendmail(
                 current_app.config['MAIL_SUBJECT'],
-                current_app.config['MAIL_MESSAGE']
+                current_app.config['MAIL_MESSAGE'],
                 [user.email]
             )
             smtp.exit()
