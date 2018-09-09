@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/vendor/datatables-responsive/dataTables.responsive.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/vendor/datatables-responsive/dataTables.responsive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/vendor/datatables/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/vendor/datatables/js/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/lastfailed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_challenge_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api_challenge_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,12 +154,12 @@
           <entry key="Pipfile" value="8" />
           <entry key="TODO" value="1" />
           <entry key="coverage" value="1" />
-          <entry key="html" value="128" />
+          <entry key="html" value="129" />
           <entry key="http" value="1" />
           <entry key="js" value="3" />
           <entry key="lock" value="1" />
           <entry key="md" value="30" />
-          <entry key="py" value="564" />
+          <entry key="py" value="565" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="8" />
         </counts>
@@ -173,12 +167,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="128" />
+          <entry key="HTML" value="129" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="3" />
           <entry key="Markdown" value="30" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="564" />
+          <entry key="Python" value="565" />
           <entry key="PythonStub" value="1" />
           <entry key="TOML file" value="8" />
         </counts>
@@ -190,7 +184,7 @@
           <entry key="html" value="8854" />
           <entry key="js" value="12" />
           <entry key="md" value="3654" />
-          <entry key="py" value="35922" />
+          <entry key="py" value="35923" />
           <entry key="txt" value="263" />
         </counts>
       </usages-collector>
@@ -201,7 +195,7 @@
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="3652" />
           <entry key="PLAIN_TEXT" value="263" />
-          <entry key="Python" value="35923" />
+          <entry key="Python" value="35924" />
           <entry key="SQL" value="1" />
           <entry key="TOML file" value="89" />
         </counts>
@@ -210,14 +204,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/api_challenge_test.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="106" column="104" selection-start-line="106" selection-start-column="104" selection-end-line="106" selection-end-column="104" />
+            <state relative-caret-position="366">
+              <caret line="758" column="72" selection-start-line="758" selection-start-column="72" selection-end-line="758" selection-end-column="72" />
               <folding>
-                <marker date="1536493625617" expanded="true" signature="1977:3042" ph="..." />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#html#0;n#!!top" />
+                <element signature="n#div#6;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -334,7 +350,6 @@
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/register.html" />
         <option value="$PROJECT_DIR$/app/api/user/models.py" />
-        <option value="$PROJECT_DIR$/app/config.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/resources.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/templates/account.html" />
@@ -345,6 +360,7 @@
         <option value="$PROJECT_DIR$/app/static/vendor/datatables-responsive/dataTables.responsive.js" />
         <option value="$PROJECT_DIR$/app/static/vendor/datatables/js/jquery.dataTables.js" />
         <option value="$PROJECT_DIR$/tests/api_challenge_test.py" />
+        <option value="$PROJECT_DIR$/app/config.py" />
       </list>
     </option>
   </component>
@@ -424,6 +440,11 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -600,12 +621,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests - 2018.09.09 at 13h 42m 16s.xml">
-      <configuration name="tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="tests - 2018.09.09 at 13h 42m 29s.xml">
-      <configuration name="tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="tests - 2018.09.09 at 13h 42m 30s.xml">
       <configuration name="tests" configurationId="tests" />
     </history-entry>
@@ -630,6 +645,12 @@
     <history-entry file="tests - 2018.09.09 at 13h 46m 21s.xml">
       <configuration name="tests" configurationId="tests" />
     </history-entry>
+    <history-entry file="tests - 2018.09.09 at 13h 47m 08s.xml">
+      <configuration name="tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="tests - 2018.09.09 at 13h 47m 15s.xml">
+      <configuration name="tests" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -644,7 +665,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.17129135" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.17129135" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -655,7 +676,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49786553" visible="true" weight="0.28709677" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" visible="true" weight="0.28709677" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50213444" side_tool="true" weight="0.28709677" />
@@ -1017,13 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/static/vendor/datatables-responsive/dataTables.responsive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1038,9 +1052,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/api_challenge_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="106" column="104" selection-start-line="106" selection-start-column="104" selection-end-line="106" selection-end-column="104" />
+          <folding>
+            <marker date="1536493625617" expanded="true" signature="1977:3042" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
+        <state relative-caret-position="366">
           <caret line="758" column="72" selection-start-line="758" selection-start-column="72" selection-end-line="758" selection-end-column="72" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -1061,13 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/api_challenge_test.py">
+    <entry file="file://$PROJECT_DIR$/app/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="106" column="104" selection-start-line="106" selection-start-column="104" selection-end-line="106" selection-end-column="104" />
-          <folding>
-            <marker date="1536493625617" expanded="true" signature="1977:3042" ph="..." />
-          </folding>
+        <state relative-caret-position="203">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>

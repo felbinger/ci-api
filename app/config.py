@@ -19,7 +19,7 @@ class ProductionConfig(Config):
     database = os.environ.get('MYSQL_DATABASE')
     SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{username}:{password}@{hostname}:{port}/{database}?charset=utf8mb4'
 
-    # ENABLE_MAIL = True
+    ENABLE_MAIL = True
 
     # TODO add something
     MAIL_SUBJECT = "The Morpheus Tutorials - Challenges"
