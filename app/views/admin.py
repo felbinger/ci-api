@@ -300,8 +300,10 @@ def dashboard():
                         flash(f'Unable to update challenge: {resp.json().get("message")}', 'danger')
                     else:
                         flash('Challenge has been created successfully!', 'success')
-                        if urls and url_descriptions:
+                        all_urls = resp.json().get('data').get('urls')
+                        if url_ids and urls and url_descriptions:
                             for _id, url, description in zip(url_ids, urls, url_descriptions):
+                                # if url and description contain something useful update the url
                                 if url and description:
                                     resp = requests.put(
                                         f'{request.scheme}://{request.host}{url_for("url_api")}/{_id}',
@@ -314,12 +316,35 @@ def dashboard():
                                     if resp.status_code != 200:
                                         flash(f'Unable to update challenge: {resp.json().get("message")}', 'danger')
                                 else:
+                                    # if url and description fields are emtpy
                                     resp = requests.delete(
                                         f'{request.scheme}://{request.host}{url_for("url_api")}/{_id}',
                                         headers=header
                                     )
-                                    if resp.status_code != 200:
+                                    if resp.status_code != 204:
                                         flash(f'Unable to update challenge: {resp.json().get("message")}', 'danger')
+
+                            # iterate over all urls for the challenge
+                            for obj in all_urls:
+                                # if the id from the currently saved url object is not in the request delete it
+                                if str(obj.get('id')) not in url_ids:
+                                    resp = requests.delete(
+                                       f'{request.scheme}://{request.host}{url_for("url_api")}/{obj.get("id")}',
+                                       headers=header
+                                    )
+                                    if resp.status_code != 204:
+                                        msg = resp.json().get("message")
+                                        flash(f'Unable to update challenge (url): {msg}', 'danger')
+                        else:
+                            # if urls and url_descriptions are completely emtpy delete all urls
+                            for obj in all_urls:
+                                resp = requests.delete(
+                                    f'{request.scheme}://{request.host}{url_for("url_api")}/{obj.get("id")}',
+                                    headers=header
+                                )
+                                if resp.status_code != 204:
+                                    msg = resp.json().get("message")
+                                    flash(f'Unable to update challenge (url): {msg}', 'danger')
 
     data = dict()
     data['accounts'] = requests.get(
