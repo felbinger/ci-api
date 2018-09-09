@@ -126,8 +126,14 @@ services:
 * Change database collection from `latin1_swedish_ci` to `utf8mb4_unicode_ci`
 * Execute following sql:
 ```sql
-INSERT INTO `role` (`id`, `name`, `description`) VALUES (NULL, 'user', 'User'), (NULL, 'admin', 'Admin');
-INSERT INTO `category` (`id`, `name`, `description`) VALUES (NULL, 'Special', 'Special Challenges'), (NULL, 'HC', 'Hacking Challenges'), (NULL, 'CC', 'Coding Challenges');
+INSERT INTO `category` (`id`, `name`, `description`) VALUES
+(1, 'HC', 'Hacking Challenges'),
+(2, 'CC', 'Coding Challenges'),
+(3, 'Special', 'Special Challenges');
+
+INSERT INTO `role` (`id`, `name`, `description`) VALUES
+(1, 'admin', 'Admin'),
+(2, 'user', 'User');
 ```
 
 * Use docker-compose:

@@ -70,8 +70,8 @@
                                     <thead>
                                         <tr>
                                             <th>Username</th>
-                                            <th>Created</th>
                                             <th>Last Login</th>
+                                            <th>Solved Challenges</th>
                                             <th>Role</th>
                                             <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateAccount" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
                                         </tr>
@@ -81,7 +81,7 @@
                                         <tr class="odd gradeX">
                                             <td>{{ account['username'] }}</td>
                                             <td>{{ account['created'] }}</td>
-                                            <td>{{ account['lastLogin'] }}</td>
+                                            <td>{{ account['solved']|length }}</td>
                                             <td>{{ account['role']['description'] }}</td>
                                             <td align="center">
                                                 <a onclick='openModalUpdateAccount({{ account|tojson }})'>
@@ -441,21 +441,9 @@
                                     <label>Username</label>
                                     <input id="updateUsername" name="username" class="form-control" type="text" required>
                                 </div>
-                                <div class="form-group">
-                                    <label>E-Mail</label>
-                                    <input id="updateEmail" name="email" class="form-control" type="text" required>
-                                </div>
                             </div>
                             <!-- /.col-md-6 (nested) -->
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Created</label>
-                                    <input id="updateCreated" class="form-control" type="text" disabled>
-                                </div>
-                                <div class="form-group">
-                                    <label>Last Login</label>
-                                    <input id="updateLastLogin" class="form-control" type="text" disabled>
-                                </div>
                                 <div class="form-group">
                                     <label>Role</label>
                                     <select name="role" class="form-control" required>
@@ -464,8 +452,33 @@
                                         {% endfor %}
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                    <label>E-Mail</label>
+                                    <input id="updateEmail" name="email" class="form-control" type="text" required>
+                                </div>
                             </div>
                             <!-- /.col-md-6 (nested) -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Created</label>
+                                    <input id="updateCreated" class="form-control" type="text" disabled>
+                                </div>
+                            </div>
+                            <!-- /.col-md-4 (nested) -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Last Login</label>
+                                    <input id="updateLastLogin" class="form-control" type="text" disabled>
+                                </div>
+                            </div>
+                            <!-- /.col-md-4 (nested) -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Solved Challenges</label>
+                                    <input id="updateSolvedChallenges" class="form-control" type="text" disabled>
+                                </div>
+                            </div>
+                            <!-- /.col-md-4 (nested) -->
                         </div>
                         <!-- /.row (nested) -->
                     </div>
@@ -649,6 +662,7 @@
             $("#updateUsername").val(data["username"]);
             $("#updateCreated").val(data["created"]);
             $("#updateLastLogin").val(data["lastLogin"]);
+            $("#updateSolvedChallenges").val(data['solved'].length);
             $("#updateEmail").val(data["email"]);
             $('select[name="role"]').find('option[value="' + data['role']['name'] + '"]').attr("selected",true);
             $('#modalUpdateAccount').modal('show');
