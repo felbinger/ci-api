@@ -45,8 +45,72 @@ def test_create_challenge_without_data(app, client):
     assert json.loads(resp.data.decode()).get('message') == 'Payload is invalid'
 
 
-# update challenge (description and video ids)
-# TODO - after rechecking api
+# update challenge (description, video ids)
+def test_update_challenge(app, client):
+    token = _get_token(app, client)
+    # create dummy challenge
+    _create_dummy_category(app, client)
+    data = {'name': 'challenge name',
+            'description': 'challenge description',
+            'flag': 'TMT{TestFlag}',
+            'category': 'hacking'}
+    resp = client.post('/api/challenges', headers={'Access-Token': token}, json=data)
+    assert resp.status_code == 201
+    challenge_id = json.loads(resp.data.decode()).get('data').get('id')
+
+    # update challenge
+    data = {'description': 'new challenge description',
+            'ytChallengeId': 'anything',
+            'ytSolutionId': 'something'}
+    resp = client.put(f'/api/challenges/{challenge_id}', headers={'Access-Token': token}, json=data)
+    assert resp.status_code == 200
+    assert json.loads(resp.data.decode()).get('data').get('description') == data.get('description')
+    assert json.loads(resp.data.decode()).get('data').get('ytChallengeId') == data.get('ytChallengeId')
+    assert json.loads(resp.data.decode()).get('data').get('ytSolutionId') == data.get('ytSolutionId')
+
+
+def test_update_challenge_without_data(app, client):
+    token = _get_token(app, client)
+
+    _create_dummy_category(app, client)
+    data = {'name': 'challenge name',
+            'description': 'challenge description',
+            'flag': 'TMT{TestFlag}',
+            'category': 'hacking'}
+    resp = client.post('/api/challenges', headers={'Access-Token': token}, json=data)
+    assert resp.status_code == 201
+    challenge_id = json.loads(resp.data.decode()).get('data').get('id')
+
+    resp = client.put(f'/api/challenges/{challenge_id}', headers={'Access-Token': token})
+    assert resp.status_code == 200
+
+
+def test_update_challenge_invalid_data(app, client):
+    token = _get_token(app, client)
+    # create dummy challenge
+    _create_dummy_category(app, client)
+    data = {'name': 'challenge name',
+            'description': 'challenge description',
+            'flag': 'TMT{TestFlag}',
+            'category': 'hacking'}
+    resp = client.post('/api/challenges', headers={'Access-Token': token}, json=data)
+    assert resp.status_code == 201
+    challenge_id = json.loads(resp.data.decode()).get('data').get('id')
+
+    # update challenge
+    data = {'invalid_key': 'new challenge description',
+            'ytChallengeId': 'too long data - maximum is 10'}
+    resp = client.put(f'/api/challenges/{challenge_id}', headers={'Access-Token': token}, json=data)
+    assert resp.status_code == 400
+    assert json.loads(resp.data.decode()).get('message') == 'Payload is invalid'
+    assert 'ytChallengeId' in json.loads(resp.data.decode()).get('errors')
+    assert any('Length' in s for s in json.loads(resp.data.decode()).get('errors').get('ytChallengeId'))
+
+
+def test_update_challenge_invalid_challenge(app, client):
+    resp = client.put('/api/challenges/101010', headers={'Access-Token': _get_token(app, client)})
+    assert resp.status_code == 404
+    assert json.loads(resp.data.decode()).get('message') == 'Challenge does not exist!'
 
 
 def _get_token(app, client):

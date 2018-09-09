@@ -330,21 +330,6 @@
                                 <!-- /.col-lg-12 (nested) -->
                                 <div class="row">
                                     <div id="urls"></div>
-                                    <div class="col-lg-12">
-                                        <div class="col-lg-5">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="urls[]" value="" placeholder="URL">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="urlDescriptions[]" placeholder="Description">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <div class="form-group"><div class="form-group input-group-btn"><button class="btn btn-success" type="button" onclick="append_url();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div></div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- /.col-lg-12 -->
@@ -697,7 +682,7 @@
             	var url = data['urls'][i]['url'];
                 var description = data['urls'][i]['description'];
                 var id = data['urls'][i]['id'];
-                // TODO implement delete and add new url
+                // TODO place a "+" Button somewhere (if the maximum amount of urls hasn't been reached)
                 $('#updateChallengeURLs').append(
                 	'<div class="row" id="updateChallengeUrl_' + i + '">' +
                         '<div class="col-lg-12">' +
@@ -729,7 +714,7 @@
         var count = 1;
         function append_url() {
             if (count < 3) {
-                $('#urls').append(
+            	$('#urls').append(
                     '<div id="url_' + id + '">' +
                         '<div class="col-lg-12">' +
                             '<div class="col-lg-5">' +
@@ -761,34 +746,52 @@
         }
 
         $(document).ready(function() {
-          $('#accountList').DataTable({
-              responsive: true,
-              "columnDefs": [{
-                  "targets": 'no-sort',
-                  "orderable": false
-              }]
-          });
-          $('#challengeList').DataTable({
-              responsive: true,
-              "columnDefs": [{
-                  "targets": 'no-sort',
-                  "orderable": false
-              }]
-          });
-          $('#rolelist').DataTable({
-              responsive: true,
-              "columnDefs": [{
-              	  "targets": 'no-sort',
-                  "orderable": false
-              }]
-          });
-          $('#categoryList').DataTable({
-              responsive: true,
-              "columnDefs": [{
-                  "targets": 'no-sort',
-                  "orderable": false
-              }]
-          });
+        	// TODO change "+" Button to "-" Button (delete_url) if the maximum amount of urls has been reached
+            $('#urls').append(
+        	'<div class="col-lg-12">' +
+			    '<div class="col-lg-5">' +
+			        '<div class="form-group">' +
+			        '<input type="text" class="form-control" name="urls[]" value="" placeholder="URL">' +
+			        '</div>' +
+                '</div>' +
+                '<div class="col-lg-5">' +
+                    '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="urlDescriptions[]" placeholder="Description">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="col-lg-2">' +
+			        '<div class="form-group"><div class="form-group input-group-btn"><button class="btn btn-success" type="button" onclick="append_url();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div></div>' +
+			        '</div>' +
+			    '</div>' +
+            '</div>');
+            $('#accountList').DataTable({
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false
+                }]
+            });
+            $('#challengeList').DataTable({
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false
+                }]
+            });
+            $('#rolelist').DataTable({
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false
+                }]
+            });
+            $('#categoryList').DataTable({
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false
+                }]
+            });
         });
     </script>
 </html>
