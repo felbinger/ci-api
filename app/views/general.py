@@ -11,12 +11,6 @@ def index():
     return render_template('index.html'), 200
 
 
-@general.route('/rules', methods=['GET'])
-@require_login
-def rules():
-    return render_template('rules.html'), 200
-
-
 @general.route('/login', methods=['GET', 'POST'])
 @require_logout
 def login():
@@ -85,16 +79,15 @@ def register():
                     session['Access-Token'] = token
                     return redirect(url_for('app.views.general.index'))
             else:
-                flash(f'Unknown error: {resp.json().get("message")}')
+                flash(f'Unknown error: {resp.json().get("message")}', 'danger')
         else:
-            flash('Missing data')
+            flash('Missing data', 'danger')
 
     if request.method == 'GET':
         if request.args.get('username') or request.args.get('email') or request.args.get('password'):
-            flash('Missing data')
+            flash('Missing data', 'danger')
             if request.args.get('username') and request.args.get('email') and request.args.get('password'):
-                # Flash an message in the template to deflect the user.
-                flash('Permission Denied: Missing admin cookie!', 'danger')
+                flash('Internal Error', 'danger')
 
     # The template contains one form which should have the attribute method="POST".
     # The user should recognize this error and correct it itself to create the account.
@@ -123,7 +116,7 @@ def account():
                         else:
                             flash('Password has been updated!', 'success')
                     else:
-                        flash('Password is too short. Please use a password which is >= 8 characters!')
+                        flash('Password is too short. Please use a password which is >= 8 characters!', 'danger')
                 else:
                     flash('The entered Password\'s are not the same!', 'danger')
 
