@@ -476,6 +476,7 @@
                             <!-- /.col-md-4 (nested) -->
                         </div>
                         <!-- /.row (nested) -->
+                        <div id="solvedChallenges"></div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" id="modalButtonDeleteAccount" name="action" value="deleteAccount" class="btn btn-danger">Delete Account</button>
@@ -660,6 +661,36 @@
             $("#updateSolvedChallenges").val(data['solved'].length);
             $("#updateEmail").val(data["email"]);
             $('select[name="role"]').find('option[value="' + data['role']['name'] + '"]').attr("selected",true);
+
+            let rows = "";
+            for (var i in data['solved']) {
+                rows += '<tr class="odd gradeX">' +
+                        '<td>' + data['solved'][i]['challenge']['category']['description'] + '</td>' +
+                        '<td>' + data['solved'][i]['challenge']['name'] + '</td>' +
+                        '<td>' + data['solved'][i]['timestamp'] + '</td>' +
+                        '</tr>';
+            }
+            $('#solvedChallenges').append(`
+                <table width="100%" class="table table-striped table-bordered table-hover" id="solvedListForAccount${data['id']}">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Name</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${rows}
+                    </tbody>
+                </table>
+            `);
+            $('#solvedListForAccount' + data['id']).DataTable({
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false
+                }]
+            });
             $('#modalUpdateAccount').modal('show');
         }
 
