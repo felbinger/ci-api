@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/cc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/cc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/hc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/hc.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -155,7 +156,7 @@
           <entry key="TODO" value="1" />
           <entry key="coverage" value="1" />
           <entry key="css" value="4" />
-          <entry key="html" value="144" />
+          <entry key="html" value="146" />
           <entry key="http" value="1" />
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
@@ -169,7 +170,7 @@
         <counts>
           <entry key="CSS" value="4" />
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="144" />
+          <entry key="HTML" value="146" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="35" />
@@ -183,7 +184,7 @@
         <counts>
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="89" />
-          <entry key="html" value="9355" />
+          <entry key="html" value="9368" />
           <entry key="js" value="12" />
           <entry key="md" value="4266" />
           <entry key="py" value="36432" />
@@ -193,7 +194,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="9355" />
+          <entry key="HTML" value="9368" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="4264" />
           <entry key="PLAIN_TEXT" value="263" />
@@ -206,11 +207,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/api/challenge/resources.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
               <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="86" column="64" lean-forward="true" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="92" column="100" selection-start-line="92" selection-start-column="100" selection-end-line="92" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -299,7 +318,6 @@
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/app/api/url/resource.py" />
         <option value="$PROJECT_DIR$/app/api/solve/schemas.py" />
-        <option value="$PROJECT_DIR$/app/templates/hc.html" />
         <option value="$PROJECT_DIR$/app/templates/special.html" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/views/challenges.py" />
@@ -325,7 +343,6 @@
         <option value="$PROJECT_DIR$/app/api/url/models.py" />
         <option value="$PROJECT_DIR$/app/api/challenge/schemas.py" />
         <option value="$PROJECT_DIR$/app/templates/example_dynamic.html" />
-        <option value="$PROJECT_DIR$/app/templates/cc.html" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/api/user/models.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/resources.py" />
@@ -347,6 +364,8 @@
         <option value="$PROJECT_DIR$/app/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/app/api/challenge/models.py" />
         <option value="$PROJECT_DIR$/app/api/challenge/resources.py" />
+        <option value="$PROJECT_DIR$/app/templates/hc.html" />
+        <option value="$PROJECT_DIR$/app/templates/cc.html" />
       </list>
     </option>
   </component>
@@ -952,24 +971,10 @@
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="115" column="56" selection-start-line="115" selection-start-column="56" selection-end-line="132" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="123" column="67" selection-start-line="123" selection-start-column="67" selection-end-line="123" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1017,6 +1022,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="92" column="100" selection-start-line="92" selection-start-column="100" selection-end-line="92" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="86" column="64" lean-forward="true" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
         </state>
       </provider>
     </entry>
