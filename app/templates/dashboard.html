@@ -661,6 +661,7 @@
             $("#updateSolvedChallenges").val(data['solved'].length);
             $("#updateEmail").val(data["email"]);
             $('select[name="role"]').find('option[value="' + data['role']['name'] + '"]').attr("selected",true);
+            $("#solvedChallenges").children().remove()
 
             let rows = "";
             for (var i in data['solved']) {
@@ -671,7 +672,7 @@
                         '</tr>';
             }
             $('#solvedChallenges').append(`
-                <table width="100%" class="table table-striped table-bordered table-hover" id="solvedListForAccount${data['id']}">
+                <table width="100%" class="table table-striped table-bordered table-hover" id="solvedListForAccount">
                     <thead>
                         <tr>
                             <th>Category</th>
@@ -684,7 +685,7 @@
                     </tbody>
                 </table>
             `);
-            $('#solvedListForAccount' + data['publicId']).DataTable({
+            $('#solvedListForAccount').DataTable({
                 responsive: true,
                 "columnDefs": [{
                     "targets": 'no-sort',
