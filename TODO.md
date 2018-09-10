@@ -2,17 +2,18 @@
 
 ### General
 * config.py: Mail Subject/Message anpassen (Cedric)
+
 * Announcement Video (erst kurz vor Veröffentlichung um alle Features mitzunehmen)
   * Planen
   * Produzieren
   * ID in index.html einfügen
-* Flags zu Coding Challenges hinzufügen
+ 
 * Code kommentieren (Nico)
 
 #### gewünschte Videoinhalte:
 * Beweggründe zu einem neuen Interface
-  * Hacking Challenges (ab 0x10)
-  * Coding Challenges (ab 0x01) - um die Flag zu erhalten einfach nochmal lösen.
+  * Hacking Challenges
+  * Coding Challenges - um die Flag zu erhalten einfach nochmal lösen.
 * Funktionsweise kurz erklärt
 * Feature Requests/Bugs Melden
 
@@ -31,3 +32,7 @@
 
 
 ### Tests
+##### PyTests
+
+##### manuelle Tests
+* alle Challenges Manuell machen und Flag übermitteln

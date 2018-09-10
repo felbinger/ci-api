@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/challenges.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/challenges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/general.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -190,7 +185,7 @@
           <entry key="Pipfile" value="89" />
           <entry key="html" value="9487" />
           <entry key="js" value="12" />
-          <entry key="md" value="4331" />
+          <entry key="md" value="4616" />
           <entry key="py" value="36546" />
           <entry key="txt" value="263" />
         </counts>
@@ -200,7 +195,7 @@
           <entry key="Dockerfile" value="18" />
           <entry key="HTML" value="9487" />
           <entry key="JavaScript" value="12" />
-          <entry key="Markdown" value="4329" />
+          <entry key="Markdown" value="4614" />
           <entry key="PLAIN_TEXT" value="263" />
           <entry key="Python" value="36547" />
           <entry key="SQL" value="1" />
@@ -211,47 +206,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="405">
-                <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+              <first_editor relative-caret-position="304">
+                <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/general.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="373" column="65" selection-start-line="373" selection-start-column="65" selection-end-line="373" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -373,12 +335,12 @@
         <option value="$PROJECT_DIR$/app/api/challenge/resources.py" />
         <option value="$PROJECT_DIR$/app/templates/hc.html" />
         <option value="$PROJECT_DIR$/app/templates/cc.html" />
-        <option value="$PROJECT_DIR$/TODO.md" />
         <option value="$PROJECT_DIR$/app/templates/account.html" />
         <option value="$PROJECT_DIR$/app/views/challenges.py" />
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/views/general.py" />
         <option value="$PROJECT_DIR$/app/views/admin.py" />
+        <option value="$PROJECT_DIR$/TODO.md" />
       </list>
     </option>
   </component>
@@ -675,7 +637,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.18089648" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.18089648" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -686,11 +648,11 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" visible="true" weight="0.28709677" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" weight="0.28709677" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50213444" side_tool="true" weight="0.28709677" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" weight="0.32795697" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" visible="true" weight="0.32795697" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32760474" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" weight="0.32867885" />
@@ -1025,16 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="405">
-            <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1057,8 +1009,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="373" column="65" selection-start-line="373" selection-start-column="65" selection-end-line="373" selection-end-column="65" />
+        <state relative-caret-position="403">
+          <caret line="366" column="22" lean-forward="true" selection-start-line="366" selection-start-column="22" selection-end-line="366" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="304">
+            <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
