@@ -71,14 +71,15 @@ class ChallengeResource(MethodView):
             name=data.get('name'),
             description=data.get('description'),
             flag=data.get('flag'),
-            category=category
+            category=category,
+            yt_challenge_id=data.get('ytChallengeId') or None,
+            yt_solution_id=data.get('ytSolutionId') or None
         )
 
         # add the challenge object to the database
         db.session.add(challenge)
         # commit db changes (urls + challenge)
         db.session.commit()
-
         return ResultSchema(
             data=challenge.jsonify(),
             status_code=201
