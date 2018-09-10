@@ -8,6 +8,9 @@
   * Produzieren
   * ID in index.html einfügen
  
+* Impressum + Datenschutzerklärung in Footer auf Register/Login Page
+* Kontaktmöglichkeiten zu regeln hinzufügen
+ 
 * Code kommentieren (Nico)
 
 #### gewünschte Videoinhalte:
