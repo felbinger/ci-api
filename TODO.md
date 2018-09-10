@@ -3,7 +3,7 @@
 ### General
 * config.py: Mail Subject/Message anpassen (Cedric)
 
-* Announcement Video (erst kurz vor Veröffentlichung um alle Features mitzunehmen)
+* Announcement Video (erst kurz vor Veröffentlichung um alle Features mitzunehmen) ???
   * Planen
   * Produzieren
   * ID in index.html einfügen
@@ -20,6 +20,9 @@
 * Feature Requests/Bugs Melden
 
 
+* 0x03 funktioniert nicht (Cedric, Nico - Funktionscheck)
+
+* Leaderboard (Hendrik)
 
 ### API
 
@@ -31,10 +34,10 @@
 #### Design
 * Mehr Special (Stego Challenges) ausdenken (Nico)
 * Registration Background - with binary hint (Chaozz)
+  * Erste Idee: https://cdn.discordapp.com/attachments/398227587458924544/488764528230662149/Unbenannt-4.png
 
 
 ### Tests
 ##### PyTests
 
 ##### manuelle Tests
-* alle Challenges Manuell machen und Flag übermitteln
