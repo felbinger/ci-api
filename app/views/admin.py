@@ -366,4 +366,9 @@ def dashboard():
         f'{request.scheme}://{request.host}{url_for("role_api")}',
         headers=header
     ).json().get('data')
-    return render_template('dashboard.html', data=data)
+
+    user = requests.get(
+        f'{request.scheme}://{request.host}{url_for("auth_api")}',
+        headers=header
+    ).json().get('data')
+    return render_template('dashboard.html', user=user, data=data)

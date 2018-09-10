@@ -49,7 +49,12 @@ def coding():
                 challenge['solved'] = True if challenge.get('id') in solves else False
                 data['challenges'].append(challenge)
 
-    return render_template('cc.html', data=data)
+    user = requests.get(
+        f'{request.scheme}://{request.host}{url_for("auth_api")}',
+        headers=header
+    ).json().get('data')
+
+    return render_template('cc.html', user=user, data=data)
 
 
 @challenges.route('/hacking', methods=['GET', 'POST'])
@@ -92,7 +97,13 @@ def hacking():
                 # check if the challenge id is in the solves list
                 challenge['solved'] = True if challenge.get('id') in solves else False
                 data['challenges'].append(challenge)
-    return render_template('hc.html', data=data)
+
+    user = requests.get(
+        f'{request.scheme}://{request.host}{url_for("auth_api")}',
+        headers=header
+    ).json().get('data')
+
+    return render_template('hc.html', user=user, data=data)
 
 
 @challenges.route('/special', methods=['GET', 'POST'])
@@ -112,4 +123,9 @@ def special():
                     flash(f'Unable to solve challenge: {resp.json().get("message")}', 'danger')
                 else:
                     flash('Good Job', 'success')
-    return render_template('special.html')
+    user = requests.get(
+        f'{request.scheme}://{request.host}{url_for("auth_api")}',
+        headers=header
+    ).json().get('data')
+
+    return render_template('special.html', user=user)

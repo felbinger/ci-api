@@ -1,14 +1,12 @@
 # TODO
 
 ### General
-* Descriptions for Coding Challenges (Cedric)
 * config.py: Mail Subject/Message anpassen (Cedric)
 * Announcement Video (erst kurz vor Veröffentlichung um alle Features mitzunehmen)
   * Planen
   * Produzieren
   * ID in index.html einfügen
-* RulesModal in navigation.html - Regeln umformulieren
-* Flags zu Coding Challenges hinzufügen (erst kurz vor Veröffentlichung)
+* Flags zu Coding Challenges hinzufügen
 * Code kommentieren (Nico)
 
 #### gewünschte Videoinhalte:

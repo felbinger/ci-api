@@ -7,6 +7,9 @@
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
+                {% if user['role']['name'] == 'admin' %}
+                <li><a href="/admin">Admin Dashboard</a></li>
+                {% endif %}
                 <li><a data-toggle="modal" data-target="#modalRules">Rules</a></li>
                 <li><a href="/account">Account</a></li>
                 <li>

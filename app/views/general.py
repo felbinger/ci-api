@@ -8,7 +8,13 @@ general = Blueprint(__name__, 'general')
 @general.route('/', methods=['GET'])
 @require_login
 def index():
-    return render_template('index.html'), 200
+    header = {'Access-Token': session.get('Access-Token')}
+    user = requests.get(
+        f'{request.scheme}://{request.host}{url_for("auth_api")}',
+        headers=header
+    ).json().get('data')
+
+    return render_template('index.html', user=user), 200
 
 
 @general.route('/login', methods=['GET', 'POST'])
@@ -135,9 +141,9 @@ def account():
                 else:
                     flash('Your account has been updated!', 'success')
 
-    data = requests.get(
+    user = requests.get(
         f'{request.scheme}://{request.host}{url_for("auth_api")}',
         headers=header
     ).json().get('data')
 
-    return render_template('account.html', data=data)
+    return render_template('account.html', user=user)
