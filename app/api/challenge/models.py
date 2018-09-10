@@ -6,7 +6,7 @@ class Challenge(db.Model):
     __table_args__ = ({'mysql_character_set': 'utf8mb4', 'mysql_collate': 'utf8mb4_unicode_520_ci'})
     id = Column('id', Integer, primary_key=True)
     flag = Column('flag', String(80), unique=True, nullable=False)
-    name = Column('name', String(80), unique=True, nullable=False)
+    name = Column('name', String(80), nullable=False)
     description = Column('description', String(512), nullable=False)
     yt_challenge_id = Column('ytChallengeId', String(20), nullable=True)
     yt_solution_id = Column('ytSolutionId', String(20), nullable=True)

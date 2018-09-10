@@ -57,12 +57,12 @@ class ChallengeResource(MethodView):
                 errors=error,
                 status_code=400
             ).jsonify()
-        # check if the name for the challenge in already in use
+        # check if the flag for the challenge in already in use
         for challenge in Challenge.query.all():
-            if data.get('name') == challenge.name:
+            if data.get('flag') == challenge.flag:
                 return ResultErrorSchema(
-                    message='Name already in use!',
-                    errors=['name already in use'],
+                    message='Flag already in use!',
+                    errors=['flag already in use'],
                     status_code=400
                 ).jsonify()
         category = Category.query.filter_by(name=data.get('category')).first()
