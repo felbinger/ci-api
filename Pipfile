@@ -17,6 +17,7 @@ flask-sqlalchemy = "*"
 pyjwt = "*"
 requests = "*"
 pymysql = "*"
+flask-cors = "*"
 
 [dev-packages]
 pytest = "*"
