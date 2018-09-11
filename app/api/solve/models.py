@@ -1,6 +1,7 @@
-from datetime import datetime
-from app.db import db
 from sqlalchemy import Column, DateTime, Integer, ForeignKey
+from datetime import datetime
+
+from app.db import db
 
 
 class Solve(db.Model):

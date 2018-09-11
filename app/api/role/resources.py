@@ -1,11 +1,11 @@
 from flask.views import MethodView
 from flask import request
 
+from app.db import db
+from ..user import User
+from ..authentication import require_token, require_admin
 from ..schemas import ResultSchema, ResultErrorSchema
 from .models import Role
-from ..user import User
-from app.db import db
-from ..authentication import require_token, require_admin
 from .schemas import DaoCreateRoleSchema, DaoUpdateRoleSchema
 
 

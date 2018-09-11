@@ -1,5 +1,6 @@
 import requests
 from flask import Blueprint, redirect, render_template, request, flash, url_for, session
+
 from .utils import require_login
 
 challenges = Blueprint(__name__, 'challenges')

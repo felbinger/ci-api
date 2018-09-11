@@ -1,11 +1,11 @@
 from flask.views import MethodView
 from flask import request
 
+from app.db import db
+from ..challenge import Challenge
+from ..authentication import require_token, require_admin
 from ..schemas import ResultSchema, ResultErrorSchema
 from .models import Url
-from ..challenge import Challenge
-from app.db import db
-from ..authentication import require_token, require_admin
 from .schemas import DaoCreateCategorySchema, DaoUpdateCategorySchema
 
 

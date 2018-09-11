@@ -1,5 +1,6 @@
-from app.db import db
 from sqlalchemy import Column, String, Integer, ForeignKey
+
+from app.db import db
 
 
 class Challenge(db.Model):

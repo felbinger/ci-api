@@ -1,5 +1,5 @@
 from functools import wraps
-from flask import session, redirect, url_for, request, render_template, flash
+from flask import session, redirect, url_for, request
 import requests
 
 

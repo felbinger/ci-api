@@ -1,4 +1,5 @@
 from flask import request
+
 from ..schemas import ResultErrorSchema
 from .models import Token
 

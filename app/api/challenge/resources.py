@@ -1,13 +1,13 @@
 from flask.views import MethodView
 from flask import request
 
-from ..schemas import ResultSchema, ResultErrorSchema
-from .models import Challenge
-from ..categories import Category
 from app.db import db
+from ..schemas import ResultSchema, ResultErrorSchema
+from ..categories import Category
 from ..authentication import require_token, require_admin
-from .schemas import DaoCreateChallengeSchema, DaoUpdateChallengeSchema
 from ..solve import Solve
+from .models import Challenge
+from .schemas import DaoCreateChallengeSchema, DaoUpdateChallengeSchema
 
 
 class ChallengeResource(MethodView):

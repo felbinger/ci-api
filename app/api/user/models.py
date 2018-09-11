@@ -2,6 +2,7 @@ from sqlalchemy import Column, String, DateTime, ForeignKey, Integer
 from uuid import uuid4
 from hashlib import sha512
 from datetime import datetime
+
 from app.db import db
 
 

@@ -2,12 +2,12 @@ from flask.views import MethodView
 from flask import request
 from datetime import datetime
 
+from app.db import db
 from .utils import require_token
 from .schemas import AuthSchema, AuthResultSchema
 from ..schemas import ResultSchema
 from ..user.models import User
 from .models import Token
-from app.db import db
 
 
 class AuthResource(MethodView):

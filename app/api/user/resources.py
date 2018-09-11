@@ -5,11 +5,10 @@ from hashlib import sha512
 from app.db import db
 from app.utils import SMTPMail
 from ..schemas import ResultSchema, ResultErrorSchema
-from ..authentication import require_token, require_admin
+from ..authentication import Token, require_token, require_admin
+from ..solve import Solve
 from ..role import Role
 from .models import User
-from ..authentication import Token
-from ..solve import Solve
 from .schemas import DaoCreateUserSchema, DaoUpdateUserSchema, DaoRegisterUserSchema
 
 

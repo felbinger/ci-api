@@ -1,13 +1,13 @@
 from flask.views import MethodView
 from flask import request
-import json
-from ..schemas import ResultSchema, ResultErrorSchema
-from .models import Solve
+
 from app.db import db
 from ..categories import Category
 from ..authentication import require_token
-from .schemas import DaoSolveChallengeSchema
+from ..schemas import ResultSchema, ResultErrorSchema
 from ..challenge import Challenge
+from .models import Solve
+from .schemas import DaoSolveChallengeSchema
 
 
 class SolveResource(MethodView):
