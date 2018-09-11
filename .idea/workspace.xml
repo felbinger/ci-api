@@ -3,31 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/authentication/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/authentication/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/authentication/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/categories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/categories/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/categories/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/categories/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/categories/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/categories/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/role/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/role/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/role/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/role/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/role/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/role/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/solve/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/solve/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/solve/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/solve/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/url/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/url/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/url/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/url/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/url/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/url/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/user/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/user/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/user/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/user/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/challenges.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/challenges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/general.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +23,7 @@
     <SUITE FILE_PATH="coverage/CC$cc__productive_.coverage" NAME="cc (productive) Coverage Results" MODIFIED="1533043001959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CC$tests.coverage" NAME="tests Coverage Results" MODIFIED="1532884587413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$Twisted_Trial_for_backend_login_test_test_login_without_data.coverage" NAME="Twisted Trial for backend_login_test.test_login_without_data Coverage Results" MODIFIED="1532882089879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/ChallengeInterface$ChallengeInterface__dev_.coverage" NAME="ChallengeInterface (dev) Coverage Results" MODIFIED="1536605587351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChallengeInterface$ChallengeInterface__dev_.coverage" NAME="ChallengeInterface (dev) Coverage Results" MODIFIED="1536679758249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CC$cc__dev_.coverage" NAME="cc (dev) Coverage Results" MODIFIED="1534937298014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ChallengeInterface$pytest_for_api_challenge_test_test_helper_functions.coverage" NAME="pytest for api_challenge_test.test_helper_functions Coverage Results" MODIFIED="1536007063817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$Twisted_Trial_for_backend_login_test_test_login.coverage" NAME="Twisted Trial for backend_login_test.test_login Coverage Results" MODIFIED="1532880333452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -185,9 +161,9 @@
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
           <entry key="md" value="41" />
-          <entry key="py" value="618" />
+          <entry key="py" value="620" />
           <entry key="pyi" value="1" />
-          <entry key="txt" value="8" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -198,8 +174,8 @@
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="41" />
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="618" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="620" />
           <entry key="PythonStub" value="1" />
           <entry key="TOML file" value="8" />
         </counts>
@@ -211,8 +187,8 @@
           <entry key="html" value="10936" />
           <entry key="js" value="12" />
           <entry key="md" value="5523" />
-          <entry key="py" value="36631" />
-          <entry key="txt" value="263" />
+          <entry key="py" value="36953" />
+          <entry key="txt" value="267" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -221,8 +197,8 @@
           <entry key="HTML" value="10936" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="5521" />
-          <entry key="PLAIN_TEXT" value="263" />
-          <entry key="Python" value="36632" />
+          <entry key="PLAIN_TEXT" value="267" />
+          <entry key="Python" value="36954" />
           <entry key="SQL" value="1" />
           <entry key="TOML file" value="89" />
         </counts>
@@ -231,38 +207,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/general.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="433">
+              <caret line="118" column="112" selection-start-line="118" selection-start-column="112" selection-end-line="118" selection-end-column="112" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -339,7 +291,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/tests/api_solve_test.py" />
         <option value="$PROJECT_DIR$/tests/conftest.py" />
         <option value="$PROJECT_DIR$/wsgi.py" />
@@ -350,7 +301,6 @@
         <option value="$PROJECT_DIR$/app/api/challenge/__init__.py" />
         <option value="$PROJECT_DIR$/tests/api_url_test.py" />
         <option value="$PROJECT_DIR$/app/templates/example_dynamic.html" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/static/vendor/datatables-responsive/dataTables.responsive.js" />
         <option value="$PROJECT_DIR$/app/static/vendor/datatables/js/jquery.dataTables.js" />
         <option value="$PROJECT_DIR$/tests/api_challenge_test.py" />
@@ -388,8 +338,10 @@
         <option value="$PROJECT_DIR$/app/api/user/models.py" />
         <option value="$PROJECT_DIR$/app/views/admin.py" />
         <option value="$PROJECT_DIR$/app/views/utils.py" />
-        <option value="$PROJECT_DIR$/app/views/general.py" />
         <option value="$PROJECT_DIR$/app/views/challenges.py" />
+        <option value="$PROJECT_DIR$/app/views/general.py" />
+        <option value="$PROJECT_DIR$/app/static/downloads/test.txt" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
       </list>
     </option>
   </component>
@@ -489,6 +441,12 @@
               <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -520,19 +478,19 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/static/dist/img" />
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$/app/api/url" />
-      <recent name="$PROJECT_DIR$/app/templates" />
-      <recent name="$PROJECT_DIR$/app/api/categories" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/api" />
       <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$/app/api/solved" />
       <recent name="$PROJECT_DIR$/app/api/unused_db_models_remove_me" />
       <recent name="$PROJECT_DIR$/cc/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static/dist/img" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/app/api/url" />
+      <recent name="$PROJECT_DIR$/app/templates" />
+      <recent name="$PROJECT_DIR$/app/api/categories" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -569,7 +527,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.tests">
+  <component name="RunManager" selected="Flask server.ChallengeInterface (dev)">
     <configuration name="ressource.py" type="OdpsQLRunnerConfigurationType" factoryName="MaxCompute SQL">
       <odps_target_file />
       <odps_output_dir />
@@ -722,11 +680,11 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" weight="0.28709677" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" visible="true" weight="0.28709677" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.3268817" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" visible="true" weight="0.3268817" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" weight="0.3268817" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32760474" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" weight="0.32867885" />
@@ -777,20 +735,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/static/vendor/datatables/js/jquery.dataTables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="1056" column="12" selection-start-line="1056" selection-start-column="12" selection-end-line="1056" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/api_challenge_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="106" column="104" selection-start-line="106" selection-start-column="104" selection-end-line="106" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1065,15 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -1109,7 +1044,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -1120,17 +1055,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/general.py">
+    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="-286">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+    <entry file="file://$PROJECT_DIR$/app/views/general.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="471">
+          <caret line="149" column="53" selection-start-line="149" selection-start-column="53" selection-end-line="149" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/downloads/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="118" column="112" selection-start-line="118" selection-start-column="112" selection-end-line="118" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

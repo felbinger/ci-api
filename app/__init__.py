@@ -79,27 +79,47 @@ def register_views(app):
     @app.route('/favicon.ico')
     def favicon():
         return send_from_directory(
-            os.path.join(general.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon'
+            directory=os.path.join(app.root_path, 'static'),
+            filename='favicon.ico',
+            mimetype='image/vnd.microsoft.icon'
         )
 
     @app.route('/robots.txt')
     def robots():
-        return send_from_directory(os.path.join(general.root_path, 'static'), 'robots.txt', mimetype='text/plain')
+        return send_from_directory(
+            directory=os.path.join(app.root_path, 'static'),
+            filename='robots.txt',
+            mimetype='text/plain'
+        )
 
     @app.route('/static/vendor/images/sort_both.png')
     def sort_both():
         return send_from_directory(
-            os.path.join(general.root_path, 'static/vendor/datatables/images/'), 'sort_both.png', mimetype='image/png'
+            directory=os.path.join(app.root_path, 'static/vendor/datatables/images/'),
+            filename='sort_both.png',
+            mimetype='image/png'
         )
 
     @app.route('/static/vendor/images/sort_asc.png')
     def sort_asc():
         return send_from_directory(
-            os.path.join(general.root_path, 'static/vendor/datatables/images/'), 'sort_asc.png', mimetype='image/png'
+            directory=os.path.join(app.root_path, 'static/vendor/datatables/images/'),
+            filename='sort_asc.png',
+            mimetype='image/png'
         )
 
     @app.route('/static/vendor/images/sort_desc.png')
     def sort_desc():
         return send_from_directory(
-            os.path.join(general.root_path, 'static/vendor/datatables/images/'), 'sort_desc.png', mimetype='image/png'
+            directory=os.path.join(app.root_path, 'static/vendor/datatables/images/'),
+            filename='sort_desc.png',
+            mimetype='image/png'
+        )
+
+    # Download a file inside the downloads directory. This feature is for new challenges - reversing for example
+    @app.route('/downloads/<path:filename>', methods=['GET', 'POST'])
+    def download(filename):
+        return send_from_directory(
+            directory=os.path.join(app.root_path, 'static/downloads'),
+            filename=filename
         )
