@@ -1,5 +1,6 @@
 import os
 from flask import Flask, send_from_directory
+from flask_cors import CORS
 
 from .api import AuthResource, UserResource, RoleResource, ChallengeResource, SolveResource, CategoryResource, \
     UrlResource
@@ -11,6 +12,8 @@ from .views import general, challenges, admin
 def create_app(testing_config=None):
     # create flask app
     app = Flask(__name__)
+    # enable cross origin resources sharing
+    CORS(app)
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     # check which config should be used, can be defined in the environment variable FLASK_ENV
     env = os.environ.get('FLASK_ENV')
