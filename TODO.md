@@ -1,14 +1,12 @@
 # TODO
 
 ### General
-* config.py: Mail Subject/Message anpassen (Cedric)
 * Code kommentieren (Nico)
-* 0x03 funktioniert nicht (Cedric, Nico - Funktionscheck)
 * Leaderboard (Hendrik)
 
-* 0x0e Video (Cedric)
 * Challenge Interface Video (Cedric) -> Video im Dashboard einbinden
 
+* 0x0e Video (Cedric)
 
 ### API
 

@@ -22,11 +22,19 @@ class ProductionConfig(Config):
     ENABLE_MAIL = True
 
     # TODO add something
-    MAIL_SUBJECT = "The Morpheus Tutorials - Challenges"
+    MAIL_SUBJECT = "Willkommen, junger h4x0r-Padawan"
     MAIL_MESSAGE = """
-Hallo,
-schön das du dich bei uns registriert hast!
-
+HAI 1.2
+CAN HAS STDIO?
+VISIBLE `
+May the sudo be with you.
+Click on this link to confirm you are a bot: https://www.youtube.com/user/TheMorpheus407
+If you != bot:
+click here: https://challenges.the-morpheus.de
+try: systemd of a pwn
+except: Panic! at the Kernel
+finally: rage against the virtual machine`
+KTHXBYE
 """
 
     SMTP_HOSTNAME = os.environ.get('SMTP_HOSTNAME')
