@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/dist/img/register_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/dist/img/register_background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,14 +140,15 @@
     <session id="977645913">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="49" />
+          <entry key="project.closed" value="51" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="21" />
           <entry key="project.open.time.11" value="11" />
           <entry key="project.open.time.12" value="8" />
           <entry key="project.open.time.13" value="5" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="51" />
+          <entry key="project.open.time.9" value="6" />
+          <entry key="project.opened" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -165,7 +163,7 @@
           <entry key="http" value="1" />
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
-          <entry key="md" value="42" />
+          <entry key="md" value="43" />
           <entry key="py" value="623" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="9" />
@@ -178,7 +176,7 @@
           <entry key="HTML" value="160" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
-          <entry key="Markdown" value="42" />
+          <entry key="Markdown" value="43" />
           <entry key="PLAIN_TEXT" value="13" />
           <entry key="Python" value="623" />
           <entry key="PythonStub" value="1" />
@@ -190,9 +188,9 @@
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="89" />
           <entry key="gitignore" value="19" />
-          <entry key="html" value="10982" />
+          <entry key="html" value="10986" />
           <entry key="js" value="12" />
-          <entry key="md" value="5523" />
+          <entry key="md" value="5567" />
           <entry key="py" value="37016" />
           <entry key="txt" value="267" />
         </counts>
@@ -200,9 +198,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="10982" />
+          <entry key="HTML" value="10986" />
           <entry key="JavaScript" value="12" />
-          <entry key="Markdown" value="5521" />
+          <entry key="Markdown" value="5565" />
           <entry key="PLAIN_TEXT" value="286" />
           <entry key="Python" value="37017" />
           <entry key="SQL" value="1" />
@@ -212,48 +210,15 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1367">
-              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TODO.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2040">
-                <caret line="136" column="3" lean-forward="true" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="3" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="315">
+                <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -350,7 +315,6 @@
         <option value="$PROJECT_DIR$/app/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/config.py" />
-        <option value="$PROJECT_DIR$/TODO.md" />
         <option value="$PROJECT_DIR$/app/api/authentication/models.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/schemas.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/utils.py" />
@@ -381,6 +345,7 @@
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/register.html" />
         <option value="$PROJECT_DIR$/app/templates/login.html" />
+        <option value="$PROJECT_DIR$/TODO.md" />
       </list>
     </option>
   </component>
@@ -409,17 +374,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ScamPage" type="cbb8eebc:String" user="ScamPage" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -504,6 +458,17 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ScamPage" type="cbb8eebc:String" user="ScamPage" />
             </path>
           </expand>
           <select />
@@ -714,7 +679,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.19583778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.20010673" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -725,7 +690,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" visible="true" weight="0.28709677" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" weight="0.28709677" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.3268817" />
@@ -834,16 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/categories/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -862,9 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,17 +1013,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1367">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/categories/resources.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-345">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="20" column="86" lean-forward="true" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -1085,23 +1044,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/register.html">
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1100">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/TODO.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
