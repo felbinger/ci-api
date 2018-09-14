@@ -4,8 +4,6 @@
 * Code kommentieren (Nico)
 * Leaderboard (Hendrik)
 
-* Challenge Interface Video im Dashboard einbinden
-
 ### API
 
 ### Backend
