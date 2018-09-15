@@ -75,7 +75,7 @@
                                         {% for account in data['accounts'] %}
                                         <tr class="odd gradeX">
                                             <td>{{ account['username'] }}</td>
-                                            <td>{{ account['created'] }}</td>
+                                            <td>{{ account['lastLogin'] }}</td>
                                             <td>{{ account['solved']|length }}</td>
                                             <td>{{ account['role']['description'] }}</td>
                                             <td align="center">

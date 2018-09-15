@@ -64,29 +64,32 @@ def register():
         email = request.form.get('email')
         password = request.form.get('password')
         if username and email and password:
-            resp = requests.post(
-                f'{request.scheme}://{request.host}{url_for("user_api")}',
-                json={
-                    'username': username,
-                    'email': email,
-                    'password': password
-                }
-            )
-            if resp.status_code == 201:
-                # Login
-                token = requests.post(
-                    f'{request.scheme}://{request.host}{url_for("auth_api")}',
+            if len(password) < 8:
+                flash('Password too short (>= 8 character)', 'danger')
+            else:
+                resp = requests.post(
+                    f'{request.scheme}://{request.host}{url_for("user_api")}',
                     json={
                         'username': username,
+                        'email': email,
                         'password': password
                     }
-                ).json().get('token')
-                if token:
-                    print(f'User {username} logged in with token: {token}')
-                    session['Access-Token'] = token
-                    return redirect(url_for('app.views.general.index'))
-            else:
-                flash(f'Unknown error: {resp.json().get("message")}', 'danger')
+                )
+                if resp.status_code == 201:
+                    # Login
+                    token = requests.post(
+                        f'{request.scheme}://{request.host}{url_for("auth_api")}',
+                        json={
+                            'username': username,
+                            'password': password
+                        }
+                    ).json().get('token')
+                    if token:
+                        print(f'User {username} logged in with token: {token}')
+                        session['Access-Token'] = token
+                        return redirect(url_for('app.views.general.index'))
+                else:
+                    flash(f'Unknown error: {resp.json().get("message")}', 'danger')
         else:
             flash('Missing data', 'danger')
 

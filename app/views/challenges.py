@@ -28,7 +28,7 @@ def coding():
                 if resp.status_code != 201:
                     flash(f'Unable to solve challenge: {resp.json().get("message")}', 'danger')
                 else:
-                    flash('Good Job', 'success')
+                    flash('Herzlichen Glückwunsch, du hast eine weitere Challenge gelöst!', 'success')
 
     data = dict()
     data['challenges'] = list()
@@ -74,7 +74,7 @@ def hacking():
                 if resp.status_code != 201:
                     flash(f'Unable to solve challenge: {resp.json().get("message")}', 'danger')
                 else:
-                    flash('Herzlichen Glückwunsch, du haben eine weitere Challenge gelöst!', 'success')
+                    flash('Herzlichen Glückwunsch, du hast eine weitere Challenge gelöst!', 'success')
 
     data = dict()
     data['challenges'] = list()
