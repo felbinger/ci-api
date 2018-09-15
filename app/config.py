@@ -21,7 +21,6 @@ class ProductionConfig(Config):
 
     ENABLE_MAIL = True
 
-    # TODO add something
     MAIL_SUBJECT = "Willkommen, junger h4x0r-Padawan"
     MAIL_MESSAGE = """
 HAI 1.2
