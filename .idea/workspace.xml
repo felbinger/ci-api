@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/special.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/special.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/challenges.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/challenges.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -169,7 +166,7 @@
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
           <entry key="md" value="46" />
-          <entry key="py" value="653" />
+          <entry key="py" value="658" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="10" />
         </counts>
@@ -183,7 +180,7 @@
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="46" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="653" />
+          <entry key="Python" value="658" />
           <entry key="PythonStub" value="1" />
           <entry key="TOML file" value="8" />
         </counts>
@@ -196,7 +193,7 @@
           <entry key="html" value="12704" />
           <entry key="js" value="12" />
           <entry key="md" value="5833" />
-          <entry key="py" value="39024" />
+          <entry key="py" value="39123" />
           <entry key="txt" value="276" />
         </counts>
       </usages-collector>
@@ -207,7 +204,7 @@
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="5831" />
           <entry key="PLAIN_TEXT" value="295" />
-          <entry key="Python" value="39025" />
+          <entry key="Python" value="39124" />
           <entry key="SQL" value="1" />
           <entry key="TOML file" value="89" />
         </counts>
@@ -215,7 +212,43 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/general.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="353" column="80" selection-start-line="353" selection-start-column="80" selection-end-line="353" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -316,7 +349,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/templates/register.html" />
         <option value="$PROJECT_DIR$/app/config.py" />
-        <option value="$PROJECT_DIR$/app/views/challenges.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/resources.py" />
         <option value="$PROJECT_DIR$/app/templates/cc.html" />
         <option value="$PROJECT_DIR$/app/templates/hc.html" />
@@ -338,6 +370,7 @@
         <option value="$PROJECT_DIR$/app/templates/login.html" />
         <option value="$PROJECT_DIR$/app/templates/special.html" />
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
+        <option value="$PROJECT_DIR$/app/views/challenges.py" />
       </list>
     </option>
   </component>
@@ -632,8 +665,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.21931697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.21931697" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -644,13 +678,13 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49786553" visible="true" weight="0.2860215" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" weight="0.2860215" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.3268817" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" weight="0.32473117" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" visible="true" weight="0.32473117" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32903227" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32760474" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3268817" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" weight="0.32867885" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -801,16 +835,6 @@
     <entry file="file://$PROJECT_DIR$/tests/api_auth_test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/static/downloads/test.txt" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -854,16 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-930">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,13 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="353" column="80" selection-start-line="353" selection-start-column="80" selection-end-line="353" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/message/resources.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -949,13 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/general.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
         </state>
       </provider>
     </entry>
@@ -1042,6 +1042,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="353" column="80" selection-start-line="353" selection-start-column="80" selection-end-line="353" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/general.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
