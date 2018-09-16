@@ -222,9 +222,9 @@
                                     <tbody>
                                         {% for message in data['messages'] %}
                                         <tr class="odd gradeX">
-                                            <td align="center">{{ message['subject'] }}</td>
-                                            <td align="center">{{ message['user']['username'] }}</td>
-                                            <td align="center">{{ message['created'] }}</td>
+                                            <td>{{ message['subject'] }}</td>
+                                            <td>{{ message['user']['username'] }}</td>
+                                            <td>{{ message['created'] }}</td>
                                             <td align="center">
                                                 <a onclick='openModalUpdateMessage({{ message|tojson }})'>
                                                     <i class="fa fa-gear fa-fw"></i>
