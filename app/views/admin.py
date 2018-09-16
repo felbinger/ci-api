@@ -347,6 +347,20 @@ def dashboard():
                                     msg = resp.json().get("message")
                                     flash(f'Unable to update challenge (url): {msg}', 'danger')
 
+            elif action == 'deleteMessage':
+                _id = request.form.get('id')
+                if _id:
+                    resp = requests.delete(
+                        f'{request.scheme}://{request.host}{url_for("message_api")}/{_id}',
+                        headers=header
+                    )
+                    if resp.status_code != 204:
+                        flash(f'Unable to delete message: {resp.json().get("message")}', 'danger')
+                    else:
+                        flash('Message has been deleted!', 'success')
+                else:
+                    flash('You need to provide an id to delete a message!', 'danger')
+
     data = dict()
     data['accounts'] = requests.get(
         f'{request.scheme}://{request.host}{url_for("user_api")}',
@@ -365,6 +379,11 @@ def dashboard():
 
     data['roles'] = requests.get(
         f'{request.scheme}://{request.host}{url_for("role_api")}',
+        headers=header
+    ).json().get('data')
+
+    data['messages'] = requests.get(
+        f'{request.scheme}://{request.host}{url_for("message_api")}',
         headers=header
     ).json().get('data')
 

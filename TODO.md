@@ -1,6 +1,5 @@
 # TODO
 
-* send message (feature requests/bugs) to admins (shown in dashboard)
 * User Solutions
 
 ### General
@@ -8,11 +7,11 @@
 * Leaderboard (Hendrik)
 
 ### API
-* Message API
 
 ### Backend
 
 ### Frontend (HTML, CSS, JS)
+* Send Message
 * Admin/Dashboard/Update Challenge
 
 #### Design
