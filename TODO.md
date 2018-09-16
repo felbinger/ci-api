@@ -1,6 +1,7 @@
 # TODO
 
-* User Solutions
+* User Solutions (URLs)
+* Chat
 
 ### General
 * Code kommentieren (Nico)
@@ -11,7 +12,6 @@
 ### Backend
 
 ### Frontend (HTML, CSS, JS)
-* Send Message
 * Admin/Dashboard/Update Challenge
 
 #### Design
