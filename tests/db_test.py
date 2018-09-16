@@ -1,4 +1,4 @@
-from app.api import User, Role, Challenge, Solve, Category
+from app.api import User, Role, Challenge, Solve, Category, Message
 from uuid import UUID
 
 
@@ -84,3 +84,24 @@ def test_create_user(app, client):
     assert isinstance(first, User)
     assert len(UUID(first.public_id).hex) == 32
     assert first.verify_password('testineTestHatEinPw')
+
+
+def test_create_message(app, client):
+    db = client.db
+    role = Role(name='admin', description='Administrator')
+    user = User(
+        username='test',
+        email='testine@test.de',
+        password='testineTestHatEinPw',
+        role=role
+    )
+    msg = Message(
+        subject="test",
+        message="test",
+        user=user
+    )
+    with app.app_context():
+        db.session.add(role)
+        db.session.add(user)
+        db.session.add(msg)
+        db.session.commit()

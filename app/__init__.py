@@ -3,7 +3,7 @@ from flask import Flask, send_from_directory
 from flask_cors import CORS
 
 from .api import AuthResource, UserResource, RoleResource, ChallengeResource, SolveResource, CategoryResource, \
-    UrlResource
+    UrlResource, MessageResource
 from .config import ProductionConfig, DevelopmentConfig
 from .db import db
 from .views import general, challenges, admin
@@ -39,13 +39,14 @@ def create_app(testing_config=None):
     register_resource(app, UrlResource, 'url_api', '/api/urls', get_all=False, get=False)
     register_resource(app, ChallengeResource, 'challenge_api', '/api/challenges', delete=False)
     register_resource(app, SolveResource, 'solve_api', '/api/solve', get=False, delete=False)
+    register_resource(app, MessageResource, 'message_api', '/api/messages')
 
     return app
 
 
 def register_models():
     # noinspection PyUnresolvedReferences
-    from .api import User, Token, Role, Challenge, Solve, Url, Category
+    from .api import User, Token, Role, Challenge, Solve, Url, Category, Message
 
 
 def register_resource(app, resource, endpoint, url, pk='_id', pk_type='int',

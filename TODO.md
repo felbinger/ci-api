@@ -1,10 +1,14 @@
 # TODO
 
+* send message (feature requests/bugs) to admins (shown in dashboard)
+* User Solutions
+
 ### General
 * Code kommentieren (Nico)
 * Leaderboard (Hendrik)
 
 ### API
+* Message API
 
 ### Backend
 
