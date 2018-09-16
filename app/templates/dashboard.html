@@ -64,10 +64,10 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="accountList">
                                     <thead>
                                         <tr>
-                                            <th>Username</th>
-                                            <th>Last Login</th>
-                                            <th>Solved Challenges</th>
-                                            <th>Role</th>
+                                            <th style="text-align: center;">Username</th>
+                                            <th style="text-align: center;">Last Login</th>
+                                            <th style="text-align: center;">Solved Challenges</th>
+                                            <th style="text-align: center;">Role</th>
                                             <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateAccount" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
                                         </tr>
                                     </thead>
@@ -76,7 +76,7 @@
                                         <tr class="odd gradeX">
                                             <td>{{ account['username'] }}</td>
                                             <td>{{ account['lastLogin'] }}</td>
-                                            <td>{{ account['solved']|length }}</td>
+                                            <td align="center">{{ account['solved']|length }}</td>
                                             <td>{{ account['role']['description'] }}</td>
                                             <td align="center">
                                                 <a onclick='openModalUpdateAccount({{ account|tojson }})'>
@@ -105,9 +105,9 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="challengeList">
                                     <thead>
                                         <tr>
-                                            <th>Category</th>
-                                            <th>Name</th>
-                                            <th>Solves</th>
+                                            <th style="text-align: center;">Category</th>
+                                            <th style="text-align: center;">Name</th>
+                                            <th style="text-align: center;">Solves</th>
                                             <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateChallenge" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
                                         </tr>
                                     </thead>
@@ -116,7 +116,7 @@
                                         <tr class="odd gradeX">
                                             <td>{{ challenge['category']['description'] }}</td>
                                             <td>{{ challenge['name'] }}</td>
-                                            <td>{{ challenge['solveCount'] }}</td>
+                                            <td align="center">{{ challenge['solveCount'] }}</td>
                                             <td align="center">
                                                 <a onclick='openModalUpdateChallenge({{ challenge|tojson }})'>
                                                     <i class="fa fa-gear fa-fw"></i>
@@ -144,8 +144,8 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="rolelist">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
+                                            <th style="text-align: center;">Name</th>
+                                            <th style="text-align: center;">Description</th>
                                             <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateRole" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
                                         </tr>
                                     </thead>
@@ -178,8 +178,8 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="categoryList">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
+                                            <th style="text-align: center;">Name</th>
+                                            <th style="text-align: center;">Description</th>
                                             <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateCategory" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
                                         </tr>
                                     </thead>
