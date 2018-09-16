@@ -53,7 +53,9 @@
                                         <div id="hc_{{ challenge['id'] }}" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 {% if challenge['description'] %}
+                                                <div class="col-lg-12">
                                                 <p>{{ challenge['description'] }}</p>
+                                                </div>
                                                 {% endif %}
                                                 <!--check url count, max 4, resize-->
                                                 {% if challenge['urls']|length == 1 %}

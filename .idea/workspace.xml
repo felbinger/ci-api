@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/challenges.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/challenges.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/cc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/cc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/hc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/hc.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -161,7 +162,7 @@
           <entry key="coverage" value="1" />
           <entry key="css" value="4" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="190" />
+          <entry key="html" value="192" />
           <entry key="http" value="1" />
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
@@ -175,7 +176,7 @@
         <counts>
           <entry key="CSS" value="4" />
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="190" />
+          <entry key="HTML" value="192" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="46" />
@@ -190,7 +191,7 @@
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="89" />
           <entry key="gitignore" value="19" />
-          <entry key="html" value="12704" />
+          <entry key="html" value="12705" />
           <entry key="js" value="12" />
           <entry key="md" value="5833" />
           <entry key="py" value="39123" />
@@ -200,7 +201,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="12704" />
+          <entry key="HTML" value="12705" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="5831" />
           <entry key="PLAIN_TEXT" value="295" />
@@ -214,38 +215,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/general.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
+            <state relative-caret-position="276">
+              <caret line="53" column="81" lean-forward="true" selection-start-line="53" selection-start-column="81" selection-end-line="56" selection-end-column="54" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="353" column="80" selection-start-line="353" selection-start-column="80" selection-end-line="353" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -350,8 +334,6 @@
         <option value="$PROJECT_DIR$/app/templates/register.html" />
         <option value="$PROJECT_DIR$/app/config.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/resources.py" />
-        <option value="$PROJECT_DIR$/app/templates/cc.html" />
-        <option value="$PROJECT_DIR$/app/templates/hc.html" />
         <option value="$PROJECT_DIR$/app/api/message/__init__.py" />
         <option value="$PROJECT_DIR$/app/api/__init__.py" />
         <option value="$PROJECT_DIR$/app/api/message/schemas.py" />
@@ -371,6 +353,8 @@
         <option value="$PROJECT_DIR$/app/templates/special.html" />
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/views/challenges.py" />
+        <option value="$PROJECT_DIR$/app/templates/hc.html" />
+        <option value="$PROJECT_DIR$/app/templates/cc.html" />
       </list>
     </option>
   </component>
@@ -1000,20 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="74" column="122" selection-start-line="74" selection-start-column="122" selection-end-line="74" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="32" column="96" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1045,16 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="353" column="80" selection-start-line="353" selection-start-column="80" selection-end-line="353" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-52">
@@ -1062,20 +1022,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/general.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
+        <state relative-caret-position="488">
           <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+        <state relative-caret-position="2528">
+          <caret line="353" column="80" selection-start-line="353" selection-start-column="80" selection-end-line="353" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="53" column="81" lean-forward="true" selection-start-line="53" selection-start-column="81" selection-end-line="56" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
         </state>
       </provider>
     </entry>
