@@ -2,9 +2,10 @@
 
 * User Solutions (URLs)
 * Chat
+* Password Reset via Email
 
 ### General
-* Code kommentieren (Nico)
+* Comment code (Nico)
 * Leaderboard (Hendrik)
 
 ### API
