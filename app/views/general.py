@@ -151,3 +151,32 @@ def account():
     ).json().get('data')
 
     return render_template('account.html', user=user)
+
+
+@general.route('/message', methods=['POST'])
+@require_login
+def message():
+    header = {'Access-Token': session.get('Access-Token')}
+    if request.form is not None:
+        subject = request.form.get('subject')
+        message = request.form.get('message')
+        if subject and message:
+            resp = requests.post(
+                f'{request.scheme}://{request.host}{url_for("message_api")}',
+                json={
+                    'subject': subject,
+                    'message': message
+                },
+                headers=header
+            )
+            if resp.status_code != 201:
+                flash(f'Unknown error: {resp.json().get("message")}', 'danger')
+            else:
+                flash('Message has been created!', 'success')
+
+    user = requests.get(
+        f'{request.scheme}://{request.host}{url_for("auth_api")}',
+        headers=header
+    ).json().get('data')
+
+    return redirect(url_for('app.views.general.index'), code=302)
