@@ -117,8 +117,8 @@
                                                     <div class="col-lg-12">
                                                         <label>Rate challenge:</label>
                                                         <input type="hidden" name="id" value="{{ challenge.get('id') }}">
-                                                        <button type="submit" class="btn btn-default" name="action" value="rateUp"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-                                                        <button type="submit" class="btn btn-default" name="action" value="rateDown"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                                                        <button type="submit" class="btn btn-default" name="action" value="rateUp">{{ challenge.get('ratings').get('thumbUp') }}  <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                                                        <button type="submit" class="btn btn-default" name="action" value="rateDown">{{ challenge.get('ratings').get('thumbDown') }}  <i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
                                                     </div>
                                                     <!-- ./col-lg-12 (nested) -->
                                                 </form>

@@ -31,10 +31,28 @@ def coding():
                     flash('Good Job, you\'ve solved another challenge!', 'success')
 
             elif action == 'rateUp':
-                flash('Thanks for rating!', 'success')
+                # TODO change url_for('rating_api')
+                resp = requests.put(
+                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    headers=header,
+                    json={'thumbUp': True}
+                )
+                if resp.status_code != 201:
+                    flash(f'Unable to rate challenge: {resp.json().get("message")}', 'danger')
+                else:
+                    flash('Thanks for rating!', 'success')
 
             elif action == 'rateDown':
-                flash('Thanks for rating!', 'success')
+                # TODO change url_for('rating_api')
+                resp = requests.put(
+                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    headers=header,
+                    json={'thumbUp': False}
+                )
+                if resp.status_code != 201:
+                    flash(f'Unable to rate challenge: {resp.json().get("message")}', 'danger')
+                else:
+                    flash('Thanks for rating!', 'success')
 
     data = dict()
     data['challenges'] = list()
@@ -44,12 +62,8 @@ def coding():
     ).json().get('data')
 
     # append the id's of the solved challenges to an list
-    solves = list()
     solved = requests.get(f'{request.scheme}://{request.host}{url_for("solve_api")}', headers=header).json().get('data')
-    if solved:
-        for solve in solved.get('challenges'):
-            # append the challenge id the the solves list
-            solves.append(solve.get('challenge').get('id'))
+    solves = [s.get('challenge').get('id') for s in solved.get('challenges')]
     if challs:
         for challenge in challs:
             if challenge.get('category').get('name') == 'CC':
@@ -83,10 +97,28 @@ def hacking():
                     flash('Good Job, you\'ve solved another challenge!', 'success')
 
             elif action == 'rateUp':
-                flash('Thanks for rating!', 'success')
+                # TODO change url_for('rating_api')
+                resp = requests.put(
+                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    headers=header,
+                    json={'thumbUp': True}
+                )
+                if resp.status_code != 201:
+                    flash(f'Unable to rate challenge: {resp.json().get("message")}', 'danger')
+                else:
+                    flash('Thanks for rating!', 'success')
 
             elif action == 'rateDown':
-                flash('Thanks for rating!', 'success')
+                # TODO change url_for('rating_api')
+                resp = requests.put(
+                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    headers=header,
+                    json={'thumbUp': False}
+                )
+                if resp.status_code != 201:
+                    flash(f'Unable to rate challenge: {resp.json().get("message")}', 'danger')
+                else:
+                    flash('Thanks for rating!', 'success')
 
     data = dict()
     data['challenges'] = list()
@@ -96,12 +128,8 @@ def hacking():
     ).json().get('data')
 
     # append the id's of the solved challenges to an list
-    solves = list()
     solved = requests.get(f'{request.scheme}://{request.host}{url_for("solve_api")}', headers=header).json().get('data')
-    if solved:
-        for solve in solved.get('challenges'):
-            # append the challenge id the the solves list
-            solves.append(solve.get('challenge').get('id'))
+    solves = [s.get('challenge').get('id') for s in solved.get('challenges')]
 
     # append all hacking challenges to the data list
     if challs:

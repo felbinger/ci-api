@@ -29,6 +29,7 @@ class Challenge(db.Model):
     def jsonify(self):
         from ..solve import Solve
         from ..url import Url
+        from ..rating import Rating
         return {
             'id': self.id,
             'name': self.name,
@@ -38,5 +39,9 @@ class Challenge(db.Model):
             'ytChallengeId': self.yt_challenge_id,
             'ytSolutionId': self.yt_solution_id,
             'urls': [url.jsonify() for url in Url.query.filter_by(challenge=self).all()],
-            'solveCount': len(Solve.query.filter_by(challenge=self).all())
+            'solveCount': len(Solve.query.filter_by(challenge=self).all()),
+            'ratings': {
+                'thumbUp': len(Rating.query.filter_by(challenge=self, thumb_up=True).all()),
+                'thumbDown': len(Rating.query.filter_by(challenge=self, thumb_up=False).all())
+            }
         }
