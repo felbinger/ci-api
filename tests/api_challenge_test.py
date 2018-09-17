@@ -28,7 +28,8 @@ def test_create_challenge(app, client):
     data = {'name': 'challenge name',
             'description': 'challenge description',
             'flag': 'TMT{TestFlag}',
-            'category': 'hacking'}
+            'category': 'hacking',
+            'points': 20}
     resp = client.post('/api/challenges', headers={'Access-Token': token}, json=data)
     assert resp.status_code == 201
     resp_data = json.loads(resp.data.decode()).get('data')
@@ -61,7 +62,8 @@ def test_update_challenge(app, client):
     # update challenge
     data = {'description': 'new challenge description',
             'ytChallengeId': 'anything',
-            'ytSolutionId': 'something'}
+            'ytSolutionId': 'something',
+            'points': 100}
     resp = client.put(f'/api/challenges/{challenge_id}', headers={'Access-Token': token}, json=data)
     assert resp.status_code == 200
     assert json.loads(resp.data.decode()).get('data').get('description') == data.get('description')
@@ -154,7 +156,8 @@ def _create_dummy_challenge(app, client):
         name=_id,
         description='Description',
         flag='TMT{' + _id + '}',
-        category=cat
+        category=cat,
+        points=100
     )
     db = client.db
     with app.app_context():

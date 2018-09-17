@@ -71,6 +71,7 @@ class ChallengeResource(MethodView):
             name=data.get('name'),
             description=data.get('description'),
             flag=data.get('flag'),
+            points=data.get('points'),
             category=category,
             yt_challenge_id=data.get('ytChallengeId') or None,
             yt_solution_id=data.get('ytSolutionId') or None

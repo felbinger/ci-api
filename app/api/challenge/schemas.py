@@ -13,6 +13,9 @@ class DaoCreateChallengeSchema(Schema):
         required=True,
         validate=[validate.Length(min=1, max=800)]
     )
+    points = fields.Integer(
+        required=True
+    )
     category = fields.Str(
         required=True,
         validate=[validate.Length(min=1, max=50), validate_spaces]
@@ -34,6 +37,7 @@ class DaoUpdateChallengeSchema(Schema):
     category = fields.Str(
         validate=[validate.Length(min=1, max=50), validate_spaces]
     )
+    points = fields.Integer()
     yt_challenge_id = fields.Str(
         load_from='ytChallengeId',
         validate=[validate.Length(min=0, max=20)]

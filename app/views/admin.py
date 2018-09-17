@@ -80,6 +80,7 @@ def challenges():
                 name = request.form.get('name')
                 description = request.form.get('description')
                 flag = request.form.get('flag')
+                points = request.form.get('points')
                 category_name = request.form.get('category')
                 yt_challenge_id = request.form.get('ytChallengeId')
                 yt_solution_id = request.form.get('ytSolutionId')
@@ -101,6 +102,7 @@ def challenges():
                                     'name': name,
                                     'description': description,
                                     'flag': flag,
+                                    'points': points,
                                     'category': category_name,
                                     'ytChallengeId': yt_challenge_id,
                                     'ytSolutionId': yt_solution_id
@@ -134,6 +136,7 @@ def challenges():
                 description = request.form.get('description')
                 yt_challenge_id = request.form.get('ytChallengeId')
                 yt_solution_id = request.form.get('ytSolutionId')
+                points = request.form.get('points')
                 url_ids = request.form.getlist('urlIds[]')
                 urls = request.form.getlist('urls[]')
                 url_descriptions = request.form.getlist("urlDescriptions[]")
@@ -146,7 +149,8 @@ def challenges():
                         json={
                             'description': description,
                             'ytChallengeId': yt_challenge_id,
-                            'ytSolutionId': yt_solution_id
+                            'ytSolutionId': yt_solution_id,
+                            'points': points
                         }
                     )
                     if resp.status_code != 200:

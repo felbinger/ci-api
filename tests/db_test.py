@@ -12,7 +12,7 @@ def test_create_challenge(app, client):
         description='Test'
     )
     db = client.db
-    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category=cat)
+    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category=cat, points=30)
     with app.app_context():
         db.session.add(challenge)
         db.session.add(cat)

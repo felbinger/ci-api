@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/challenge/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/challenge/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/challenge/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/cc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/cc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/challenge-dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/challenge-dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/hc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/hc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/api_challenge_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api_challenge_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/db_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/db_test.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +31,7 @@
     <SUITE FILE_PATH="coverage/CC$cc__productive_.coverage" NAME="cc (productive) Coverage Results" MODIFIED="1533043001959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CC$tests.coverage" NAME="tests Coverage Results" MODIFIED="1532884587413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$Twisted_Trial_for_backend_login_test_test_login_without_data.coverage" NAME="Twisted Trial for backend_login_test.test_login_without_data Coverage Results" MODIFIED="1532882089879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/ChallengeInterface$ChallengeInterface__dev_.coverage" NAME="ChallengeInterface (dev) Coverage Results" MODIFIED="1537175867291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChallengeInterface$ChallengeInterface__dev_.coverage" NAME="ChallengeInterface (dev) Coverage Results" MODIFIED="1537178968132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CC$cc__dev_.coverage" NAME="cc (dev) Coverage Results" MODIFIED="1534937298014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ChallengeInterface$pytest_for_api_challenge_test_test_helper_functions.coverage" NAME="pytest for api_challenge_test.test_helper_functions Coverage Results" MODIFIED="1536007063817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CC$Twisted_Trial_for_backend_login_test_test_login.coverage" NAME="Twisted Trial for backend_login_test.test_login Coverage Results" MODIFIED="1532880333452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -161,12 +170,12 @@
           <entry key="coverage" value="1" />
           <entry key="css" value="4" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="201" />
+          <entry key="html" value="204" />
           <entry key="http" value="1" />
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
-          <entry key="md" value="46" />
-          <entry key="py" value="659" />
+          <entry key="md" value="47" />
+          <entry key="py" value="669" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="10" />
         </counts>
@@ -175,12 +184,12 @@
         <counts>
           <entry key="CSS" value="4" />
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="201" />
+          <entry key="HTML" value="204" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
-          <entry key="Markdown" value="46" />
+          <entry key="Markdown" value="47" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="659" />
+          <entry key="Python" value="669" />
           <entry key="PythonStub" value="1" />
           <entry key="TOML file" value="8" />
         </counts>
@@ -190,21 +199,21 @@
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="89" />
           <entry key="gitignore" value="19" />
-          <entry key="html" value="12837" />
+          <entry key="html" value="13077" />
           <entry key="js" value="12" />
-          <entry key="md" value="5833" />
-          <entry key="py" value="39527" />
+          <entry key="md" value="6018" />
+          <entry key="py" value="39948" />
           <entry key="txt" value="276" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="12837" />
+          <entry key="HTML" value="13077" />
           <entry key="JavaScript" value="12" />
-          <entry key="Markdown" value="5831" />
+          <entry key="Markdown" value="6016" />
           <entry key="PLAIN_TEXT" value="295" />
-          <entry key="Python" value="39528" />
+          <entry key="Python" value="39949" />
           <entry key="SQL" value="1" />
           <entry key="TOML file" value="89" />
         </counts>
@@ -213,29 +222,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/admin.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="431" column="51" selection-start-line="431" selection-start-column="51" selection-end-line="431" selection-end-column="51" />
-              <folding>
-                <element signature="e#681#1551#0" />
-                <element signature="e#1616#2624#0" />
-                <element signature="e#2687#3298#0" />
-                <element signature="e#3362#6454#0" />
-                <element signature="e#6518#10806#0" />
-                <element signature="e#1393#1993#0" />
-                <element signature="e#1944#3910#0" />
-                <element signature="e#3972#4839#0" />
-                <element signature="e#4901#5519#0" />
-                <element signature="e#5582#6816#0" />
-                <element signature="e#6875#7729#0" />
-                <element signature="e#7788#8776#0" />
-                <element signature="e#8835#9430#0" />
-                <element signature="e#445#20016#0" />
-                <marker date="1537176959541" expanded="true" signature="10803:11362" ph="..." />
-                <marker date="1537176959541" expanded="true" signature="12685:21100" ph="..." />
-              </folding>
+            <state relative-caret-position="420">
+              <caret line="50" column="128" lean-forward="true" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="128" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -253,7 +253,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>json.loads(resp.data.decode()).get('data')</find>
       <find>name</find>
       <find>render</find>
       <find>error</find>
@@ -283,6 +282,7 @@
       <find>TODO</find>
       <find>data</find>
       <find>haben</find>
+      <find>validate</find>
     </findStrings>
     <replaceStrings>
       <replace>display_name</replace>
@@ -312,16 +312,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/templates/account.html" />
         <option value="$PROJECT_DIR$/app/api/authentication/models.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/schemas.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/utils.py" />
         <option value="$PROJECT_DIR$/app/api/categories/models.py" />
         <option value="$PROJECT_DIR$/app/api/categories/resources.py" />
         <option value="$PROJECT_DIR$/app/api/categories/schemas.py" />
-        <option value="$PROJECT_DIR$/app/api/challenge/schemas.py" />
-        <option value="$PROJECT_DIR$/app/api/challenge/resources.py" />
-        <option value="$PROJECT_DIR$/app/api/challenge/models.py" />
         <option value="$PROJECT_DIR$/app/api/role/schemas.py" />
         <option value="$PROJECT_DIR$/app/api/role/resources.py" />
         <option value="$PROJECT_DIR$/app/api/role/models.py" />
@@ -344,7 +340,6 @@
         <option value="$PROJECT_DIR$/app/api/message/schemas.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/api/message/models.py" />
-        <option value="$PROJECT_DIR$/tests/db_test.py" />
         <option value="$PROJECT_DIR$/app/api/message/resources.py" />
         <option value="$PROJECT_DIR$/tests/api_message_test.py" />
         <option value="$PROJECT_DIR$/app/templates/messages.html" />
@@ -352,17 +347,22 @@
         <option value="$PROJECT_DIR$/app/views/general.py" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/TODO.md" />
         <option value="$PROJECT_DIR$/app/templates/login.html" />
         <option value="$PROJECT_DIR$/app/templates/special.html" />
         <option value="$PROJECT_DIR$/app/views/challenges.py" />
-        <option value="$PROJECT_DIR$/app/templates/hc.html" />
-        <option value="$PROJECT_DIR$/app/templates/cc.html" />
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/templates/message-dashboard.html" />
-        <option value="$PROJECT_DIR$/app/templates/challenge-dashboard.html" />
         <option value="$PROJECT_DIR$/app/templates/account-dashboard.html" />
+        <option value="$PROJECT_DIR$/TODO.md" />
+        <option value="$PROJECT_DIR$/app/api/challenge/models.py" />
+        <option value="$PROJECT_DIR$/app/api/challenge/schemas.py" />
+        <option value="$PROJECT_DIR$/tests/db_test.py" />
+        <option value="$PROJECT_DIR$/tests/api_challenge_test.py" />
+        <option value="$PROJECT_DIR$/app/templates/challenge-dashboard.html" />
+        <option value="$PROJECT_DIR$/app/api/challenge/resources.py" />
         <option value="$PROJECT_DIR$/app/views/admin.py" />
+        <option value="$PROJECT_DIR$/app/templates/cc.html" />
+        <option value="$PROJECT_DIR$/app/templates/hc.html" />
       </list>
     </option>
   </component>
@@ -414,7 +414,7 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="challenge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
@@ -659,7 +659,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.22198506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.22198506" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -674,8 +674,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.3268817" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" visible="true" weight="0.32473117" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32903227" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" weight="0.32473117" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3268817" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" weight="0.32867885" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -725,33 +725,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/api/challenge/schemas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/role/schemas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/role/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/solve/schemas.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/solve/resources.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/solve/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -884,13 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/db_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/api_message_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
@@ -955,16 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="240">
-            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
@@ -1000,16 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/general.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
@@ -1019,27 +965,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="56" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/challenge-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/account-dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1069,28 +994,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
+    <entry file="file://$PROJECT_DIR$/TODO.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="210">
+            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/backend-0noUrJRQ/lib/python3.6/site-packages/marshmallow/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="1108" column="18" selection-start-line="1108" selection-start-column="10" selection-end-line="1108" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/challenge/schemas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/challenge/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
-          <caret line="431" column="51" selection-start-line="431" selection-start-column="51" selection-end-line="431" selection-end-column="51" />
+          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
           <folding>
-            <element signature="e#681#1551#0" />
-            <element signature="e#1616#2624#0" />
-            <element signature="e#2687#3298#0" />
-            <element signature="e#3362#6454#0" />
-            <element signature="e#6518#10806#0" />
-            <element signature="e#1393#1993#0" />
-            <element signature="e#1944#3910#0" />
-            <element signature="e#3972#4839#0" />
-            <element signature="e#4901#5519#0" />
-            <element signature="e#5582#6816#0" />
-            <element signature="e#6875#7729#0" />
-            <element signature="e#7788#8776#0" />
-            <element signature="e#8835#9430#0" />
-            <element signature="e#445#20016#0" />
-            <marker date="1537176959541" expanded="true" signature="10803:11362" ph="..." />
-            <marker date="1537176959541" expanded="true" signature="12685:21100" ph="..." />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/api_challenge_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="159" column="18" selection-start-line="159" selection-start-column="18" selection-end-line="159" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/db_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/challenge-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1095">
+          <caret line="166" column="105" selection-start-line="166" selection-start-column="105" selection-end-line="166" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/challenge/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="118" column="28" lean-forward="true" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="50" column="128" lean-forward="true" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
         </state>
       </provider>
     </entry>
