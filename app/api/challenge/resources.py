@@ -65,17 +65,10 @@ class ChallengeResource(MethodView):
                     errors=['flag already in use'],
                     status_code=400
                 ).jsonify()
-        category = Category.query.filter_by(name=data.get('category')).first()
+        data['category'] = Category.query.filter_by(name=data.get('category')).first()
+        
         # create the challenge
-        challenge = Challenge(
-            name=data.get('name'),
-            description=data.get('description'),
-            flag=data.get('flag'),
-            points=data.get('points'),
-            category=category,
-            yt_challenge_id=data.get('ytChallengeId') or None,
-            yt_solution_id=data.get('ytSolutionId') or None
-        )
+        challenge = Challenge(**data)
 
         # add the challenge object to the database
         db.session.add(challenge)

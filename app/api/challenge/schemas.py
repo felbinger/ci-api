@@ -28,6 +28,9 @@ class DaoCreateChallengeSchema(Schema):
         load_from='ytSolutionId',
         validate=[validate.Length(min=0, max=20)]
     )
+    publication = fields.DateTime(
+        required=True  # TODO how does this work @Daniel
+    )
 
 
 class DaoUpdateChallengeSchema(Schema):

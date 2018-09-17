@@ -1,5 +1,5 @@
-from sqlalchemy import Column, String, Integer, ForeignKey
-
+from sqlalchemy import Column, String, Integer, ForeignKey, DateTime
+from datetime import datetime
 from app.db import db
 
 
@@ -13,8 +13,14 @@ class Challenge(db.Model):
     yt_challenge_id = Column('ytChallengeId', String(20), nullable=True)
     yt_solution_id = Column('ytSolutionId', String(20), nullable=True)
 
+    # publication = Column('publication', DateTime, nullable=False) # TODO uncomment
+    created = Column('created', DateTime, nullable=False)
+
     category_id = Column('category', Integer, ForeignKey('category.id'), nullable=False)
     category = db.relationship('Category', backref=db.backref('challenges', lazy=True))
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs, created=datetime.utcnow())
 
     def min_jsonify(self):
         # Used for solved challenges

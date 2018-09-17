@@ -95,7 +95,6 @@ def hacking():
                     flash('Good Job, you\'ve solved another challenge!', 'success')
 
             elif action == 'rateUp':
-                # TODO change url_for('rating_api')
                 resp = requests.put(
                     f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
                     headers=header,
@@ -107,7 +106,6 @@ def hacking():
                     flash('Thanks for rating!', 'success')
 
             elif action == 'rateDown':
-                # TODO change url_for('rating_api')
                 resp = requests.put(
                     f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
                     headers=header,
