@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,7 +165,7 @@
           <entry key="http" value="1" />
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
-          <entry key="md" value="56" />
+          <entry key="md" value="57" />
           <entry key="py" value="738" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="10" />
@@ -180,7 +178,7 @@
           <entry key="HTML" value="211" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
-          <entry key="Markdown" value="56" />
+          <entry key="Markdown" value="57" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="Python" value="738" />
           <entry key="PythonStub" value="1" />
@@ -194,7 +192,7 @@
           <entry key="gitignore" value="19" />
           <entry key="html" value="13533" />
           <entry key="js" value="12" />
-          <entry key="md" value="6629" />
+          <entry key="md" value="6663" />
           <entry key="py" value="42335" />
           <entry key="txt" value="276" />
         </counts>
@@ -204,7 +202,7 @@
           <entry key="Dockerfile" value="18" />
           <entry key="HTML" value="13533" />
           <entry key="JavaScript" value="12" />
-          <entry key="Markdown" value="6627" />
+          <entry key="Markdown" value="6661" />
           <entry key="PLAIN_TEXT" value="295" />
           <entry key="Python" value="42336" />
           <entry key="SQL" value="1" />
@@ -216,11 +214,11 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TODO.md">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="45">
-                <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="330">
+                <caret line="53" column="92" selection-start-line="53" selection-start-column="92" selection-end-line="53" selection-end-column="92" />
               </first_editor>
               <second_editor />
             </state>
@@ -348,8 +346,8 @@
         <option value="$PROJECT_DIR$/app/templates/cc.html" />
         <option value="$PROJECT_DIR$/app/templates/hc.html" />
         <option value="$PROJECT_DIR$/app/views/challenges.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TODO.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1058,21 +1056,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TODO.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="45">
             <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="330">
+            <caret line="53" column="92" selection-start-line="53" selection-start-column="92" selection-end-line="53" selection-end-column="92" />
           </first_editor>
           <second_editor />
         </state>

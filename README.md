@@ -51,7 +51,7 @@
 * Category: `name`, `description`
 * URL: `id`, `url`, `description`, `challenge` (`id`, `name`, `category`(`name`, `description`))
 * Challenge: `id`, `name`, `description`, `points`, `category`(`name`, `description`), `ytChallengeId`, `ytSolutionId`, 
-  `urls` [(`id`, `url`, `description`), ...], `solveCount`
+  `urls` [(`id`, `url`, `description`), ...], `solveCount`, `rating`(`thumbUp`, `thumbDown`)
 
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings |
