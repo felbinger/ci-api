@@ -4,6 +4,7 @@
 * Chat
 * Password Reset via Email
 * Email validation (send link/code in email, activate account after clicking the link/entering the code)
+* Challenge Rating: (Thumb Up/Thumb Down)
 
 ### General
 * Comment code (Nico)

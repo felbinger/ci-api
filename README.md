@@ -36,8 +36,8 @@
 ||||||
 | GET | /api/challenges | Access-Token | / | Get all challenges |
 | GET | /api/challenges/{id:int} | Access-Token | / | Get challenge |
-| POST | /api/challenges | Access-Token | name, description, category, flag | Admin: create challenge |
-| PUT | /api/challenges/{id:int} | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description | Admin: update challenge (YouTube video id's and/or description) |
+| POST | /api/challenges | Access-Token | name, description, category, flag, points | Admin: create challenge |
+| PUT | /api/challenges/{id:int} | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description (and/or) points | Admin: update challenge (YouTube video id's and/or description) |
 ||||||
 | POST | /api/solve | Access-Token | flag | Solve Special Challenge |
 | PUT | /api/solve/{id:int} | Access-Token | flag | Solve Challenge | |
@@ -48,7 +48,7 @@
   `role` (`name`, `description`), `solved` (`challenge` (`id`, `name`, `category`), `timestamp`)
 * Category: `name`, `description`
 * URL: `id`, `url`, `description`, `challenge` (`id`, `name`, `category`(`name`, `description`))
-* Challenge: `id`, `name`, `description`, `category`(`name`, `description`), `ytChallengeId`, `ytSolutionId`, 
+* Challenge: `id`, `name`, `description`, `points`, `category`(`name`, `description`), `ytChallengeId`, `ytSolutionId`, 
   `urls` [(`id`, `url`, `description`), ...], `solveCount`
 
 ## Database Schema
@@ -73,6 +73,7 @@
 |  | broken | Integer(1) (boolean) |  |
 | challenge | id | Integer(20) | primary key, auto increment |  
 |  | flag | Varchar(80) | unique |  
+|  | points | Integer(11) |  |  
 |  | name | Varchar(80) | unique |  
 |  | description | Varchar(512) |  |  
 |  | ytChallengeId | Varchar(10) |  |  

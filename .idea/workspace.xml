@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/challenge/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/challenge/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/cc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/cc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/challenge-dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/challenge-dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/hc.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/hc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_challenge_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api_challenge_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/db_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/db_test.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -174,8 +166,8 @@
           <entry key="http" value="1" />
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
-          <entry key="md" value="47" />
-          <entry key="py" value="669" />
+          <entry key="md" value="49" />
+          <entry key="py" value="670" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="10" />
         </counts>
@@ -187,9 +179,9 @@
           <entry key="HTML" value="204" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
-          <entry key="Markdown" value="47" />
+          <entry key="Markdown" value="49" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="669" />
+          <entry key="Python" value="670" />
           <entry key="PythonStub" value="1" />
           <entry key="TOML file" value="8" />
         </counts>
@@ -201,7 +193,7 @@
           <entry key="gitignore" value="19" />
           <entry key="html" value="13077" />
           <entry key="js" value="12" />
-          <entry key="md" value="6018" />
+          <entry key="md" value="6153" />
           <entry key="py" value="39948" />
           <entry key="txt" value="276" />
         </counts>
@@ -211,7 +203,7 @@
           <entry key="Dockerfile" value="18" />
           <entry key="HTML" value="13077" />
           <entry key="JavaScript" value="12" />
-          <entry key="Markdown" value="6016" />
+          <entry key="Markdown" value="6151" />
           <entry key="PLAIN_TEXT" value="295" />
           <entry key="Python" value="39949" />
           <entry key="SQL" value="1" />
@@ -222,20 +214,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/cc.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="50" column="128" lean-forward="true" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="128" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/hc.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="255">
+                <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -312,7 +298,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/api/authentication/models.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/schemas.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/utils.py" />
         <option value="$PROJECT_DIR$/app/api/categories/models.py" />
@@ -353,7 +338,6 @@
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/templates/message-dashboard.html" />
         <option value="$PROJECT_DIR$/app/templates/account-dashboard.html" />
-        <option value="$PROJECT_DIR$/TODO.md" />
         <option value="$PROJECT_DIR$/app/api/challenge/models.py" />
         <option value="$PROJECT_DIR$/app/api/challenge/schemas.py" />
         <option value="$PROJECT_DIR$/tests/db_test.py" />
@@ -363,6 +347,8 @@
         <option value="$PROJECT_DIR$/app/views/admin.py" />
         <option value="$PROJECT_DIR$/app/templates/cc.html" />
         <option value="$PROJECT_DIR$/app/templates/hc.html" />
+        <option value="$PROJECT_DIR$/TODO.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -408,13 +394,6 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="challenge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChallengeInterface" type="b2602c69:ProjectViewProjectNode" />
@@ -674,8 +653,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.3268817" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" weight="0.32473117" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32903227" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" visible="true" weight="0.32473117" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3268817" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" weight="0.32867885" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -795,16 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-345">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2040">
-            <caret line="136" column="3" lean-forward="true" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -994,16 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/backend-0noUrJRQ/lib/python3.6/site-packages/marshmallow/fields.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1058,13 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/challenge-dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1095">
@@ -1093,6 +1045,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="360">
+            <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
