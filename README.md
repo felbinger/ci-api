@@ -41,6 +41,8 @@
 ||||||
 | POST | /api/solve | Access-Token | flag | Solve Special Challenge |
 | PUT | /api/solve/{id:int} | Access-Token | flag | Solve Challenge | |
+||||||
+| PUT | /api/rate/{challenge_id:int} | Access-Token | thumbUp(boolean) | Rate a challenge |
 
 ### GET Result Schemas
 * Role: `name`, `description`
@@ -61,12 +63,12 @@
 |  | password | Blob(512) (sha512 Hash) |  |
 |  | lastLogin | TimeStamp |  |
 |  | created | TimeStamp |  |
-|  | role | Integer(11) | foreign key -} role.id |
+|  | role | Integer(11) | foreign key -> role.id |
 | roles | id | Integer(11) | primary key, auto increment |
 |  | name | Varchar(80) |  |
 |  | description | Varchar(100) |  |
 | tokens | id | Integer(11) | primary key, auto increment |
-|  | user | Integer(11) | foreign key -} user.id |
+|  | user | Integer(11) | foreign key -> user.id |
 |  | token | Varchar(128) | unique |
 |  | created | TimeStamp |  |
 |  | expires | TimeStamp |  |
@@ -80,17 +82,17 @@
 |  | ytSolutionId | Varchar(10) |  |  
 |  | category | Varchar(80) | |  
 | ratings | id | Integer(11) | |
-|  | user | Integer(11) | foreign key -} user.id |
-|  | challenge | Integer(11) | foreign key -} challenge.id |
+|  | user | Integer(11) | foreign key -> user.id |
+|  | challenge | Integer(11) | foreign key -> challenge.id |
 |  | thumbUp | Boolean | |
 |  | created | DateTime | |
 | url | id | Integer(11) | primary key, auto increment |  
 |  | description | Varchar(100) |  |  
 |  | url | Varchar(100) | unique |
-|  | challenge | Integer(11) | foreign key -} challenge.id |  
+|  | challenge | Integer(11) | foreign key -> challenge.id |  
 | solved | id | Integer(11) | primary key, auto increment |  
-|  | challenge | Integer(11) | foreign key -} challenge.id |
-|  | user | Integer(11) | foreign key -} user.id |  
+|  | challenge | Integer(11) | foreign key -> challenge.id |
+|  | user | Integer(11) | foreign key -> user.id |  
 |  | timestamp | TimeStamp |  |  |
 
 ## Installation

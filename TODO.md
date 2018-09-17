@@ -1,11 +1,12 @@
 # TODO
 
 * User Solutions (URLs)
+* DateTime for publication of Challenges (automated)
 * Chat
-* Password Reset via Email
-* Email validation (send link/code in email, activate account after clicking the link/entering the code)
-* Challenge Rating: (Thumb Up/Thumb Down)
-
+* E-Mail interaction:
+  * Password Reset
+  * Account Activation after registration
+  
 ### General
 * Comment code (Nico)
 * Leaderboard (Hendrik)
