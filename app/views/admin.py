@@ -429,6 +429,7 @@ def accounts():
     return render_template('account-dashboard.html', user=user, data=data)
 
 
+# TODO remove after testing the splitted dashboard's
 @admin.route('/dashboard', methods=['GET', 'POST'])
 @require_login
 @require_admin

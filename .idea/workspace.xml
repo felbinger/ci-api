@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navigation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -195,7 +193,7 @@
           <entry key="html" value="12837" />
           <entry key="js" value="12" />
           <entry key="md" value="5833" />
-          <entry key="py" value="39465" />
+          <entry key="py" value="39527" />
           <entry key="txt" value="276" />
         </counts>
       </usages-collector>
@@ -206,7 +204,7 @@
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="5831" />
           <entry key="PLAIN_TEXT" value="295" />
-          <entry key="Python" value="39466" />
+          <entry key="Python" value="39528" />
           <entry key="SQL" value="1" />
           <entry key="TOML file" value="89" />
         </counts>
@@ -215,11 +213,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="217" column="37" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
+            <state relative-caret-position="428">
+              <caret line="431" column="51" selection-start-line="431" selection-start-column="51" selection-end-line="431" selection-end-column="51" />
               <folding>
                 <element signature="e#681#1551#0" />
                 <element signature="e#1616#2624#0" />
@@ -235,52 +233,9 @@
                 <element signature="e#7788#8776#0" />
                 <element signature="e#8835#9430#0" />
                 <element signature="e#445#20016#0" />
-                <marker date="1537176462485" expanded="true" signature="10803:11362" ph="..." />
-                <marker date="1537176462485" expanded="true" signature="12685:21048" ph="..." />
+                <marker date="1537176959541" expanded="true" signature="10803:11362" ph="..." />
+                <marker date="1537176959541" expanded="true" signature="12685:21100" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/message-dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/account-dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="42" column="22" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="22" />
-              <folding>
-                <element signature="n#div#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/challenge-dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -403,11 +358,11 @@
         <option value="$PROJECT_DIR$/app/views/challenges.py" />
         <option value="$PROJECT_DIR$/app/templates/hc.html" />
         <option value="$PROJECT_DIR$/app/templates/cc.html" />
-        <option value="$PROJECT_DIR$/app/views/admin.py" />
         <option value="$PROJECT_DIR$/app/templates/navigation.html" />
         <option value="$PROJECT_DIR$/app/templates/message-dashboard.html" />
         <option value="$PROJECT_DIR$/app/templates/challenge-dashboard.html" />
         <option value="$PROJECT_DIR$/app/templates/account-dashboard.html" />
+        <option value="$PROJECT_DIR$/app/views/admin.py" />
       </list>
     </option>
   </component>
@@ -704,7 +659,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.22198506" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83507854" visible="true" weight="0.22198506" />
       <window_info id="Project Explorer" order="1" sideWeight="0.4984756" weight="0.32977587" />
       <window_info id="Structure" order="2" sideWeight="0.16578947" side_tool="true" weight="0.20490928" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -715,11 +670,11 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39957035" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" visible="true" weight="0.2860215" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49786553" weight="0.2860215" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.15161291" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50160086" side_tool="true" weight="0.3268817" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" weight="0.32473117" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" visible="true" weight="0.32473117" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3268817" />
       <window_info anchor="bottom" id="DB Execution Console" order="12" weight="0.32867885" />
@@ -1079,10 +1034,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/challenge-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/account-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="22" />
+          <folding>
+            <element signature="n#div#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/message-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="217" column="37" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
+        <state relative-caret-position="428">
+          <caret line="431" column="51" selection-start-line="431" selection-start-column="51" selection-end-line="431" selection-end-column="51" />
           <folding>
             <element signature="e#681#1551#0" />
             <element signature="e#1616#2624#0" />
@@ -1098,43 +1088,8 @@
             <element signature="e#7788#8776#0" />
             <element signature="e#8835#9430#0" />
             <element signature="e#445#20016#0" />
-            <marker date="1537176462485" expanded="true" signature="10803:11362" ph="..." />
-            <marker date="1537176462485" expanded="true" signature="12685:21048" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/navigation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/challenge-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/message-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/account-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#html#0;n#!!top" />
+            <marker date="1537176959541" expanded="true" signature="10803:11362" ph="..." />
+            <marker date="1537176959541" expanded="true" signature="12685:21100" ph="..." />
           </folding>
         </state>
       </provider>
