@@ -31,9 +31,8 @@ def coding():
                     flash('Good Job, you\'ve solved another challenge!', 'success')
 
             elif action == 'rateUp':
-                # TODO change url_for('rating_api')
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
                     headers=header,
                     json={'thumbUp': True}
                 )
@@ -43,9 +42,8 @@ def coding():
                     flash('Thanks for rating!', 'success')
 
             elif action == 'rateDown':
-                # TODO change url_for('rating_api')
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
                     headers=header,
                     json={'thumbUp': False}
                 )
@@ -99,7 +97,7 @@ def hacking():
             elif action == 'rateUp':
                 # TODO change url_for('rating_api')
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
                     headers=header,
                     json={'thumbUp': True}
                 )
@@ -111,7 +109,7 @@ def hacking():
             elif action == 'rateDown':
                 # TODO change url_for('rating_api')
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}/api/rate/{request.form.get("id")}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
                     headers=header,
                     json={'thumbUp': False}
                 )
