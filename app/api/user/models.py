@@ -25,6 +25,9 @@ class User(db.Model):
 
     def jsonify(self):
         from ..solve import Solve
+        points = 0
+        for solve in Solve.query.filter_by(user=self).all():
+            points += solve.challenge.points
         return {
             'publicId': self.public_id,
             'username': self.username,
@@ -32,7 +35,8 @@ class User(db.Model):
             'created': self.created.strftime("%d.%m.%Y %H:%M:%S"),
             'lastLogin': self.last_login.strftime("%d.%m.%Y %H:%M:%S") if self.last_login else None,
             'role': self.role.jsonify(),
-            'solved': [solve.jsonify() for solve in Solve.query.filter_by(user=self).all()]
+            'solved': [solve.jsonify() for solve in Solve.query.filter_by(user=self).all()],
+            'points': points
         }
 
     def verify_password(self, password):

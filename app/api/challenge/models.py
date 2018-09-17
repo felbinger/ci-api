@@ -22,7 +22,8 @@ class Challenge(db.Model):
             'id': self.id,
             'name': self.name,
             'description': self.description,
-            'category': self.category.jsonify()
+            'category': self.category.jsonify(),
+            'points': self.points
         }
 
     def jsonify(self):

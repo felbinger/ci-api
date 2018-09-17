@@ -79,6 +79,8 @@
 |  | ytChallengeId | Varchar(10) |  |  
 |  | ytSolutionId | Varchar(10) |  |  
 |  | category | Varchar(80) | |  
+| ratings | id | Integer(20) | |
+|  | user | Integer(20) |  |
 | url | id | Integer(20) | primary key, auto increment |  
 |  | description | Varchar(100) |  |  
 |  | url | Varchar(100) | unique |
