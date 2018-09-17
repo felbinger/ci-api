@@ -238,18 +238,38 @@
                 <form method="POST" name="form">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>ID</label>
-                                    <input id="updateID" name="id" class="form-control" type="text" readonly>
+                            <div class="col-md-8">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input id="updateUsername" name="username" class="form-control" type="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Solved Challenges</label>
+                                        <input id="updateSolvedChallenges" class="form-control" type="text" disabled>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Username</label>
-                                    <input id="updateUsername" name="username" class="form-control" type="text" required>
+                                <!-- /.col-md-4 (nested) -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>E-Mail</label>
+                                        <input id="updateEmail" name="email" class="form-control" type="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Points</label>
+                                        <input id="updatePoints" class="form-control" type="text" disabled>
+                                    </div>
+                                </div>
+                                <!-- /.col-md-4 (nested) -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>ID</label>
+                                        <input id="updateID" name="id" class="form-control" type="text" readonly>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- /.col-md-6 (nested) -->
-                            <div class="col-md-6">
+                            <!-- /.col-md-8 (nested) -->
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Role</label>
                                     <select name="role" class="form-control" required>
@@ -259,29 +279,12 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>E-Mail</label>
-                                    <input id="updateEmail" name="email" class="form-control" type="text" required>
-                                </div>
-                            </div>
-                            <!-- /.col-md-6 (nested) -->
-                            <div class="col-md-4">
-                                <div class="form-group">
                                     <label>Created</label>
                                     <input id="updateCreated" class="form-control" type="text" disabled>
                                 </div>
-                            </div>
-                            <!-- /.col-md-4 (nested) -->
-                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Last Login</label>
                                     <input id="updateLastLogin" class="form-control" type="text" disabled>
-                                </div>
-                            </div>
-                            <!-- /.col-md-4 (nested) -->
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Solved Challenges</label>
-                                    <input id="updateSolvedChallenges" class="form-control" type="text" disabled>
                                 </div>
                             </div>
                             <!-- /.col-md-4 (nested) -->
@@ -377,6 +380,7 @@
             $("#updateLastLogin").val(data["lastLogin"]);
             $("#updateSolvedChallenges").val(data['solved'].length);
             $("#updateEmail").val(data["email"]);
+            $("#updatePoints").val(data["points"]);
             $('select[name="role"]').find('option[value="' + data['role']['name'] + '"]').attr("selected",true);
             $("#solvedChallenges").children().remove()
 
