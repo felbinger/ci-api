@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin Dashboard</title>
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+        <!-- Bootstrap 3.3.7 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+        <!-- MetisMenu 1.1.3 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.css" integrity="sha256-wX02j8eyavr6AAbf7QKnd+hn+WMGX3wLsItXJT6d8hg=" crossorigin="anonymous" />
+        <!--<script src="../vendor/metisMenu/metisMenu.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.js" integrity="sha256-j/etbFTYvJhMr1E7dJMJhIt3X0kMYoI27gL+aKeB3no=" crossorigin="anonymous"></script>
+        <!-- Font Awesome 4.6.3 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+        <!-- Custom CSS -->
+        <link href="{{url_for('static',filename='dist/css/sb-admin-2.css')}}" rel="stylesheet">
+        <!-- Custom Theme JavaScript -->
+        <script src="{{url_for('static',filename='dist/js/sb-admin-2.js')}}"></script>
+        <!-- DataTables CSS -->
+        <link href="{{url_for('static',filename='vendor/datatables-plugins/dataTables.bootstrap.css')}}" rel="stylesheet">
+        <!-- DataTables Responsive CSS -->
+        <link href="{{url_for('static',filename='vendor/datatables-responsive/dataTables.responsive.css')}}" rel="stylesheet">
+        <!-- DataTables JavaScript -->
+        <script src="{{url_for('static',filename='vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{url_for('static',filename='vendor/datatables-plugins/dataTables.bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static',filename='vendor/datatables-responsive/dataTables.responsive.js')}}"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            {% include "navigation.html" %}
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Challenge Dashboard</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                        <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+                        {% if messages %}
+                          {% for category, message in messages %}
+                            <div class="form-group"><div class="alert alert-{{ category }}"><span class="fa fa-info-circle"></span> {{ message }}</div></div>
+                          {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class="col-lg-12">
+                        <!-- Table: Challenges -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Challenges
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="challengeList">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: center;">Category</th>
+                                            <th style="text-align: center;">Name</th>
+                                            <th style="text-align: center;">Solves</th>
+                                            <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateChallenge" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for challenge in data['challenges'] %}
+                                        <tr class="odd gradeX">
+                                            <td>{{ challenge['category']['description'] }}</td>
+                                            <td>{{ challenge['name'] }}</td>
+                                            <td align="center">{{ challenge['solveCount'] }}</td>
+                                            <td align="center">
+                                                <a onclick='openModalUpdateChallenge({{ challenge|tojson }})'>
+                                                    <i class="fa fa-gear fa-fw"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                    <div class="col-lg-6">
+                        <!-- Table: Challenge Categories -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Challenge Categories
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="categoryList">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: center;">Name</th>
+                                            <th style="text-align: center;">Description</th>
+                                            <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateCategory" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for category in data['categories'] %}
+                                        <tr class="odd gradeX">
+                                            <td>{{ category['name'] }}</td>
+                                            <td>{{ category['description'] }}</td>
+                                            <td align="center">
+                                                <a onclick='openModalUpdateCategory({{ category|tojson }})'>
+                                                    <i class="fa fa-gear fa-fw"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </body>
+
+    <!-- Modal: Create Challenge -->
+    <div class="modal fade" id="modalCreateChallenge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create Challenge</h4>
+                </div>
+                <form method="POST" role="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12" id="urlError"></div>
+                            <div class="col-lg-12">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input name="name" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Flag</label>
+                                        <input name="flag" class="form-control" placeholder="TMT{fL4g}">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>YouTube Challenge Video ID</label>
+                                        <input name="ytChallengeId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>YouTube Solution Video ID</label>
+                                        <input name="ytSolutionId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <select name="category" class="form-control">
+                                            {% for category in data['categories'] %}
+                                            <option value="{{ category['name'] }}">{{ category['description'] }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea style="resize: vertical;" name="description" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-12 (nested) -->
+                                <div class="row">
+                                    <div id="urls"></div>
+                                </div>
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" name="action" value="createChallenge" class="btn btn-primary">Create Challenge</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <!-- Modal: Create Category -->
+    <div class="modal fade" id="modalCreateCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create Category</h4>
+                </div>
+                <form method="POST" role="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input name="name" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input name="description" class="form-control" value="">
+                                </div>
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="modalButtonCreateCategory" name="action" value="createCategory" class="btn btn-primary">Create Category</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Modify Category -->
+    <div class="modal fade" id="modalUpdateCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Update Category</h4>
+                </div>
+                <form method="POST" name="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input id="updateCategoryName" name="name" class="form-control" type="text" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input id="updateCategoryDescription" name="description" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="modalButtonDeleteCategory" name="action" value="deleteCategory" class="btn btn-danger">Delete Category</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="modalButtonUpdateCategory" name="action" value="updateCategory" class="btn btn-primary">Update Category</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Modal: Modify Challenge -->
+    <div class="modal fade" id="modalUpdateChallenge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Update Challenge</h4>
+                </div>
+                <form method="POST" role="form">
+                    <input type="hidden" id="updateChallengeId" name="id" class="form-control" readonly>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <input id="updateChallengeCategory" class="form-control" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>YouTube Challenge Video ID</label>
+                                        <input id="updateChallengeYtChallengeId" name="ytChallengeId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input id="updateChallengeName" class="form-control" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>YouTube Solution Video ID</label>
+                                        <input id="updateChallengeYtSolutionId" name="ytSolutionId" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea id="updateChallengeDescription" style="resize: vertical;" name="description" class="form-control"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div id="updateChallengeURLs"></div>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-12 (nested) -->
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" name="action" value="updateChallenge" class="btn btn-primary">Update Challenge</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script>
+        function openModalUpdateCategory(data) {
+            $('#updateCategoryName').val(data['name']);
+            $("#updateCategoryDescription").val(data["description"]);
+            $('#modalUpdateCategory').modal('show');
+        }
+
+        function openModalUpdateChallenge(data) {
+        	$('#updateChallengeId').val(data['id']);
+            $('#updateChallengeCategory').val(data['category']['description']);
+            $("#updateChallengeName").val(data["name"]);
+            $("#updateChallengeDescription").val(data["description"]);
+            $("#updateChallengeYtChallengeId").val(data["ytChallengeId"]);
+            $("#updateChallengeYtSolutionId").val(data["ytSolutionId"]);
+
+            // remove urls from old challenges
+            $('#updateChallengeUrl_0').remove();
+            $('#updateChallengeUrl_1').remove();
+            $('#updateChallengeUrl_2').remove();
+            for (let i in data['urls']) {
+            	let url = data['urls'][i]['url'];
+                let description = data['urls'][i]['description'];
+                let id = data['urls'][i]['id'];
+                // TODO place a "+" Button somewhere (if the maximum amount of urls hasn't been reached)
+                $('#updateChallengeURLs').append(
+                	'<div class="row" id="updateChallengeUrl_' + i + '">' +
+                        '<div class="col-lg-12">' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="hidden" name="urlIds[]" value="' + id + '">' +
+                                    '<input type="text" class="form-control" name="urls[]" value="' + url + '" placeholder="URL">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="text" class="form-control" name="urlDescriptions[]" value="' + description + '" placeholder="Description">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-2 nopadding">' +
+                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url(\'updateChallengeUrl_'+ i +'\');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
+                            '</div>' +
+                            '<div class="clear"></div>' +
+                        '</div>' +
+                    '</div>'
+                );
+			}
+
+            $('#modalUpdateChallenge').modal('show');
+        }
+
+        let id = 1;
+        let count = 1;
+        function append_url() {
+            if (count < 3) {
+            	$('#urls').append(
+                    '<div id="url_' + id + '">' +
+                        '<div class="col-lg-12">' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="text" class="form-control" name="urls[]" value="" placeholder="URL">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-5">' +
+                                '<div class="form-group">' +
+                                    '<input type="text" class="form-control" name="urlDescriptions[]" placeholder="Description">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-lg-2 nopadding">' +
+                                '<div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_url(\'url_'+ id +'\');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>' +
+                            '</div>' +
+                            '<div class="clear"></div>' +
+                        '</div>' +
+                    '</div>'
+                );
+                id++;
+                count++;
+            } else {
+                $('#urlError').html('<div class="form-group"><div class="alert alert-danger"><span class="fa fa-info-circle"></span> The maximum amount of url\'s has been reached.</div></div>')
+            }
+        }
+        function remove_url(id) {
+            $('#' + id).remove();
+            count--;
+        }
+
+        $(document).ready(function() {
+        	// TODO change "+" Button to "-" Button (delete_url) if the maximum amount of urls has been reached
+            $('#urls').append(
+        	'<div class="col-lg-12">' +
+			    '<div class="col-lg-5">' +
+			        '<div class="form-group">' +
+			        '<input type="text" class="form-control" name="urls[]" value="" placeholder="URL">' +
+			        '</div>' +
+                '</div>' +
+                '<div class="col-lg-5">' +
+                    '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="urlDescriptions[]" placeholder="Description">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="col-lg-2">' +
+			        '<div class="form-group"><div class="form-group input-group-btn"><button class="btn btn-success" type="button" onclick="append_url();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div></div>' +
+			        '</div>' +
+			    '</div>' +
+            '</div>');
+            $('#challengeList').DataTable({
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false
+                }]
+            });
+            $('#categoryList').DataTable({
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false
+                }]
+            });
+        });
+    </script>
+</html>
