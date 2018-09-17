@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6196070e-5c24-4fbc-bd56-6a00475d17b5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/templates/account-dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/account-dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/account.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -161,7 +161,7 @@
           <entry key="coverage" value="1" />
           <entry key="css" value="4" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="205" />
+          <entry key="html" value="206" />
           <entry key="http" value="1" />
           <entry key="js" value="6" />
           <entry key="lock" value="1" />
@@ -175,7 +175,7 @@
         <counts>
           <entry key="CSS" value="4" />
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="205" />
+          <entry key="HTML" value="206" />
           <entry key="HTTP Request" value="1" />
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="51" />
@@ -190,7 +190,7 @@
           <entry key="Dockerfile" value="18" />
           <entry key="Pipfile" value="89" />
           <entry key="gitignore" value="19" />
-          <entry key="html" value="13129" />
+          <entry key="html" value="13232" />
           <entry key="js" value="12" />
           <entry key="md" value="6232" />
           <entry key="py" value="40097" />
@@ -200,7 +200,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="18" />
-          <entry key="HTML" value="13129" />
+          <entry key="HTML" value="13232" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="6230" />
           <entry key="PLAIN_TEXT" value="295" />
@@ -214,13 +214,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/account-dashboard.html">
+        <entry file="file://$PROJECT_DIR$/app/templates/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="268" column="32" selection-start-line="268" selection-start-column="32" selection-end-line="268" selection-end-column="32" />
-              <folding>
-                <element signature="n#div#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="113" column="181" selection-start-line="113" selection-start-column="181" selection-end-line="113" selection-end-column="181" />
             </state>
           </provider>
         </entry>
@@ -297,7 +294,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/api/authentication/schemas.py" />
         <option value="$PROJECT_DIR$/app/api/authentication/utils.py" />
         <option value="$PROJECT_DIR$/app/api/categories/models.py" />
         <option value="$PROJECT_DIR$/app/api/categories/resources.py" />
@@ -348,6 +344,7 @@
         <option value="$PROJECT_DIR$/app/api/challenge/models.py" />
         <option value="$PROJECT_DIR$/app/api/user/models.py" />
         <option value="$PROJECT_DIR$/app/templates/account-dashboard.html" />
+        <option value="$PROJECT_DIR$/app/templates/account.html" />
       </list>
     </option>
   </component>
@@ -724,13 +721,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/api/url/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/url/resources.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
@@ -1094,6 +1084,13 @@
           <folding>
             <element signature="n#div#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="113" column="181" selection-start-line="113" selection-start-column="181" selection-end-line="113" selection-end-column="181" />
         </state>
       </provider>
     </entry>

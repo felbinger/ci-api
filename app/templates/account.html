@@ -105,13 +105,13 @@
                                     {% if user['solved'] != [] %}
                                     <!-- Solved Challenges -->
                                     <div class="panel panel-success">
-                                        <div class="panel-heading">Solved Challenges</div>
+                                        <div class="panel-heading">Solved Challenges (You have {{ user['points'] }} points.)</div>
                                         <!-- /.panel-heading -->
                                         <div class="panel-body">
                                             <div class="list-group">
                                                 {% for solve in user['solved'] %}
                                                 <div class="list-group-item">
-                                                    {{ solve['challenge']['category']['description'] }} - {{ solve['challenge']['name'] }}
+                                                    {{ solve['challenge']['category']['description'] }} - {{ solve['challenge']['name'] }} ({{ solve['challenge']['points'] }} points)
                                                     <span class="pull-right text-muted small"><em>{{ solve['timestamp'] }}</em></span>
                                                 </div>
                                                 {% endfor %}
