@@ -138,7 +138,6 @@ INSERT INTO `category` (`id`, `name`, `description`) VALUES
 (1, 'HC', 'Hacking Challenges'),
 (2, 'CC', 'Coding Challenges'),
 (3, 'Special', 'Special Challenges');
-
 INSERT INTO `role` (`id`, `name`, `description`) VALUES
 (1, 'admin', 'Admin'),
 (2, 'user', 'User');
