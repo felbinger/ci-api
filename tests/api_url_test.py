@@ -184,7 +184,8 @@ def _create_dummy_challenge(app, client):
         name=_id,
         description='Description',
         flag='TMT{' + _id + '}',
-        category=cat
+        category=cat,
+        points=0
     )
     db = client.db
     with app.app_context():

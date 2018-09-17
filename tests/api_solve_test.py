@@ -53,12 +53,6 @@ def test_solve_special_challenge_without_data(app, client):
     assert json.loads(resp.data.decode()).get('message') == 'Payload is invalid'
 
 
-def test_solve_special_challenge_without_data(app, client):
-    resp = client.post('/api/solve', headers={'Access-Token': _get_token(app, client)}, json={'asd': 'asf'})
-    assert resp.status_code == 400
-    assert json.loads(resp.data.decode()).get('message') == 'Payload is invalid'
-
-
 def test_solve_special_challenge_invalid_flag(app, client):
     data = {'flag': 'invalid'}
     resp = client.post('/api/solve', headers={'Access-Token': _get_token(app, client)}, json=data)
@@ -150,7 +144,8 @@ def _create_special_challenge(app, client):
             name=_id,
             description='Description',
             flag='TMT{' + _id + '}',
-            category=cat
+            category=cat,
+            points=0
         )
         db.session.add(chall)
         db.session.commit()
@@ -166,7 +161,8 @@ def _create_dummy_challenge(app, client):
             name=_id,
             description='Description',
             flag='TMT{' + _id + '}',
-            category=cat
+            category=cat,
+            points=0
         )
         db.session.add(chall)
         db.session.commit()

@@ -54,24 +54,24 @@
 ## Database Schema
 | Table | Attribute | Datatype (Length) (+ Description) | Settings |
 |:---------:|:-------------:|:---------------------------------:|:---------------------------:|
-| users | id | Integer(20) | primary key, auto increment |
+| users | id | Integer(11) | primary key, auto increment |
 |  | publicId | Varchar(36) (for uuid4) | unique |
 |  | username | Varchar(80) | unique |
 |  | email | Varchar(100) | unique |
 |  | password | Blob(512) (sha512 Hash) |  |
 |  | lastLogin | TimeStamp |  |
 |  | created | TimeStamp |  |
-|  | role | Integer(20) | foreign key -} role.id |
-| roles | id | Integer(20) | primary key, auto increment |
+|  | role | Integer(11) | foreign key -} role.id |
+| roles | id | Integer(11) | primary key, auto increment |
 |  | name | Varchar(80) |  |
 |  | description | Varchar(100) |  |
-| tokens | id | Integer(20) | primary key, auto increment |
-|  | user | Integer(20) | foreign key -} user.id |
+| tokens | id | Integer(11) | primary key, auto increment |
+|  | user | Integer(11) | foreign key -} user.id |
 |  | token | Varchar(128) | unique |
 |  | created | TimeStamp |  |
 |  | expires | TimeStamp |  |
 |  | broken | Integer(1) (boolean) |  |
-| challenge | id | Integer(20) | primary key, auto increment |  
+| challenge | id | Integer(11) | primary key, auto increment |  
 |  | flag | Varchar(80) | unique |  
 |  | points | Integer(11) |  |  
 |  | name | Varchar(80) | unique |  
@@ -79,15 +79,18 @@
 |  | ytChallengeId | Varchar(10) |  |  
 |  | ytSolutionId | Varchar(10) |  |  
 |  | category | Varchar(80) | |  
-| ratings | id | Integer(20) | |
-|  | user | Integer(20) |  |
-| url | id | Integer(20) | primary key, auto increment |  
+| ratings | id | Integer(11) | |
+|  | user | Integer(11) | foreign key -} user.id |
+|  | challenge | Integer(11) | foreign key -} challenge.id |
+|  | thumbUp | Boolean | |
+|  | created | DateTime | |
+| url | id | Integer(11) | primary key, auto increment |  
 |  | description | Varchar(100) |  |  
 |  | url | Varchar(100) | unique |
-|  | challenge | Integer(20) | foreign key -} challenge.id |  
-| solved | id | Integer(20) | primary key, auto increment |  
-|  | challenge | Integer(20) | foreign key -} challenge.id |
-|  | user | Integer(20) | foreign key -} user.id |  
+|  | challenge | Integer(11) | foreign key -} challenge.id |  
+| solved | id | Integer(11) | primary key, auto increment |  
+|  | challenge | Integer(11) | foreign key -} challenge.id |
+|  | user | Integer(11) | foreign key -} user.id |  
 |  | timestamp | TimeStamp |  |  |
 
 ## Installation

@@ -1,4 +1,4 @@
-from app.api import User, Role, Challenge, Solve, Category, Message
+from app.api import User, Role, Challenge, Solve, Category, Message #, Rating
 from uuid import UUID
 
 
@@ -34,7 +34,7 @@ def test_solve_challenge(app, client):
         name='test',
         description='Test'
     )
-    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category=cat)
+    challenge = Challenge(name="TEST", description="TEST", flag="TEST", category=cat, points=0)
     solve = Solve(challenge=challenge, user=user)
     with app.app_context():
         db.session.add(role)
@@ -105,3 +105,8 @@ def test_create_message(app, client):
         db.session.add(user)
         db.session.add(msg)
         db.session.commit()
+
+"""
+def test_created_rating(app, client):
+    pass
+"""

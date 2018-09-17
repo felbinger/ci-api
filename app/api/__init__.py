@@ -7,3 +7,4 @@ from .solve import Solve, SolveResource
 from .categories import Category, CategoryResource
 from .url import Url, UrlResource
 from .message import Message, MessageResource
+from .rating import Rating, RatingResource

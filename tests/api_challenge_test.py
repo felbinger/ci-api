@@ -54,7 +54,8 @@ def test_update_challenge(app, client):
     data = {'name': 'challenge name',
             'description': 'challenge description',
             'flag': 'TMT{TestFlag}',
-            'category': 'hacking'}
+            'category': 'hacking',
+            'points': 0}
     resp = client.post('/api/challenges', headers={'Access-Token': token}, json=data)
     assert resp.status_code == 201
     challenge_id = json.loads(resp.data.decode()).get('data').get('id')
@@ -78,7 +79,8 @@ def test_update_challenge_without_data(app, client):
     data = {'name': 'challenge name',
             'description': 'challenge description',
             'flag': 'TMT{TestFlag}',
-            'category': 'hacking'}
+            'category': 'hacking',
+            'points': 0}
     resp = client.post('/api/challenges', headers={'Access-Token': token}, json=data)
     assert resp.status_code == 201
     challenge_id = json.loads(resp.data.decode()).get('data').get('id')
@@ -94,7 +96,8 @@ def test_update_challenge_invalid_data(app, client):
     data = {'name': 'challenge name',
             'description': 'challenge description',
             'flag': 'TMT{TestFlag}',
-            'category': 'hacking'}
+            'category': 'hacking',
+            'points': 0}
     resp = client.post('/api/challenges', headers={'Access-Token': token}, json=data)
     assert resp.status_code == 201
     challenge_id = json.loads(resp.data.decode()).get('data').get('id')

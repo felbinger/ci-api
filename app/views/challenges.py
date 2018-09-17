@@ -30,6 +30,12 @@ def coding():
                 else:
                     flash('Good Job, you\'ve solved another challenge!', 'success')
 
+            elif action == 'rateUp':
+                flash('Thanks for rating!', 'success')
+
+            elif action == 'rateDown':
+                flash('Thanks for rating!', 'success')
+
     data = dict()
     data['challenges'] = list()
     challs = requests.get(
@@ -75,6 +81,12 @@ def hacking():
                     flash(f'Unable to solve challenge: {resp.json().get("message")}', 'danger')
                 else:
                     flash('Good Job, you\'ve solved another challenge!', 'success')
+
+            elif action == 'rateUp':
+                flash('Thanks for rating!', 'success')
+
+            elif action == 'rateDown':
+                flash('Thanks for rating!', 'success')
 
     data = dict()
     data['challenges'] = list()
