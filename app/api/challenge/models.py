@@ -13,13 +13,15 @@ class Challenge(db.Model):
     yt_challenge_id = Column('ytChallengeId', String(20), nullable=True)
     yt_solution_id = Column('ytSolutionId', String(20), nullable=True)
 
-    publication = Column('publication', DateTime) # TODO uncomment
+    publication = Column('publication', DateTime, nullable=False)
     created = Column('created', DateTime, nullable=False)
 
     category_id = Column('category', Integer, ForeignKey('category.id'), nullable=False)
     category = db.relationship('Category', backref=db.backref('challenges', lazy=True))
 
     def __init__(self, *args, **kwargs):
+        kwargs['publication'] = datetime.utcnow()  # todo remove
+        # todo create a field (mini calender) in the frontend and check the validation (iso 8601)
         super().__init__(*args, **kwargs, created=datetime.utcnow())
 
     def min_jsonify(self):

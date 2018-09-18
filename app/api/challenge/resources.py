@@ -1,3 +1,4 @@
+import dateutil.parser
 from flask.views import MethodView
 from flask import request
 
@@ -66,7 +67,18 @@ class ChallengeResource(MethodView):
                     status_code=400
                 ).jsonify()
         data['category'] = Category.query.filter_by(name=data.get('category')).first()
-        
+
+        # todo create field and do this in schema
+        # try:
+        #     data['publication'] = dateutil.parser.parse(data['publication'])
+        # except ValueError as e:
+        #     print(e)
+        #     return ResultErrorSchema(
+        #         message='Invalid date for publication!',
+        #         errors=['invalid date for publication'],
+        #         status_code=400
+        #     ).jsonify()
+
         # create the challenge
         challenge = Challenge(**data)
 
