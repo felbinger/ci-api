@@ -67,6 +67,7 @@
                                             <th style="text-align: center;">Username</th>
                                             <th style="text-align: center;">Last Login</th>
                                             <th style="text-align: center;">Solved Challenges</th>
+                                            <th style="text-align: center;">Points</th>
                                             <th style="text-align: center;">Role</th>
                                             <th style="text-align: center;" class="no-sort"><a data-target="#modalCreateAccount" data-toggle="modal"><i class="fa fa-plus fa-fw"></i></a></th>
                                         </tr>
@@ -77,6 +78,7 @@
                                             <td>{{ account['username'] }}</td>
                                             <td>{{ account['lastLogin'] }}</td>
                                             <td align="center">{{ account['solved']|length }}</td>
+                                            <td align="center">{{ account['points'] }}</td>
                                             <td>{{ account['role']['description'] }}</td>
                                             <td align="center">
                                                 <a onclick='openModalUpdateAccount({{ account|tojson }})'>
