@@ -37,6 +37,9 @@ class RatingResource(MethodView):
             ).jsonify()
 
         # check if the user has solved the challenge
+        print(user.jsonify())
+        print(challenge.jsonify())
+        print([s.jsonify() for s in Solve.query.filter_by(user=user).all()])
         if not Solve.query.filter_by(user=user, challenge=challenge).first():
             return ResultErrorSchema(
                 message='Challenge not solved!',

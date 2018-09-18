@@ -13,7 +13,7 @@ class Challenge(db.Model):
     yt_challenge_id = Column('ytChallengeId', String(20), nullable=True)
     yt_solution_id = Column('ytSolutionId', String(20), nullable=True)
 
-    # publication = Column('publication', DateTime, nullable=False) # TODO uncomment
+    publication = Column('publication', DateTime) # TODO uncomment
     created = Column('created', DateTime, nullable=False)
 
     category_id = Column('category', Integer, ForeignKey('category.id'), nullable=False)

@@ -32,7 +32,7 @@ def coding():
 
             elif action == 'rateUp':
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=request.form.get("id"))}',
                     headers=header,
                     json={'thumbUp': True}
                 )
@@ -43,7 +43,7 @@ def coding():
 
             elif action == 'rateDown':
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=request.form.get("id"))}',
                     headers=header,
                     json={'thumbUp': False}
                 )
@@ -96,7 +96,7 @@ def hacking():
 
             elif action == 'rateUp':
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=request.form.get("id"))}',
                     headers=header,
                     json={'thumbUp': True}
                 )
@@ -107,7 +107,7 @@ def hacking():
 
             elif action == 'rateDown':
                 resp = requests.put(
-                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=1)}',
+                    f'{request.scheme}://{request.host}{url_for("rating_api", _id=request.form.get("id"))}',
                     headers=header,
                     json={'thumbUp': False}
                 )
