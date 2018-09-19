@@ -15,7 +15,16 @@ def index():
         headers=header
     ).json().get('data')
 
-    return render_template('index.html', user=user), 200
+    leaderboard = requests.get(
+        f'{request.scheme}://{request.host}{url_for("leaderboard_api")}',
+        headers=header
+    ).json().get('data')
+    rank = requests.get(
+        f'{request.scheme}://{request.host}{url_for("leaderboard_api")}/me',
+        headers=header
+    ).json().get('data')
+
+    return render_template('index.html', user=user, rank=rank, leaderboard=leaderboard), 200
 
 
 @general.route('/login', methods=['GET', 'POST'])

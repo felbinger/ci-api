@@ -3,10 +3,10 @@ from flask import Flask, send_from_directory
 from flask_cors import CORS
 
 from .api import AuthResource, UserResource, RoleResource, ChallengeResource, SolveResource, CategoryResource, \
-    UrlResource, MessageResource, RatingResource
+    UrlResource, MessageResource, RatingResource, LeaderboardResource
 from .config import ProductionConfig, DevelopmentConfig
 from .db import db
-from .views import general, challenges, admin
+from .views import general, challenges, admin, leaderboard
 
 
 def create_app(testing_config=None):
@@ -42,6 +42,8 @@ def create_app(testing_config=None):
     register_resource(app, MessageResource, 'message_api', '/api/messages')
     register_resource(app, RatingResource, 'rating_api', '/api/rate',
                       get=False, get_all=False, post=False, delete=False)
+    register_resource(app, LeaderboardResource, 'leaderboard_api', '/api/leaderboard', pk="name", pk_type="string",
+                      post=False, put=False, delete=False)
 
     return app
 
@@ -71,6 +73,7 @@ def register_views(app):
     app.register_blueprint(general)
     app.register_blueprint(challenges, url_prefix='/challenges')
     app.register_blueprint(admin, url_prefix='/admin')
+    app.register_blueprint(leaderboard, url_prefix='/')
 
     # 404 error page
     @app.errorhandler(404)
