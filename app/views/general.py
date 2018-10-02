@@ -102,14 +102,6 @@ def register():
         else:
             flash('Missing data', 'danger')
 
-    if request.method == 'GET':
-        if request.args.get('username') or request.args.get('email') or request.args.get('password'):
-            flash('Missing data', 'danger')
-            if request.args.get('username') and request.args.get('email') and request.args.get('password'):
-                flash('Internal Error', 'danger')
-
-    # The template contains one form which should have the attribute method="POST".
-    # The user should recognize this error and correct it itself to create the account.
     return render_template('register.html'), 200
 
 

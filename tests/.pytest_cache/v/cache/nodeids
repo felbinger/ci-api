@@ -28,7 +28,7 @@
   "api_challenge_test.py::test_update_challenge_without_data",
   "api_challenge_test.py::test_update_challenge_invalid_data",
   "api_challenge_test.py::test_update_challenge_invalid_challenge",
-  "api_leaderboard_test.py::test_get_all_roles",
+  "api_leaderboard_test.py::test_get_leaderboard",
   "api_leaderboard_test.py::test_get_rank",
   "api_message_test.py::test_create_message",
   "api_message_test.py::test_create_message_without_data",

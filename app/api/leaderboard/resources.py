@@ -14,6 +14,7 @@ class LeaderboardResource(MethodView):
     @require_token
     def get(self, name, user, **_):
         if name == 'me':
+            # TODO rewrite to sqlalchemy - tests wont work
             rank = list(db.engine.execute(f"""
                 SELECT COUNT(*)
                 FROM (
@@ -30,7 +31,7 @@ class LeaderboardResource(MethodView):
             ).jsonify()
         else:
             data = []
-
+            # TODO rewrite to sqlalchemy - tests wont work
             top = list(db.engine.execute("""
                 SELECT *
                 FROM (
@@ -39,7 +40,7 @@ class LeaderboardResource(MethodView):
                     JOIN challenge on challenge.id = solve.challenge
                     GROUP BY user.id
                 ) a
-                ORDER BY a.points DESC 
+                ORDER BY a.points DESC
             """))
 
             for i, user_data in enumerate(top):

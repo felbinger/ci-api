@@ -37,12 +37,16 @@ class User(db.Model):
         }
 
     def get_points(self):
-        return list(db.engine.execute(f"""
-            SELECT SUM(challenge.points) AS points FROM solve
-            JOIN user on user.id = solve.user
-            JOIN challenge on challenge.id = solve.challenge
-            WHERE user.id = {self.id};
-        """))[0][0]
+        from ..solve import Solve
+        solves = Solve.query.filter_by(user=self).all()
+        points = sum([solve.challenge.points for solve in solves])
+        return points
+        # return list(db.engine.execute(f"""
+        #     SELECT SUM(challenge.points) AS points FROM solve
+        #     JOIN user on user.id = solve.user
+        #     JOIN challenge on challenge.id = solve.challenge
+        #     WHERE user.id = {self.id};
+        # """))[0][0]
 
     def verify_password(self, password):
         return self.password == sha512(password.encode()).hexdigest()

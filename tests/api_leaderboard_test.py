@@ -3,9 +3,10 @@ import json
 
 
 # get the leaderboard
-def test_get_all_roles(app, client):
+def test_get_leaderboard(app, client):
     resp = client.get('/api/leaderboard', headers={'Access-Token': _get_token(app, client)})
     assert resp.status_code == 200
+    print(resp.data)
     # TODO test more cases (solve challenge with a few users (build leaderboard then check if correct))
 
 
@@ -14,6 +15,7 @@ def test_get_rank(app, client):
     resp = client.get(f'/api/leaderboard/me', headers={'Access-Token': _get_token(app, client)})
     assert resp.status_code == 200
     assert isinstance(json.loads(resp.data.decode()).get('data'), int)
+    print(resp.data)
     # TODO test more cases (solve challenge with a few users (build leaderboard then check if correct))
 
 

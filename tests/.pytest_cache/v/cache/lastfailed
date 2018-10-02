@@ -1,26 +1,15 @@
 {
   "api_auth_test.py::test_delete_session": true,
-  "api_auth_test.py::test_get_user_data": true,
   "api_challenge_test.py::test_create_challenge_invalid_urls": true,
-  "api_leaderboard_test.py::test_get_rank": true,
-  "api_message_test.py::test_create_message": true,
-  "api_message_test.py::test_get_all_messages": true,
-  "api_message_test.py::test_get_message": true,
   "api_message_test.py::test_get_role_invalid_message": true,
   "api_role_test.py::test_create_role_error": true,
   "api_role_test.py::test_create_role_error_wrong_data": true,
   "api_role_test.py::test_get_role_error": true,
   "api_role_test.py::test_update_role_error": true,
   "api_role_test.py::test_update_role_error_invalid_data": true,
-  "api_user_test.py::test_admin_update": true,
   "api_user_test.py::test_create_two_equal_users": true,
-  "api_user_test.py::test_create_user": true,
   "api_user_test.py::test_create_user_error": true,
   "api_user_test.py::test_create_user_error_status": true,
   "api_user_test.py::test_create_user_error_wrong_data": true,
-  "api_user_test.py::test_get_all_user": true,
-  "api_user_test.py::test_get_user": true,
-  "api_user_test.py::test_get_user_error": true,
-  "api_user_test.py::test_register_user": true,
-  "api_user_test.py::test_self_update": true
+  "api_user_test.py::test_get_user_error": true
 }
