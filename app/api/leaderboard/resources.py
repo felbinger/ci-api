@@ -44,7 +44,8 @@ class LeaderboardResource(MethodView):
             """))
 
             for i, user_data in enumerate(top):
-                if i == 20:
+                # todo rewrite
+                if i == 10:
                     break
                 user = User.query.filter_by(id=user_data[0]).first()
                 data.append({
