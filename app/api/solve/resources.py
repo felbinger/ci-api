@@ -18,7 +18,7 @@ class SolveResource(MethodView):
     def get(self, user, **_):
         lst = list()
         for category in Category.query.all():
-            if category.name != 'Special':
+            if category.name != 'special':
                 challenge_count = len(Challenge.query.filter_by(category=category).all())
                 solved_count = 0
                 for solve in Solve.query.filter_by(user=user).all():
@@ -55,7 +55,7 @@ class SolveResource(MethodView):
                 status_code=400
             ).jsonify()
         challenge = Challenge.query.filter_by(flag=data.get('flag')).first()
-        if not challenge or challenge.category.name != 'Special':
+        if not challenge or challenge.category.name != 'special':
             return ResultErrorSchema(
                 message="Invalid flag!",
                 errors=["invalid flag"],

@@ -64,7 +64,7 @@ def coding():
     solves = [s.get('challenge').get('id') for s in solved.get('challenges')]
     if challs:
         for challenge in challs:
-            if challenge.get('category').get('name') == 'CC':
+            if challenge.get('category').get('name') == 'cc':
                 challenge['solved'] = True if challenge.get('id') in solves else False
                 data['challenges'].append(challenge)
 
@@ -130,7 +130,7 @@ def hacking():
     # append all hacking challenges to the data list
     if challs:
         for challenge in challs:
-            if challenge.get('category').get('name') == 'HC':
+            if challenge.get('category').get('name') == 'hc':
                 # check if the challenge id is in the solves list
                 challenge['solved'] = True if challenge.get('id') in solves else False
                 data['challenges'].append(challenge)

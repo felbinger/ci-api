@@ -135,9 +135,9 @@ services:
 * Execute following sql:
 ```sql
 INSERT INTO `category` (`id`, `name`, `description`) VALUES
-(1, 'HC', 'Hacking Challenges'),
-(2, 'CC', 'Coding Challenges'),
-(3, 'Special', 'Special Challenges');
+(1, 'hc', 'Hacking Challenges'),
+(2, 'cc', 'Coding Challenges'),
+(3, 'special', 'Special Challenges');
 INSERT INTO `role` (`id`, `name`, `description`) VALUES
 (1, 'admin', 'Admin'),
 (2, 'user', 'User');

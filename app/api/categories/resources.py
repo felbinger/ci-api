@@ -57,7 +57,7 @@ class CategoryResource(MethodView):
                     status_code=400
                 ).jsonify()
         category = Category(
-            name=data.get('name'),
+            name=data.get('name').lower(),
             description=data.get('description')
         )
         db.session.add(category)
@@ -83,7 +83,7 @@ class CategoryResource(MethodView):
                 errors=error,
                 status_code=400
             ).jsonify()
-        category = Category.query.filter_by(name=name).first()
+        category = Category.query.filter_by(name=name.lower()).first()
         if not category:
             return ResultErrorSchema(
                 message='Category does not exist!',
@@ -102,7 +102,7 @@ class CategoryResource(MethodView):
     @require_token
     @require_admin
     def delete(self, name, **_):
-        category = Category.query.filter_by(name=name).first()
+        category = Category.query.filter_by(name=name.lower()).first()
         if not category:
             return ResultErrorSchema(
                 message='Category does not exist!',

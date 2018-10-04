@@ -49,7 +49,7 @@ class ChallengeResource(MethodView):
     """
     Create a new challenge
     curl -H "Access-Token: $token" -X POST localhost:5000/api/challenge -H "Content-Type: application/json" \
-    -d '{"name": "Test", "description": "TestChallenge", "flag": "TMT{t3$T}", "category": "HC"}'
+    -d '{"name": "Test", "description": "TestChallenge", "flag": "TMT{t3$T}", "category": "hc"}'
     """
     @require_token
     @require_admin
