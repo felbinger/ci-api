@@ -13,15 +13,17 @@ from .schemas import DaoCreateChallengeSchema, DaoUpdateChallengeSchema
 
 class ChallengeResource(MethodView):
     """
-    curl -H "Access-Token: $token" -X GET localhost:5000/api/challenge
-    curl -H "Access-Token: $token" -X GET localhost:5000/api/challenge/test
+    curl -H "Access-Token: $token" -X GET localhost:5000/api/challenges
+    curl -H "Access-Token: $token" -X GET localhost:5000/api/challenges/1
     """
     @require_token
     def get(self, _id, **_):
         if _id is None:
             # get all challenges
             return ResultSchema(
-                data=[d.jsonify() for d in Challenge.query.all()]
+                data=[d.jsonify() for d in Challenge.query.filter(
+                    Challenge.category != Category.query.filter_by(name='special').first()
+                ).all()]
             ).jsonify()
         else:
             # get the challenge object by the submitted name in the resource (url)
@@ -34,8 +36,7 @@ class ChallengeResource(MethodView):
             data = challenge.jsonify()
             challenge_solves = Solve.query.filter_by(challenge=challenge).first()
             if challenge_solves:
-                print(challenge_solves.jsonify())
-            data['solved'] = True
+                data['solved'] = True
             return ResultSchema(
                 data=data
             ).jsonify()
