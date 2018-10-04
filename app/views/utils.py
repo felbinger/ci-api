@@ -6,8 +6,19 @@ import requests
 def require_login(view_func):
     @wraps(view_func)
     def wrapper(*args, **kwargs):
+        # check if access token exist
         if session.get('Access-Token'):
-            return view_func(*args, **kwargs)
+            # check if access token is still valid
+            resp = requests.get(
+                f'{request.scheme}://{request.host}/api/auth',
+                headers={'Access-Token': session.get('Access-Token')}
+            )
+            if resp.status_code != 200:
+                # invalid token
+                return redirect(url_for('app.views.general.login'))
+            else:
+                # token is valid
+                return view_func(*args, **kwargs)
         else:
             return redirect(url_for('app.views.general.login'))
     return wrapper

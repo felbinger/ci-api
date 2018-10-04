@@ -9,7 +9,7 @@
   
 ### General
 * Comment code (Nico)
-* Leaderboard (Hendrik)
+* Leaderboard rewrite (Nico)
 
 ### API
 
