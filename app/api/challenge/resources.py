@@ -28,6 +28,11 @@ class ChallengeResource(MethodView):
         else:
             # get the challenge object by the submitted name in the resource (url)
             challenge = Challenge.query.filter_by(id=_id).first()
+            if challenge.category == Category.query.filter_by(name='special').first():
+                return ResultErrorSchema(
+                    message='Special challenge is not deliverable',
+                    errors=['special challenge is not deliverable']
+                ).jsonify()
             if not challenge:
                 return ResultErrorSchema(
                     message='Challenge does not exist!',
