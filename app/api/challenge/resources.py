@@ -86,7 +86,15 @@ class ChallengeResource(MethodView):
         #     ).jsonify()
 
         # create the challenge
-        challenge = Challenge(**data)
+        challenge = Challenge(
+            name=data.get('name'),
+            description=data.get('description'),
+            flag=data.get('flag'),
+            points=data.get('points'),
+            category=data.get('category'),
+            yt_challenge_id=data.get('ytChallengeId') or None,
+            yt_solution_id=data.get('ytSolutionId') or None
+        )
 
         # add the challenge object to the database
         db.session.add(challenge)
