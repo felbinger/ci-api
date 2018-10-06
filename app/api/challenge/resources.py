@@ -22,9 +22,7 @@ class ChallengeResource(MethodView):
         if _id is None:
             if user.role.name == 'admin':
                 # get all challenges (used for the admin dashboard and challenge list (for admins only))
-                data = [d.jsonify() for d in Challenge.query.filter(
-                    Challenge.category != Category.query.filter_by(name='special').first()
-                ).all()]
+                data = [d.jsonify() for d in Challenge.query.filter().all()]
             else:
                 # get all challenges (except not published and special challenges)
                 data = [d.jsonify() for d in Challenge.query.filter(
