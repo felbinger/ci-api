@@ -1,7 +1,6 @@
 # TODO
 
 * User Solutions (URLs)
-* DateTime for publication of Challenges (automated)
 * Chat
 * E-Mail interaction:
   * Password Reset
@@ -17,6 +16,7 @@
 
 ### Frontend (HTML, CSS, JS)
 * Admin/Dashboard/Update Challenge
+* Mini calender in challenge admin dashboard for publication datetime
 
 #### Design
 * Special Challenges ausdenken
