@@ -18,29 +18,37 @@ class ChallengeResource(MethodView):
     curl -H "Access-Token: $token" -X GET localhost:5000/api/challenges/1
     """
     @require_token
-    def get(self, _id, **_):
+    def get(self, _id, user, **_):
         if _id is None:
-            # get all challenges (except not published and special challenges)
-            return ResultSchema(
-                data=[d.jsonify() for d in Challenge.query.filter(
+            if user.role.name == 'admin':
+                # get all challenges (used for the admin dashboard and challenge list (for admins only))
+                data = [d.jsonify() for d in Challenge.query.filter(
+                    Challenge.category != Category.query.filter_by(name='special').first()
+                ).all()]
+            else:
+                # get all challenges (except not published and special challenges)
+                data = [d.jsonify() for d in Challenge.query.filter(
                     Challenge.category != Category.query.filter_by(name='special').first(),
                     Challenge.publication < datetime.now()
                 ).all()]
-            ).jsonify()
+            return ResultSchema(
+                    data=data
+                ).jsonify()
         else:
             # get the challenge object by the submitted name in the resource (url)
             challenge = Challenge.query.filter_by(id=_id).first()
-            if challenge.category == Category.query.filter_by(name='special').first():
-                return ResultErrorSchema(
-                    message='Special challenge is not deliverable',
-                    errors=['special challenge is not deliverable']
-                ).jsonify()
-            if challenge.publication:
-                if challenge.publication > datetime.now():
+            if user.role.name != 'admin':
+                if challenge.category == Category.query.filter_by(name='special').first():
                     return ResultErrorSchema(
-                        message='Challenge is not published yet!',
-                        errors=['challenge is not published yet!']
-                    )
+                        message='Special challenge is not deliverable',
+                        errors=['special challenge is not deliverable']
+                    ).jsonify()
+                if challenge.publication:
+                    if challenge.publication > datetime.now():
+                        return ResultErrorSchema(
+                            message='Challenge is not published yet!',
+                            errors=['challenge is not published yet!']
+                        )
             if not challenge:
                 return ResultErrorSchema(
                     message='Challenge does not exist!',
