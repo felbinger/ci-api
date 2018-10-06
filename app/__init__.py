@@ -1,5 +1,5 @@
 import os
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, render_template
 from flask_cors import CORS
 
 from .api import AuthResource, UserResource, RoleResource, ChallengeResource, SolveResource, CategoryResource, \
@@ -84,6 +84,19 @@ def register_views(app):
     @app.errorhandler(403)
     def permission_denied(e):
         return 'Permissions Denied!', 403
+
+    # Special Challenge 0x03 (suppose to be found with gobuster/dirbuster/dirb)
+    @app.route('/cursor-snarfing/')
+    def special_0x03():
+        return """Submit <a href="img.jpg">me</a> in the well known format: TMT{flag}"""
+
+    @app.route('/cursor-snarfing/img.jpg')
+    def special_0x03_img():
+        return send_from_directory(
+            directory=os.path.join(app.root_path, 'static/dist/img/'),
+            filename='special_0x03.png',
+            mimetype='image/png'
+        )
 
     @app.route('/favicon.ico')
     def favicon():
