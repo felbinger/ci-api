@@ -34,8 +34,10 @@
 | PUT | /api/urls/{id:int} | Access-Token | url, description, challenge | Admin: modify url |
 | DELETE | /api/urls/{id:int} | Access-Token | / | Admin: delete url |
 ||||||
-| GET | /api/challenges | Access-Token | / | Get all challenges |
-| GET | /api/challenges/{id:int} | Access-Token | / | Get challenge |
+| GET | /api/challenges | Access-Token | / | Get all challenges (except special and not published challenges) |
+| GET | /api/challenges | Access-Token | / | Admin: Get all challenges |
+| GET | /api/challenges/{id:int} | Access-Token | / | Get challenge (except special and not published challenges) |
+| GET | /api/challenges/{id:int} | Access-Token | / | Admin: Get challenge |
 | POST | /api/challenges | Access-Token | name, description, category, flag, points | Admin: create challenge |
 | PUT | /api/challenges/{id:int} | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description (and/or) points | Admin: update challenge (YouTube video id's and/or description) |
 ||||||
@@ -80,7 +82,9 @@
 |  | description | Varchar(512) |  |  
 |  | ytChallengeId | Varchar(10) |  |  
 |  | ytSolutionId | Varchar(10) |  |  
-|  | category | Varchar(80) | |  
+|  | category | Varchar(80) | |
+|  | created | DateTime | |
+|  | publication | DateTime | |
 | ratings | id | Integer(11) | |
 |  | user | Integer(11) | foreign key -> user.id |
 |  | challenge | Integer(11) | foreign key -> challenge.id |
