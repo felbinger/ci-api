@@ -28,9 +28,7 @@ class DaoCreateChallengeSchema(Schema):
         load_from='ytSolutionId',
         validate=[validate.Length(min=0, max=20)]
     )
-    # publication = fields.Str(
-    #     required=True
-    # )
+    publication = fields.Str()
 
 
 class DaoUpdateChallengeSchema(Schema):

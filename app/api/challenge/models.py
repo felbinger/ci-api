@@ -1,5 +1,4 @@
 from sqlalchemy import Column, String, Integer, ForeignKey, DateTime
-from datetime import datetime
 from app.db import db
 
 
@@ -20,8 +19,6 @@ class Challenge(db.Model):
     category = db.relationship('Category', backref=db.backref('challenges', lazy=True))
 
     def __init__(self, *args, **kwargs):
-        kwargs['publication'] = datetime.utcnow()  # todo remove
-        # todo create a field (mini calender) in the frontend and check the validation (iso 8601)
         super().__init__(*args, **kwargs, created=datetime.utcnow())
 
     def min_jsonify(self):
