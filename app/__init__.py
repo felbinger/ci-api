@@ -94,8 +94,8 @@ def register_views(app):
     def special_0x03_img():
         return send_from_directory(
             directory=os.path.join(app.root_path, 'static/dist/img/'),
-            filename='special_0x03.png',
-            mimetype='image/png'
+            filename='special_0x03.jpg',
+            mimetype='image/jpeg'
         )
 
     @app.route('/favicon.ico')
