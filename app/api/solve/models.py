@@ -9,10 +9,10 @@ class Solve(db.Model):
     id = Column('id', Integer, primary_key=True)
 
     user_id = Column('user', Integer, ForeignKey('user.id'), nullable=False)
-    user = db.relationship('User', backref=db.backref('Solve', lazy=True))
+    user = db.relationship('User', backref=db.backref('solves', lazy=True))
 
     challenge_id = Column('challenge', Integer, ForeignKey('challenge.id'), nullable=False)
-    challenge = db.relationship('Challenge', backref=db.backref('Solve', lazy=True))
+    challenge = db.relationship('Challenge', backref=db.backref('solves', lazy=True))
 
     timestamp = Column('created', DateTime, nullable=False)
 

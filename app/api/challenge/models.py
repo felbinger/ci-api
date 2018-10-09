@@ -16,6 +16,7 @@ class Challenge(db.Model):
 
     publication = Column('publication', DateTime, nullable=False)
     created = Column('created', DateTime, nullable=False)
+    solution_date = Column('solutionDate', DateTime)
 
     category_id = Column('category', Integer, ForeignKey('category.id'), nullable=False)
     category = db.relationship('Category', backref=db.backref('challenges', lazy=True))

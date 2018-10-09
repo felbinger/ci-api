@@ -38,8 +38,16 @@ class User(db.Model):
 
     def get_points(self):
         from ..solve import Solve
-        solves = Solve.query.filter_by(user=self).all()
-        points = sum([solve.challenge.points for solve in solves])
+        points = 0
+        for solve in Solve.query.filter_by(user=self).all():
+            # TODO create tests
+            # if solution_date is null
+            if solve.challenge.solution_date:
+                # challenge has been solved before publication of the solution
+                if solve.timestamp < solve.challenge.solution_date:
+                    points += solve.challenge.points
+            else:
+                points += solve.challenge.points
         return points
         # return list(db.engine.execute(f"""
         #     SELECT SUM(challenge.points) AS points FROM solve
