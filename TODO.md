@@ -5,10 +5,13 @@
 * E-Mail interaction:
   * Password Reset
   * Account Activation after registration
+* add solution_date via admin dashboard (add to schema + frontend)
+* add publication date via admin dashboard (add to frontend)
+* write more tests
+* check the other todos
   
 ### General
 * Comment code (Nico)
-* Leaderboard rewrite (Nico)
 
 ### API
 
@@ -23,5 +26,6 @@
 
 ### Tests
 ##### PyTests
+* Leaderboard
 
 ##### manuel tests

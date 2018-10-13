@@ -53,8 +53,7 @@ class ChallengeResource(MethodView):
                     errors=['challenge does not exist']
                 ).jsonify()
             data = challenge.jsonify()
-            challenge_solves = Solve.query.filter_by(challenge=challenge).first()
-            if challenge_solves:
+            if Solve.query.filter_by(challenge=challenge, user=user).first():
                 data['solved'] = True
             return ResultSchema(
                 data=data
