@@ -20,6 +20,7 @@ class Solve(db.Model):
         super().__init__(*args, **kwargs, timestamp=datetime.utcnow())
 
     def jsonify(self):
+        # TODO check points (DownloadPizza reported that the points on account page are not correct)
         return {
             'challenge': self.challenge.min_jsonify(),
             'timestamp': self.timestamp

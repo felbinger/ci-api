@@ -42,9 +42,12 @@
 | PUT | /api/challenges/{id:int} | Access-Token | ytChallengeId (and/or) ytSolutionId (and/or) description (and/or) points | Admin: update challenge (YouTube video id's and/or description) |
 ||||||
 | POST | /api/solve | Access-Token | flag | Solve Special Challenge |
-| PUT | /api/solve/{id:int} | Access-Token | flag | Solve Challenge | |
+| PUT | /api/solve/{id:int} | Access-Token | flag | Solve Challenge |
 ||||||
 | PUT | /api/rate/{challenge_id:int} | Access-Token | thumbUp(boolean) | Rate a challenge |
+||||||
+| GET | /api/leaderboard/me | Access-Token | | Get my rank |
+| GET | /api/leaderboard | Access-Token | | Get leaderboard ||
 
 ### GET Result Schemas
 * Role: `name`, `description`
@@ -52,7 +55,7 @@
   `role` (`name`, `description`), `solved` (`challenge` (`id`, `name`, `category`), `timestamp`)
 * Category: `name`, `description`
 * URL: `id`, `url`, `description`, `challenge` (`id`, `name`, `category`(`name`, `description`))
-* Challenge: `id`, `name`, `description`, `points`, `category`(`name`, `description`), `ytChallengeId`, `ytSolutionId`, 
+* Challenge: `id`, `name`, `description`, `points`, `category`(`name`, `description`), `ytChallengeId`, `ytSolutionId`,
   `urls` [(`id`, `url`, `description`), ...], `solveCount`, `ratings`(`thumbUp`, `thumbDown`)
 
 ## Database Schema
